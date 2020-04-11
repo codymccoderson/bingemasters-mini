@@ -26,15 +26,14 @@ class FetchRandomMovieStar extends React.Component {
     };
 
     render() {
+        const imageURL = `https://image.tmdb.org/t/p/w235_and_h235_face${this.state.star}`;
         return(
             <div>
                 {this.state.loading || !this.state.star ? (
                 <div>loading...</div> 
                 ) : (
                 <div>
-                    <div>
-                        {this.state.star}
-                    </div>
+                    <img src={imageURL} alt="this... is a random actor"/>
                 </div>
                 )}
             </div>
