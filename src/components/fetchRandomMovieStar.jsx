@@ -4,7 +4,8 @@ class FetchRandomMovieStar extends React.Component {
 
     state = {
         loading: true,
-        star: null
+        star: null,
+        userGuessInput: ""
 
     };
 
@@ -17,12 +18,14 @@ class FetchRandomMovieStar extends React.Component {
         const url = `https://api.themoviedb.org/3/person/popular?api_key=0923dd9b4328f2ddced216cb32ecf851&language=en-US&page=${randomPage}`;
         const response = await fetch(url);
         const data = await response.json();
-        const randomActor = randomPageFunction(1, 20);
+        const randomActorSelector = randomPageFunction(1, 20);
 
         this.setState({
-            star: data.results[randomActor].profile_path, loading: false
+            star: data.results[randomActorSelector].profile_path, 
+            loading: false
         });
-        console.log(data.results[randomActor].profile_path);
+        console.log(data.results[randomActorSelector].profile_path);
+        console.log(data.results[randomActorSelector].name);
     };
 
     render() {
@@ -36,6 +39,15 @@ class FetchRandomMovieStar extends React.Component {
                     <img src={imageURL} alt="this... is a random actor"/>
                 </div>
                 )}
+                <div>
+                    <form>
+                        <input 
+                        type="text"
+                        placeholder="Name this actor."
+                        />
+                        <button type="submit">Final Answer?</button>
+                    </form>
+                </div>
             </div>
         )
     }
@@ -43,3 +55,24 @@ class FetchRandomMovieStar extends React.Component {
 };
 
 export default FetchRandomMovieStar;
+
+
+//     // handleChange = event => {
+//     //     this.setState({
+//     //         userGuessInput: event.target.value
+//     //     })
+//     // }
+
+//     // handleFinalAnswer = async () => {
+//     //     const newActorData = await this.loadData();
+//     //     if(randomActorName === event.target.value) {
+//     //         this.setState({
+//     //             actorData: newActorData
+//     //         })
+//     //     } else {
+//     //         this.setState({
+//     //             actorData: actorData
+//     //         })
+//     //     }
+//     // }
+    
