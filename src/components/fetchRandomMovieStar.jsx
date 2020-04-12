@@ -19,14 +19,27 @@ class FetchRandomMovieStar extends React.Component {
         const response = await fetch(url);
         const data = await response.json();
         const randomActorSelector = randomPageFunction(1, 20);
+        const randomActorPhotoPath = data.results[randomActorSelector].profile_path;
+        const randomActorName = data.results[randomActorSelector].name;
+        const movieTheyWereIn = data.results[randomActorSelector].known_for[0].title;
+        const secondMovieTheyWereIn = data.results[randomActorSelector].known_for[1].title;
 
         this.setState({
-            star: data.results[randomActorSelector].profile_path, 
-            loading: false
+            star: randomActorPhotoPath, 
+            loading: false,
+            userGuessInput: ""
         });
-        console.log(data.results[randomActorSelector].profile_path);
-        console.log(data.results[randomActorSelector].name);
+        console.log(randomActorPhotoPath);
+        console.log(randomActorName);
+        console.log(movieTheyWereIn);
+        console.log(secondMovieTheyWereIn);
     };
+
+    handleChange = event => {
+        this.setState({
+            userGuessInput: event.target.value
+            })
+        }
 
     render() {
         const imageURL = `https://image.tmdb.org/t/p/w235_and_h235_face${this.state.star}`;
@@ -37,6 +50,7 @@ class FetchRandomMovieStar extends React.Component {
                 ) : (
                 <div>
                     <img src={imageURL} alt="this... is a random actor"/>
+                    <p>Hint: I was in...</p>
                 </div>
                 )}
                 <div>
@@ -44,6 +58,7 @@ class FetchRandomMovieStar extends React.Component {
                         <input 
                         type="text"
                         placeholder="Name this actor."
+                        onChange={this.handleChange}
                         />
                         <button type="submit">Final Answer?</button>
                     </form>
@@ -55,13 +70,6 @@ class FetchRandomMovieStar extends React.Component {
 };
 
 export default FetchRandomMovieStar;
-
-
-//     // handleChange = event => {
-//     //     this.setState({
-//     //         userGuessInput: event.target.value
-//     //     })
-//     // }
 
 //     // handleFinalAnswer = async () => {
 //     //     const newActorData = await this.loadData();

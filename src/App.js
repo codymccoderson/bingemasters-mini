@@ -4,7 +4,7 @@ import FetchRandomMovieStar from './components/fetchRandomMovieStar';
 function App() {
   return (
     <div className="App">
-      <h1>Hello World</h1>
+      <h1>Bingemasters</h1>
       <FetchRandomMovieStar/>
     </div>
   );
