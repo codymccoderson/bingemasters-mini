@@ -81,7 +81,10 @@ class FetchRandomMovieStar extends React.Component {
                 ) : (
                 <div>
                     <img src={imageURL} alt="this... is a random actor"/>
-                    <p>Hint: I was in {this.state.movieName} and {" "}{this.state.secondMovieName}.</p>
+                    {this.state.movieName === undefined || this.state.secondMovieName === undefined ? (
+                        <p>Sorry man, I really need to step my filmography game up.</p>
+                    ) : (
+                    <p>Hint: I was in {this.state.movieName} and {this.state.secondMovieName}.</p>)}
                 </div>
                 )}
                 <div>
