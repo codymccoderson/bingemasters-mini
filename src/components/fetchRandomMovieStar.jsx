@@ -1,6 +1,7 @@
 import React from 'react';
 import getRandomPage from '../utils/getRandomPage';
 import randomizer from '../utils/randomizer';
+
 class FetchRandomMovieStar extends React.Component {
 
     state = {
@@ -25,6 +26,7 @@ class FetchRandomMovieStar extends React.Component {
         const randomActorSelector = randomizer(1, 20);
         const randomActorPhotoPath = data.results[randomActorSelector].profile_path;
         const randomActorName = data.results[randomActorSelector].name;
+        const noAccentName = randomActorName.normalize('NFD').replace(/[\u0300-\u036f]/g, "");
         const movieTheyWereIn = data.results[randomActorSelector].known_for[0].title;
         const secondMovieTheyWereIn = data.results[randomActorSelector].known_for[1].title;
 
@@ -34,7 +36,7 @@ class FetchRandomMovieStar extends React.Component {
             actorSelector: randomActorSelector,
             profilePath: randomActorPhotoPath,
             userGuessInput: "",
-            actorName: randomActorName,
+            actorName: noAccentName,
             movieName: movieTheyWereIn,
             secondMovieName: secondMovieTheyWereIn
 
@@ -61,6 +63,7 @@ class FetchRandomMovieStar extends React.Component {
            this.setRandomPage();
         } else {
             // stay on the same page if incorrect
+            
         }
 
     }
