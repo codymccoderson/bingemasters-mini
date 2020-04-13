@@ -54,18 +54,21 @@ class FetchRandomMovieStar extends React.Component {
             })
         }
     
-    handleSubmit = event => {
+    handleSubmit = (event) => {
         event.preventDefault();
         const { userGuessInput, actorName } = this.state;
+
+        this.setState({
+            userGuessInput: ""
+        })
 
         if (userGuessInput === actorName) {
             // reload on correct guess
            this.setRandomPage();
         } else {
             // stay on the same page if incorrect
-            
+            alert('WRONG');
         }
-
     }
 
     render() {
@@ -78,7 +81,7 @@ class FetchRandomMovieStar extends React.Component {
                 ) : (
                 <div>
                     <img src={imageURL} alt="this... is a random actor"/>
-                    <p>Hint: I was in {this.state.movieName} and {this.state.secondMovieName}.</p>
+                    <p>Hint: I was in {this.state.movieName} and {" "}{this.state.secondMovieName}.</p>
                 </div>
                 )}
                 <div>
@@ -87,6 +90,7 @@ class FetchRandomMovieStar extends React.Component {
                         type="text"
                         placeholder="Name this actor."
                         onChange={this.handleChange}
+                        value={this.state.userGuessInput}
                         />
                         <button type="submit"
                         >Final Answer?
