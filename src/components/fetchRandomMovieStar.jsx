@@ -1,5 +1,5 @@
 import React from 'react';
-
+import loadData from '../utils/loadData';
 class FetchRandomMovieStar extends React.Component {
 
     state = {
@@ -16,14 +16,12 @@ class FetchRandomMovieStar extends React.Component {
     };
 
     async componentDidMount() {
-        const randomPageFunction = function randomPage(min, max) {
-            return Math.round(Math.random() * (max - min) + min);
-        };
+        const randomPageFunction = (min, max) => (
+            Math.round(Math.random() * (max - min) + min));
         const randomPage = randomPageFunction(1, 500);
         console.log(randomPage);
         const url = `https://api.themoviedb.org/3/person/popular?api_key=0923dd9b4328f2ddced216cb32ecf851&language=en-US&page=${randomPage}`;
-        const response = await fetch(url);
-        const data = await response.json();
+        const data = loadData(url);
         const randomActorSelector = randomPageFunction(1, 20);
         const randomActorPhotoPath = data.results[randomActorSelector].profile_path;
         const randomActorName = data.results[randomActorSelector].name;
@@ -49,10 +47,17 @@ class FetchRandomMovieStar extends React.Component {
     };
 
     handleChange = event => {
+        console.log(event.target.value)
         this.setState({
             userGuessInput: event.target.value
             })
         }
+    
+    handleSubmit = event => {
+        event.preventDefault();
+        console.log("submitted");
+
+    }
 
     render() {
         const imageURL = `https://image.tmdb.org/t/p/w235_and_h235_face${this.state.profilePath}`;
@@ -67,19 +72,20 @@ class FetchRandomMovieStar extends React.Component {
                 </div>
                 )}
                 <div>
-                    <form>
+                    <form onSubmit={event => this.handleSubmit(event)}>
                         <input 
                         type="text"
                         placeholder="Name this actor."
                         onChange={this.handleChange}
                         />
-                        <button type="submit">Final Answer?</button>
+                        <button type="submit"
+                        >Final Answer?
+                        </button>
                     </form>
                 </div>
             </div>
         )
     }
-
 };
 
 export default FetchRandomMovieStar;
