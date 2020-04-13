@@ -3,9 +3,15 @@ import React from 'react';
 class FetchRandomMovieStar extends React.Component {
 
     state = {
+
         loading: true,
-        star: null,
-        userGuessInput: ""
+        randomPage: [],
+        actorSelector: [],
+        profilePath: "",
+        userGuessInput: "",
+        actorName: "",
+        movieName: "",
+        secondMovieName: ""
 
     };
 
@@ -25,14 +31,21 @@ class FetchRandomMovieStar extends React.Component {
         const secondMovieTheyWereIn = data.results[randomActorSelector].known_for[1].title;
 
         this.setState({
-            star: randomActorPhotoPath, 
             loading: false,
-            userGuessInput: ""
+            randomPage: [randomPage],
+            actorSelector: [randomActorSelector],
+            profilePath: randomActorPhotoPath,
+            userGuessInput: "",
+            actorName: randomActorName,
+            movieName: movieTheyWereIn,
+            secondMovieName: secondMovieTheyWereIn
+
         });
         console.log(randomActorPhotoPath);
         console.log(randomActorName);
         console.log(movieTheyWereIn);
         console.log(secondMovieTheyWereIn);
+        
     };
 
     handleChange = event => {
@@ -42,10 +55,10 @@ class FetchRandomMovieStar extends React.Component {
         }
 
     render() {
-        const imageURL = `https://image.tmdb.org/t/p/w235_and_h235_face${this.state.star}`;
+        const imageURL = `https://image.tmdb.org/t/p/w235_and_h235_face${this.state.profilePath}`;
         return(
             <div>
-                {this.state.loading || !this.state.star ? (
+                {this.state.loading || !this.state.profilePath ? (
                 <div>loading...</div> 
                 ) : (
                 <div>
