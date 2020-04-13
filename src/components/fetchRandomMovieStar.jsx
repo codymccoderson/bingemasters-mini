@@ -21,7 +21,7 @@ class FetchRandomMovieStar extends React.Component {
         const randomPage = randomPageFunction(1, 500);
         console.log(randomPage);
         const url = `https://api.themoviedb.org/3/person/popular?api_key=0923dd9b4328f2ddced216cb32ecf851&language=en-US&page=${randomPage}`;
-        const data = loadData(url);
+        const data = await loadData(url);
         const randomActorSelector = randomPageFunction(1, 20);
         const randomActorPhotoPath = data.results[randomActorSelector].profile_path;
         const randomActorName = data.results[randomActorSelector].name;
@@ -72,7 +72,7 @@ class FetchRandomMovieStar extends React.Component {
                 </div>
                 )}
                 <div>
-                    <form onSubmit={event => this.handleSubmit(event)}>
+                    <form onSubmit={this.handleSubmit}>
                         <input 
                         type="text"
                         placeholder="Name this actor."
