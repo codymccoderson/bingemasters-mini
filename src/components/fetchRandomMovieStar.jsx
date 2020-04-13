@@ -1,12 +1,13 @@
 import React from 'react';
-import loadData from '../utils/loadData';
+import getRandomPage from '../utils/getRandomPage';
+import randomizer from '../utils/randomizer';
 class FetchRandomMovieStar extends React.Component {
 
     state = {
 
         loading: true,
-        randomPage: [],
-        actorSelector: [],
+        randomPage: null,
+        actorSelector: null,
         profilePath: "",
         userGuessInput: "",
         actorName: "",
@@ -15,14 +16,13 @@ class FetchRandomMovieStar extends React.Component {
 
     };
 
-    async componentDidMount() {
-        const randomPageFunction = (min, max) => (
-            Math.round(Math.random() * (max - min) + min));
-        const randomPage = randomPageFunction(1, 500);
-        console.log(randomPage);
-        const url = `https://api.themoviedb.org/3/person/popular?api_key=0923dd9b4328f2ddced216cb32ecf851&language=en-US&page=${randomPage}`;
-        const data = await loadData(url);
-        const randomActorSelector = randomPageFunction(1, 20);
+    componentDidMount() {
+        this.setRandomPage();
+    }
+
+    async setRandomPage() {
+        const data = await getRandomPage();
+        const randomActorSelector = randomizer(1, 20);
         const randomActorPhotoPath = data.results[randomActorSelector].profile_path;
         const randomActorName = data.results[randomActorSelector].name;
         const movieTheyWereIn = data.results[randomActorSelector].known_for[0].title;
@@ -30,8 +30,8 @@ class FetchRandomMovieStar extends React.Component {
 
         this.setState({
             loading: false,
-            randomPage: [randomPage],
-            actorSelector: [randomActorSelector],
+            randomPage: data,
+            actorSelector: randomActorSelector,
             profilePath: randomActorPhotoPath,
             userGuessInput: "",
             actorName: randomActorName,
@@ -47,7 +47,6 @@ class FetchRandomMovieStar extends React.Component {
     };
 
     handleChange = event => {
-        console.log(event.target.value)
         this.setState({
             userGuessInput: event.target.value
             })
@@ -55,12 +54,20 @@ class FetchRandomMovieStar extends React.Component {
     
     handleSubmit = event => {
         event.preventDefault();
-        console.log("submitted");
+        const { userGuessInput, actorName } = this.state;
+
+        if (userGuessInput === actorName) {
+            // reload on correct guess
+           this.setRandomPage();
+        } else {
+            // stay on the same page if incorrect
+        }
 
     }
 
     render() {
         const imageURL = `https://image.tmdb.org/t/p/w235_and_h235_face${this.state.profilePath}`;
+
         return(
             <div>
                 {this.state.loading || !this.state.profilePath ? (
@@ -68,7 +75,7 @@ class FetchRandomMovieStar extends React.Component {
                 ) : (
                 <div>
                     <img src={imageURL} alt="this... is a random actor"/>
-                    <p>Hint: I was in...</p>
+                    <p>Hint: I was in {this.state.movieName} and {this.state.secondMovieName}.</p>
                 </div>
                 )}
                 <div>
@@ -89,17 +96,4 @@ class FetchRandomMovieStar extends React.Component {
 };
 
 export default FetchRandomMovieStar;
-
-//     // handleFinalAnswer = async () => {
-//     //     const newActorData = await this.loadData();
-//     //     if(randomActorName === event.target.value) {
-//     //         this.setState({
-//     //             actorData: newActorData
-//     //         })
-//     //     } else {
-//     //         this.setState({
-//     //             actorData: actorData
-//     //         })
-//     //     }
-//     // }
     
