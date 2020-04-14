@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
 
 class Timer extends Component {
+
   constructor (props) {
     super(props)
+    console.log("Logged in user props: ", props);
     this.state = {
-      count: 15
+      count: 20,
+      resetTimer: props.resetTimer
     }
   }
 
@@ -18,11 +21,17 @@ class Timer extends Component {
   }
 
   componentDidMount () {
-    const {startCount} = this.props
-    this.setState({
-      count: startCount
-    })
     this.doIntervalChange();
+    if (this.state.resetTimer === true) {
+        this.resetClock();
+    }
+  }
+
+  resetClock () {
+      clearInterval(this.myInterval)
+      this.setState({
+          count: 20
+      })
   }
 
   doIntervalChange = () => {
