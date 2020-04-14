@@ -12,11 +12,11 @@ class Timer extends Component {
     const {count} = this.state
     return (
       <div>
-        <h1>Current Count: {count}</h1>
+        <h1>Time left: {count} seconds</h1>
       </div>
     )
   }
-  
+
   componentDidMount () {
     const {startCount} = this.props
     this.setState({
@@ -39,4 +39,4 @@ class Timer extends Component {
   }
 }
 
-export default Timer
+export default Timer;

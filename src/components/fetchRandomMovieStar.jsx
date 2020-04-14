@@ -1,6 +1,7 @@
 import React from 'react';
 import getRandomPage from '../utils/getRandomPage';
 import randomizer from '../utils/randomizer';
+import Timer from './Timer';
 
 class FetchRandomMovieStar extends React.Component {
 
@@ -38,7 +39,7 @@ class FetchRandomMovieStar extends React.Component {
             userGuessInput: "",
             actorName: noAccentName,
             movieName: movieTheyWereIn,
-            secondMovieName: secondMovieTheyWereIn
+            secondMovieName: secondMovieTheyWereIn,
 
         });
         console.log(randomActorPhotoPath);
@@ -57,14 +58,18 @@ class FetchRandomMovieStar extends React.Component {
     handleSubmit = (event) => {
         event.preventDefault();
         const { userGuessInput, actorName } = this.state;
+        const submittedAnswer = userGuessInput;
 
         this.setState({
             userGuessInput: ""
         })
 
-        if (userGuessInput === actorName) {
+        if (submittedAnswer === actorName) {
             // reload on correct guess
            this.setRandomPage();
+           this.setState({
+            userGuessInput: ""
+        })
         } else {
             // stay on the same page if incorrect
             alert('WRONG');
@@ -99,6 +104,9 @@ class FetchRandomMovieStar extends React.Component {
                         >Final Answer?
                         </button>
                     </form>
+                </div>
+                <div>
+                    <Timer startCount="20"/>
                 </div>
             </div>
         )
