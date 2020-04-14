@@ -1,6 +1,5 @@
 import React from 'react';
 import getRandomPage from '../utils/getRandomPage';
-import randomizer from '../utils/randomizer';
 
 class FetchRandomMovieStar extends React.Component {
 
@@ -9,7 +8,6 @@ class FetchRandomMovieStar extends React.Component {
         loading: true,
         randomPage: null,
         actorSelector: null,
-        popularity: "",
         profilePath: "",
         userGuessInput: "",
         actorName: "",
@@ -26,23 +24,17 @@ class FetchRandomMovieStar extends React.Component {
     }
 
     async setRandomPage() {
-        const data = await getRandomPage();
-        const randomActorSelector = randomizer(1, 20);
-        const popularity = data.results[randomActorSelector].popularity;
-        const firstMoviePopularity= data.results[randomActorSelector].known_for[0].vote_average
-
-        if (popularity > 3.4 && firstMoviePopularity > 8) {
-
-        const randomActorPhotoPath = data.results[randomActorSelector].profile_path;
-        const randomActorName = data.results[randomActorSelector].name;
+        const actor = await getRandomPage();
+        console.log(actor);
+        const randomActorPhotoPath = actor.profile_path;
+        const randomActorName = actor.name;
         const noAccentName = randomActorName.normalize('NFD').replace(/[\u0300-\u036f]/g, "");
-        const movieTheyWereIn = data.results[randomActorSelector].known_for[0].title;
-        const secondMovieTheyWereIn = data.results[randomActorSelector].known_for[1].title;
+        const movieTheyWereIn = actor.known_for[0].title;
+        const secondMovieTheyWereIn = actor.known_for[1].title;
 
         this.setState({
             loading: false,
-            randomPage: data,
-            actorSelector: randomActorSelector,
+            randomPage: actor,
             profilePath: randomActorPhotoPath,
             userGuessInput: "",
             actorName: noAccentName,
@@ -55,13 +47,6 @@ class FetchRandomMovieStar extends React.Component {
         console.log("Actor no accents: ", noAccentName);
         console.log(movieTheyWereIn);
         console.log(secondMovieTheyWereIn);
-        console.log(popularity);
-        console.log(firstMoviePopularity);
-
-        } else {
-            this.setRandomPage();
-        }
-          
     };
 
     handleChange = event => {
@@ -135,6 +120,7 @@ class FetchRandomMovieStar extends React.Component {
                         placeholder="Name this actor."
                         onChange={this.handleChange}
                         value={this.state.userGuessInput}
+                        required
                         />
                         <button type="submit"
                         >Final Answer?
