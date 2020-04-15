@@ -24,30 +24,35 @@ class FetchRandomMovieStar extends React.Component {
     }
 
     async setRandomPage() {
-        const actor = await getRandomPage();
-        console.log(actor);
-        const randomActorPhotoPath = actor.profile_path;
-        const randomActorName = actor.name;
-        const noAccentName = randomActorName.normalize('NFD').replace(/[\u0300-\u036f]/g, "");
-        const movieTheyWereIn = actor.known_for[0].title;
-        const secondMovieTheyWereIn = actor.known_for[1].title;
-
-        this.setState({
-            loading: false,
-            randomPage: actor,
-            profilePath: randomActorPhotoPath,
-            userGuessInput: "",
-            actorName: noAccentName,
-            movieName: movieTheyWereIn,
-            secondMovieName: secondMovieTheyWereIn
-
+        let actor = await getRandomPage();
+        let length = (await Object.keys(actor.known_for).length) || 0;
+        try {
+          while ((await length) <= 2 || (await actor.profile_path) === null) {
+            actor = await getRandomPage();
+            length = (await Object.keys(actor.known_for).length) || 0;
+          }
+        } catch (error) {
+          console.log(error);
+        }
+        const randomActorPhotoPath = await actor.profile_path;
+        const randomActorName = await actor.name;
+        const noAccentName = await randomActorName
+          .normalize("NFD")
+          .replace(/[\u0300-\u036f]/g, "");
+        const movieTheyWereIn = await actor.known_for[0].title;
+        const secondMovieTheyWereIn = await actor.known_for[1].title;
+        await this.setState({
+          loading: false,
+          randomPage: actor,
+          profilePath: randomActorPhotoPath,
+          userGuessInput: "",
+          actorName: noAccentName,
+          movieName: movieTheyWereIn,
+          secondMovieName: secondMovieTheyWereIn,
         });
-        console.log(randomActorPhotoPath);
         console.log(randomActorName);
-        console.log("Actor no accents: ", noAccentName);
-        console.log(movieTheyWereIn);
-        console.log(secondMovieTheyWereIn);
-    };
+      }
+    
 
     handleChange = event => {
         this.setState({
@@ -97,7 +102,7 @@ class FetchRandomMovieStar extends React.Component {
       }
 
     render() {
-        const imageURL = `https://image.tmdb.org/t/p/w235_and_h235_face${this.state.profilePath}`;
+        const imageURL = `https://image.tmdb.org/t/p/w235_and_h235_bestv2${this.state.profilePath}`;
         const { count } = this.state;
 
         return(
@@ -108,7 +113,7 @@ class FetchRandomMovieStar extends React.Component {
                 <div>
                     <img src={imageURL} alt="this... is a random actor"/>
                     {this.state.movieName === undefined || this.state.secondMovieName === undefined ? (
-                        <p>Sorry man, I really need to step my filmography game up.</p>
+                        <p>SYou're probably not gonna know who I am.</p>
                     ) : (
                     <p>Hint: I was in {this.state.movieName} and {this.state.secondMovieName}.</p>)}
                 </div>
