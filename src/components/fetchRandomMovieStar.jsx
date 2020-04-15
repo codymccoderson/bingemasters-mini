@@ -1,6 +1,7 @@
 import React from 'react';
 import getRandomPage from '../utils/getRandomPage';
 import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 class FetchRandomMovieStar extends React.Component {
 
@@ -17,7 +18,7 @@ class FetchRandomMovieStar extends React.Component {
         count: 30,
         resetTimer: false,
         currentScore: 0,
-        // gameOver: false
+        gameOver: false
 
     };
 
@@ -68,10 +69,8 @@ class FetchRandomMovieStar extends React.Component {
         const { userGuessInput, actorName } = this.state;
         let { currentScore } = this.state;
         const submittedAnswer = userGuessInput;
-        
 
         if (submittedAnswer === actorName) {
-            // reload on correct guess
            this.setRandomPage();
            const newScore = (currentScore += 1);
            this.setState({
@@ -80,7 +79,6 @@ class FetchRandomMovieStar extends React.Component {
             currentScore: newScore
         }) 
         } else {
-            // stay on the same page if incorrect
             this.setState({
                 userGuessInput: ""
             })
@@ -109,18 +107,23 @@ class FetchRandomMovieStar extends React.Component {
         clearInterval(this.myInterval)
       }
 
+    takeYouToGameOver () {
+        let history = useHistory
+        if (this.state.count === 0) {
+           this.setState({
+               gameOver: true
+           })
+           if (this.state.gameOver === true) {
+               history.push('/gameover');
+           }
+        } 
+    }
+
     render() {
         const imageURL = `https://image.tmdb.org/t/p/w235_and_h235_bestv2${this.state.profilePath}`;
         const { count } = this.state;
         const { currentScore } = this.state;
-        // const { gameOver } = this.state;
-
-        // {gameOver === true ? (
-        //     <Route path='/gameover' component={GameOver}/>
-        // ) : (
-        //     {this.state.gameOver === false}
-        // )}
-
+    
         return(
             <div>
                 <h1>Bingemasters</h1>
