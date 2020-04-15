@@ -16,7 +16,8 @@ class FetchRandomMovieStar extends React.Component {
         secondMovieName: "",
         count: 30,
         resetTimer: false,
-        currentScore: 0
+        currentScore: 0,
+        // gameOver: false
 
     };
 
@@ -85,6 +86,7 @@ class FetchRandomMovieStar extends React.Component {
             })
             alert('WRONG');
         }
+
     }
 
     resetClock () {
@@ -111,6 +113,13 @@ class FetchRandomMovieStar extends React.Component {
         const imageURL = `https://image.tmdb.org/t/p/w235_and_h235_bestv2${this.state.profilePath}`;
         const { count } = this.state;
         const { currentScore } = this.state;
+        // const { gameOver } = this.state;
+
+        // {gameOver === true ? (
+        //     <Route path='/gameover' component={GameOver}/>
+        // ) : (
+        //     {this.state.gameOver === false}
+        // )}
 
         return(
             <div>

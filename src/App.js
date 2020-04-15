@@ -4,6 +4,7 @@ import HomePage from './components/HomePage';
 import FetchRandomMovieStar from './components/FetchRandomMovieStar';
 import GameOver from './components/GameOver';
 
+
 function App() {
   return (
     <Router>
