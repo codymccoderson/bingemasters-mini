@@ -9,16 +9,16 @@ class GameOver extends React.Component {
             <div>
                 <h1>Game Over.</h1>
                 <form>
-                <button type="submit">
                     <Link to={`/`}>
-                    Return Home
+                        <button type="submit">
+                            Return Home
+                        </button>
                     </Link>
-                </button>
-                <button type="submit">
                     <Link to={`guesswho`}>
-                    Play Again
+                        <button type="submit">
+                            Play Again
+                        </button>
                     </Link>
-                </button>
                 </form>       
             </div>
         )   

@@ -8,11 +8,11 @@ class HomePage extends React.Component {
         return(
             <div>
                 <h1>Bingemasters</h1>
-                <button type="submit">
-                    <Link to={`guesswho`}>
-                    Start Game
-                    </Link>
-                </button>
+                <Link to={`guesswho`}>
+                    <button type="submit">
+                        Start Game      
+                    </button>
+                </Link>
             </div>
         )   
     }   

@@ -1,7 +1,7 @@
 import React from 'react';
 import getRandomPage from '../utils/getRandomPage';
+import GameOver from './GameOver';
 import { Link } from 'react-router-dom';
-import { useHistory } from 'react-router-dom';
 
 class FetchRandomMovieStar extends React.Component {
 
@@ -45,6 +45,7 @@ class FetchRandomMovieStar extends React.Component {
           .replace(/[\u0300-\u036f]/g, "");
         const movieTheyWereIn = await actor.known_for[0].title;
         const secondMovieTheyWereIn = await actor.known_for[1].title;
+
         await this.setState({
           loading: false,
           randomPage: actor,
@@ -107,23 +108,13 @@ class FetchRandomMovieStar extends React.Component {
         clearInterval(this.myInterval)
       }
 
-    takeYouToGameOver () {
-        let history = useHistory
-        if (this.state.count === 0) {
-           this.setState({
-               gameOver: true
-           })
-           if (this.state.gameOver === true) {
-               history.push('/gameover');
-           }
-        } 
-    }
-
     render() {
         const imageURL = `https://image.tmdb.org/t/p/w235_and_h235_bestv2${this.state.profilePath}`;
         const { count } = this.state;
         const { currentScore } = this.state;
-    
+        
+        if (this.state.count >= 1) {
+
         return(
             <div>
                 <h1>Bingemasters</h1>
@@ -133,7 +124,7 @@ class FetchRandomMovieStar extends React.Component {
                 <div>
                     <img src={imageURL} alt="this... is a random actor"/>
                     {this.state.movieName === undefined || this.state.secondMovieName === undefined ? (
-                        <p>You're probably not gonna know who I am.</p>
+                    <p>You're probably not gonna know who I am.</p>
                     ) : (
                     <p>Hint: I was in {this.state.movieName} and {this.state.secondMovieName}.</p>)}
                 </div>
@@ -155,20 +146,22 @@ class FetchRandomMovieStar extends React.Component {
                 <div>
                     <h2>Time left: {count} seconds</h2>
                     {this.state.currentScore ? (
-                        <h3>Streak: {currentScore}</h3>
-                    ): (
-                        <h3 onSubmit={this.handleSubmit}>Streak: {currentScore}</h3>
+                    <h3>Streak: {currentScore}</h3>
+                    ) : (
+                    <h3 onSubmit={this.handleSubmit}>Streak: {currentScore}</h3>
                     )}    
                 </div>
                 <div>
-                    <button type="submit">
-                        <Link to={`/`}>
-                        Quit
-                        </Link>
-                    </button>
+                    <Link to={`/`}>
+                        <button type="submit">
+                            Quit
+                        </button>
+                    </Link>
                 </div>
             </div>
-        )
+        )} else {
+            return <GameOver/>
+        }
     }
 };
 
