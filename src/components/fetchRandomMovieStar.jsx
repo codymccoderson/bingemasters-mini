@@ -1,5 +1,6 @@
 import React from 'react';
 import getRandomPage from '../utils/getRandomPage';
+import { Link } from 'react-router-dom';
 
 class FetchRandomMovieStar extends React.Component {
 
@@ -113,6 +114,7 @@ class FetchRandomMovieStar extends React.Component {
 
         return(
             <div>
+                <h1>Bingemasters</h1>
                 {this.state.loading || !this.state.profilePath ? (
                 <div>loading...</div> 
                 ) : (
@@ -145,6 +147,13 @@ class FetchRandomMovieStar extends React.Component {
                     ): (
                         <h3 onSubmit={this.handleSubmit}>Streak: {currentScore}</h3>
                     )}    
+                </div>
+                <div>
+                    <button type="submit">
+                        <Link to={`/`}>
+                        Quit
+                        </Link>
+                    </button>
                 </div>
             </div>
         )
