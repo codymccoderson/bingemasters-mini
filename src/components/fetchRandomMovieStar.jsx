@@ -14,7 +14,8 @@ class FetchRandomMovieStar extends React.Component {
         movieName: "",
         secondMovieName: "",
         count: 30,
-        resetTimer: false
+        resetTimer: false,
+        currentScore: 0
 
     };
 
@@ -62,15 +63,19 @@ class FetchRandomMovieStar extends React.Component {
     
     handleSubmit = (event) => {
         event.preventDefault();
-        const { userGuessInput, actorName  } = this.state;
+        const { userGuessInput, actorName } = this.state;
+        let { currentScore } = this.state;
         const submittedAnswer = userGuessInput;
+        
 
         if (submittedAnswer === actorName) {
             // reload on correct guess
            this.setRandomPage();
+           const newScore = (currentScore += 1);
            this.setState({
             userGuessInput: "",
-            count: 30
+            count: 30,
+            currentScore: newScore
         }) 
         } else {
             // stay on the same page if incorrect
@@ -104,6 +109,7 @@ class FetchRandomMovieStar extends React.Component {
     render() {
         const imageURL = `https://image.tmdb.org/t/p/w235_and_h235_bestv2${this.state.profilePath}`;
         const { count } = this.state;
+        const { currentScore } = this.state;
 
         return(
             <div>
@@ -113,7 +119,7 @@ class FetchRandomMovieStar extends React.Component {
                 <div>
                     <img src={imageURL} alt="this... is a random actor"/>
                     {this.state.movieName === undefined || this.state.secondMovieName === undefined ? (
-                        <p>SYou're probably not gonna know who I am.</p>
+                        <p>You're probably not gonna know who I am.</p>
                     ) : (
                     <p>Hint: I was in {this.state.movieName} and {this.state.secondMovieName}.</p>)}
                 </div>
@@ -133,7 +139,12 @@ class FetchRandomMovieStar extends React.Component {
                     </form>
                 </div>
                 <div>
-                    <h1>Time left: {count} seconds</h1>
+                    <h2>Time left: {count} seconds</h2>
+                    {this.state.currentScore ? (
+                        <h3>Streak: {currentScore}</h3>
+                    ): (
+                        <h3 onSubmit={this.handleSubmit}>Streak: {currentScore}</h3>
+                    )}    
                 </div>
             </div>
         )
