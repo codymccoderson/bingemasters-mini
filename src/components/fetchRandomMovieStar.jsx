@@ -5,14 +5,13 @@ import styled from 'styled-components';
 import another_retro_tv from '../another_retro_tv.png';
 
 const HTMLWrapper = styled.div`
-    background-image: url(${another_retro_tv});
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    
+    background: url(${another_retro_tv}) no-repeat center center fixed;
+    background-size: 82vw 95vh;
+    height: 100vh;    
 `
 
 const AppWrapper = styled.div`
+    
     display: flex;
     align-items: center;
     flex-flow: column;

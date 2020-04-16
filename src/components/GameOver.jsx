@@ -1,16 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import confetti from '../confetti.jpg';
+import another_retro_tv from '../another_retro_tv.png';
 
 const GameOverBackground = styled.div`
-    background-image: url(${confetti});
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-color: rgba(255, 175, 80, 0.8);
-    background-blend-mode: hard-light;
-    height: 1500px;
+    background: url(${another_retro_tv}) no-repeat center center fixed;
+    background-size: 80vw 92vh;
+    height: 100vh; 
 `
 
 const StyledGameOver = styled.div`
