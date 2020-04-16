@@ -50,7 +50,7 @@ const ImageWrapper = styled.div`
 
 const FormWrapper = styled.div`
 `
-const TheActualForm = styled.div`
+const TheActualForm = styled.form`
     
     .userInput {
         font-size: 14px;
@@ -95,7 +95,7 @@ class FetchRandomMovieStar extends React.Component {
         actorName: "",
         movieName: "",
         secondMovieName: "",
-        count: 1000,
+        count: 1,
         resetTimer: false,
         currentScore: 0,
         gameOver: false

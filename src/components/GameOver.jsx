@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import another_retro_tv from '../another_retro_tv.png';
+import FetchRandomMovieStar from './FetchRandomMovieStar';
 
 const GameOverBackground = styled.div`
     background: url(${another_retro_tv}) no-repeat center center fixed;
@@ -15,8 +16,22 @@ const StyledGameOver = styled.div`
     width: 200px;
     height: 200px;
     margin: 0 auto;
+    padding-left: 0;
     position: relative;
-    top: 350px;
+    top: 330px;
+    right: 130px;
+
+    @media screen and (max-width: 700px) {
+        position: relative;
+        top: 330px;
+        left: 5px;
+    }
+
+    @media screen and (max-width: 550px) {
+        margin: 0 100px;
+        position: relative;
+        top: 330px;
+    }
 
     `;
 
@@ -27,21 +42,34 @@ const GameOverTitle = styled.h1`
 `;
 
 const PlayAgain = styled.button`
-    background: white;
+    background-color: pink;
     color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 18px;
     padding: 10px;
     margin: 5px;
     width: 150px;
-    border-color: black;
-    border-radius: 10px;
+    border-radius: 8px;
     box-sizing: border-box;
-    border-width: 2px;
+    border: solid 3px black;
+    position: relative;
+    right: 5px;
     `;
 
 class GameOver extends React.Component {
 
+    state = {
+        clicked: false
+    }
+
+    handleClick () {
+        this.setState({
+          clicked: true
+        })
+      }
+
     render() {
+        if (this.state.clicked === false) {
 
         return(
             <GameOverBackground>
@@ -50,11 +78,15 @@ class GameOver extends React.Component {
                         Game Over.
                     </GameOverTitle>
                     <PlayAgain 
-                        type="submit">Play Again
+                        type="submit"
+                        onClick={this.handleClick.bind(this)}
+                        >Play Again
                     </PlayAgain>          
                 </StyledGameOver>
             </GameOverBackground>
-        )   
+        )} else {
+            return <FetchRandomMovieStar/>
+        }   
     }   
 };
 
