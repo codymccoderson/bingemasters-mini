@@ -1,7 +1,88 @@
 import React from 'react';
 import getRandomPage from '../utils/getRandomPage';
 import GameOver from './GameOver';
-import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+import another_retro_tv from '../another_retro_tv.png';
+
+const HTMLWrapper = styled.div`
+    background-image: url(${another_retro_tv});
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    
+`
+
+const AppWrapper = styled.div`
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    position: relative;
+    top: 50px;
+`
+
+const MainTitle = styled.h1`
+    font-size: 64px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+`
+
+const ImageAndHintsWrapper = styled.div`
+
+    .hint {
+        font-size: 18px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        position: relative;
+        left: 11px;
+    }
+`
+
+const ImageWrapper = styled.div`
+
+
+    .theActorImg {
+        border-radius: 10px;
+        box-sizing: border-box;
+        border: solid 8px pink;
+    }
+    
+`
+
+const FormWrapper = styled.div`
+`
+const TheActualForm = styled.div`
+    
+    .userInput {
+        font-size: 14px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        border-radius: 4px;
+        box-sizing: border-box;
+        border: solid 3px black;
+        margin-bottom: 8px;
+        position: relative;
+        left: 26px
+    }
+
+    .userSubmitButton {
+        background-color: pink;
+        font-size: 14px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: black;
+        border-radius: 4px;
+        box-sizing: border-box;
+        border: solid 3px black;
+        position: relative;
+        left: 52px;
+
+    }
+`
+const TimeAndScoreWrapper = styled.div`
+
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+`
 
 class FetchRandomMovieStar extends React.Component {
 
@@ -15,7 +96,7 @@ class FetchRandomMovieStar extends React.Component {
         actorName: "",
         movieName: "",
         secondMovieName: "",
-        count: 30,
+        count: 1000,
         resetTimer: false,
         currentScore: 0,
         gameOver: false
@@ -116,49 +197,48 @@ class FetchRandomMovieStar extends React.Component {
         if (this.state.count >= 1) {
 
         return(
-            <div>
-                <h1>Bingemasters</h1>
-                {this.state.loading || !this.state.profilePath ? (
-                <div>loading...</div> 
-                ) : (
-                <div>
-                    <img src={imageURL} alt="this... is a random actor"/>
-                    {this.state.movieName === undefined || this.state.secondMovieName === undefined ? (
-                    <p>You're probably not gonna know who I am.</p>
+            <HTMLWrapper>
+                <AppWrapper>
+                    <MainTitle>
+                        Bingemasters
+                    </MainTitle>
+                    {this.state.loading || !this.state.profilePath ? (
+                    <div>loading...</div> 
                     ) : (
-                    <p>Hint: I was in {this.state.movieName} and {this.state.secondMovieName}.</p>)}
-                </div>
-                )}
-                <div>
-                    <form onSubmit={this.handleSubmit}>
-                        <input 
-                        type="text"
-                        placeholder="Name this actor."
-                        onChange={this.handleChange}
-                        value={this.state.userGuessInput}
-                        required
-                        />
-                        <button type="submit"
-                        >Final Answer?
-                        </button>
-                    </form>
-                </div>
-                <div>
-                    <h2>Time left: {count} seconds</h2>
-                    {this.state.currentScore ? (
-                    <h3>Streak: {currentScore}</h3>
-                    ) : (
-                    <h3 onSubmit={this.handleSubmit}>Streak: {currentScore}</h3>
-                    )}    
-                </div>
-                <div>
-                    <Link to={`/`}>
-                        <button type="submit">
-                            Quit
-                        </button>
-                    </Link>
-                </div>
-            </div>
+                    <ImageAndHintsWrapper>
+                        <ImageWrapper>
+                            <img className="theActorImg" src={imageURL} alt="this... is a random actor"/>
+                        </ImageWrapper>
+                        {this.state.movieName === undefined || this.state.secondMovieName === undefined ? (
+                        <p className="hint">You're probably not gonna know who I am.</p>
+                        ) : (
+                        <p className="hint">Hint: I was in {this.state.movieName} and {this.state.secondMovieName}.</p>)}
+                    </ImageAndHintsWrapper>
+                    )}
+                    <FormWrapper>
+                        <TheActualForm onSubmit={this.handleSubmit}>
+                            <input className="userInput" 
+                            type="text"
+                            placeholder="Name this actor."
+                            onChange={this.handleChange}
+                            value={this.state.userGuessInput}
+                            required
+                            />
+                            <button className="userSubmitButton"type="submit"
+                            >Final Answer?
+                            </button>
+                        </TheActualForm>
+                    </FormWrapper>
+                    <TimeAndScoreWrapper>
+                        <h2 className="time">Time left: {count}</h2>
+                        {this.state.currentScore ? (
+                        <h3 className="score">Streak: {currentScore}</h3>
+                        ) : (
+                        <h3 onSubmit={this.handleSubmit}>Streak: {currentScore}</h3>
+                        )}    
+                    </TimeAndScoreWrapper>
+                </AppWrapper>
+            </HTMLWrapper>
         )} else {
             return <GameOver/>
         }
