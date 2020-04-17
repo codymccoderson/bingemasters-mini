@@ -174,7 +174,7 @@ class FetchRandomMovieStar extends React.Component {
         actorName: "",
         movieName: "",
         secondMovieName: "",
-        count: 1000,
+        count: 1,
         resetTimer: false,
         currentScore: 0,
         gameOver: false

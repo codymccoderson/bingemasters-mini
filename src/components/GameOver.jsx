@@ -20,17 +20,37 @@ const StyledGameOver = styled.div`
     position: relative;
     top: 330px;
     right: 130px;
-
-    @media screen and (max-width: 700px) {
-        position: relative;
-        top: 330px;
-        left: 5px;
+    
+    @media screen and (max-width: 750px) {
+        margin: 0 360px;
     }
 
-    @media screen and (max-width: 550px) {
-        margin: 0 100px;
+    @media screen and (max-width: 700px) {
+        margin: 0 340px;
+    }
+
+    @media screen and (max-width: 675px) {
+        margin: 0 320px;
+    }
+
+    @media screen and (max-width: 650px) {
         position: relative;
-        top: 330px;
+        margin: 0 300px;
+    }
+
+    @media screen and (max-width: 625px) {
+        position: relative;
+        margin: 0 290px;
+    }
+
+    @media screen and (max-width: 600px) {
+        position: relative;
+        margin: 0 270px;
+    }
+
+    @media screen and (max-width: 575px) {
+        position: relative;
+        margin: 0 235px;
     }
 
     `;
