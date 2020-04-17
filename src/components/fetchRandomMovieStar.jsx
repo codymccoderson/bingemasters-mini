@@ -19,12 +19,90 @@ const AppWrapper = styled.div`
     height: 200px;
     margin: 0 auto;
     position: relative;
-    top: 50px;
+    top: 70px;
+    right: 150px;
+
+    @media screen and (max-width: 1150px) {
+        position: relative;
+        top: 80px;
+        margin: 0 485px;    
+    }
+
+    @media screen and (max-width: 1100px) {
+        position: relative;
+        top: 80px;
+        margin: 0 485px;
+    }
+
+    @media screen and (max-width: 1075px) {
+        margin: 0 485px;
+    }
+
+    @media screen and (max-width: 1025px) {
+        margin: 0 435px;
+    }
+
+    @media screen and (max-width: 950px) {
+        margin: 0 415px;
+    }
+
+    @media screen and (max-width: 875px) {
+        margin: 0 400px;
+    }
+
+    @media screen and (max-width: 800px) {
+        margin: 0 380px;
+    }
+
+    @media screen and (max-width: 750px) {
+        margin: 0 360px;
+    }
+
+    @media screen and (max-width: 700px) {
+        margin: 0 340px;
+    }
+
+    @media screen and (max-width: 675px) {
+        margin: 0 320px;
+    }
+
+    @media screen and (max-width: 650px) {
+        position: relative;
+        top: 120px;
+        margin: 0 300px;
+    }
+
+    @media screen and (max-width: 625px) {
+        position: relative;
+        top: 120px;
+        margin: 0 290px;
+    }
+
+    @media screen and (max-width: 600px) {
+        position: relative;
+        top: 120px;
+        margin: 0 270px;
+    }
+
+    @media screen and (max-width: 575px) {
+        position: relative;
+        top: 120px;
+        margin: 0 255px;
+    }
+
 `
 
 const MainTitle = styled.h1`
-    font-size: 64px;
+    font-size: 52px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    @media screen and (max-width: 1150px) {
+        font-size: 46px;
+    }
+
+    @media screen and (max-width: 650px) {
+        font-size: 26px;
+    }
 `
 
 const ImageAndHintsWrapper = styled.div`
@@ -81,6 +159,7 @@ const TimeAndScoreWrapper = styled.div`
     font-size: 16px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
+
 `
 
 class FetchRandomMovieStar extends React.Component {
@@ -95,7 +174,7 @@ class FetchRandomMovieStar extends React.Component {
         actorName: "",
         movieName: "",
         secondMovieName: "",
-        count: 1,
+        count: 1000,
         resetTimer: false,
         currentScore: 0,
         gameOver: false
