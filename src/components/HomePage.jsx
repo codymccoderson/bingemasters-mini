@@ -17,7 +17,7 @@ const StyledStartGame = styled.div`
     margin: 0 auto;
     padding-left: 0;
     position: relative;
-    top: 330px;
+    top: 230px;
     right: 130px;
 
     @media screen and (max-width: 1000px) {
@@ -76,7 +76,28 @@ const StyledStartGame = styled.div`
 const StartGameTitle = styled.h1`
     color: black;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 36px;
+    font-size: 96px;
+
+    @media screen and (max-width: 1380px) {
+        font-size: 78px;
+    }
+
+    @media screen and (max-width: 1280px) {
+        font-size: 72px;
+    }
+
+    @media screen and (max-width: 1180px) {
+        font-size: 60px;
+    }
+
+    @media screen and (max-width: 1080px) {
+        font-size: 48px;
+    }
+
+    @media screen and (max-width: 980px) {
+        font-size: 36px;
+    }
+    
 `;
 
 const ButtonLine = styled.div`
@@ -208,6 +229,6 @@ class HomePage extends React.Component {
         )} else {
             return <FetchRandomMovieStar/>   
     };
-}
+}}
 
 export default HomePage;
