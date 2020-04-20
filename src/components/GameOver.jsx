@@ -22,6 +22,69 @@ const StyledGameOver = styled.div`
     top: 330px;
     right: 130px;
 
+    @media screen and (max-width: 1000px) {
+        margin: 0 430px;
+    }
+
+    @media screen and (max-width: 950px) {
+        margin: 0 420px;
+    }
+
+    @media screen and (max-width: 900px) {
+        margin: 0 400px;
+    }
+
+    @media screen and (max-width: 850px) {
+        margin: 0 380px;
+    }
+
+    @media screen and (max-width: 800px) {
+        margin: 0 360px;
+    }
+
+    @media screen and (max-width: 750px) {
+        margin: 0 340px;
+    }
+
+    @media screen and (max-width: 700px) {
+        margin: 0 320px;
+    }
+
+    @media screen and (max-width: 675px) {
+        margin: 0 300px;
+    }
+
+    @media screen and (max-width: 650px) {
+        margin: 0 290px;
+    }
+
+    @media screen and (max-width: 625px) {
+        margin: 0 280px;
+    }
+
+    @media screen and (max-width: 600px) {
+        margin: 0 270px;
+    }
+
+    @media screen and (max-width: 585px) {
+        margin: 0 255px;
+    }
+
+    @media screen and (max-width: 575px) {
+        margin: 0 240px;
+    }
+`;
+
+const GameOverTitle = styled.h1`
+    color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 36px;
+`;
+
+const ButtonLine = styled.div`
+    display: flex;
+
+
     @media screen and (max-width: 750px) {
         margin: 0 360px;
     }
@@ -49,21 +112,6 @@ const StyledGameOver = styled.div`
     @media screen and (max-width: 575px) {
         margin: 0 235px;
     }
-`;
-
-const GameOverTitle = styled.h1`
-    color: black;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 36px;
-`;
-
-const ButtonLine = styled.div`
-    margin: 10px auto;
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    justify-content: flex-start;
-    max-width: 90%;
 `
 
 const PlayAgain = styled.button`
@@ -79,24 +127,117 @@ const PlayAgain = styled.button`
     border: solid 3px black;
     position: relative;
     right: 5px;
-    
+
+    @media screen and (max-width: 850px) {
+        font-size: 14px;
+        width: 120px;
+    }
+
+    @media screen and (max-width: 800px) {
+        font-size: 14px;
+        width: 120px;
+    }
+
+    @media screen and (max-width: 750px) {
+        font-size: 14px;
+        width: 120px;
+    }
+
+    @media screen and (max-width: 700px) {
+        font-size: 14px;
+        width: 120px;
+    }
+
+    @media screen and (max-width: 675px) {
+        font-size: 14px;
+        width: 120px;
+    }
+
+    @media screen and (max-width: 650px) {
+        font-size: 14px;
+        width: 120px;
+    }
+
+    @media screen and (max-width: 625px) {
+        font-size: 14px;
+        width: 120px;
+
+    }
+
+    @media screen and (max-width: 600px) {
+        font-size: 14px;
+        width: 110px;
+    }
+
+    @media screen and (max-width: 575px) {
+        font-size: 14px;
+        width: 100px;
+    }
+
 `;
 
 
 
-const GoHomeButton = styled.button`
+const ReturnHomeButton = styled.button`
     background-color: pink;
     color: black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 18px;
     padding: 10px;
     margin: 5px;
+    margin-right: 30px;
     width: 150px;
     border-radius: 8px;
     box-sizing: border-box;
     border: solid 3px black;
     position: relative;
     right: 5px;
+
+    @media screen and (max-width: 850px) {
+        font-size: 14px;
+        width: 120px;
+    }
+
+    @media screen and (max-width: 800px) {
+        font-size: 14px;
+        width: 120px;
+    }
+
+    @media screen and (max-width: 750px) {
+        font-size: 14px;
+        width: 120px;
+    }
+
+    @media screen and (max-width: 700px) {
+        font-size: 14px;
+        width: 120px;
+    }
+
+    @media screen and (max-width: 675px) {
+        font-size: 14px;
+        width: 120px;
+    }
+
+    @media screen and (max-width: 650px) {
+        font-size: 14px;
+        width: 120px;
+    }
+
+    @media screen and (max-width: 625px) {
+        font-size: 14px;
+        width: 120px;
+
+    }
+
+    @media screen and (max-width: 600px) {
+        font-size: 14px;
+        width: 110px;
+    }
+
+    @media screen and (max-width: 575px) {
+        font-size: 14px;
+        width: 100px;
+    }
 `;
 
 class GameOver extends React.Component {
@@ -130,11 +271,11 @@ class GameOver extends React.Component {
                         Game Over.
                     </GameOverTitle>
                     <ButtonLine>
-                        <GoHomeButton
+                        <ReturnHomeButton
                             type="submit"
                             onClick={this.handleClickHome.bind(this)}
                             >Return Home
-                        </GoHomeButton>
+                        </ReturnHomeButton>
                         <PlayAgain 
                             type="submit"
                             onClick={this.handleClick.bind(this)}
