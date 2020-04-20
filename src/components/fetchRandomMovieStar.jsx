@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import another_retro_tv from '../another_retro_tv.png';
 
 const HTMLWrapper = styled.div`
+
     background: url(${another_retro_tv}) no-repeat center center fixed;
     background-size: 82vw 95vh;
     height: 100vh;    
@@ -199,9 +200,7 @@ class FetchRandomMovieStar extends React.Component {
         }
         const randomActorPhotoPath = await actor.profile_path;
         const randomActorName = await actor.name;
-        const noAccentName = await randomActorName
-          .normalize("NFD")
-          .replace(/[\u0300-\u036f]/g, "");
+        const noAccentName = await randomActorName.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
         const movieTheyWereIn = await actor.known_for[0].title;
         const secondMovieTheyWereIn = await actor.known_for[1].title;
 
@@ -215,6 +214,7 @@ class FetchRandomMovieStar extends React.Component {
           secondMovieName: secondMovieTheyWereIn,
         });
         console.log(randomActorName);
+        console.log(noAccentName);
       }
     
 

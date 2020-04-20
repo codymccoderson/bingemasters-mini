@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import FetchRandomMovieStar from './FetchRandomMovieStar';
 
 class HomePage extends React.Component {
 
@@ -8,11 +8,9 @@ class HomePage extends React.Component {
         return(
             <div>
                 <h1>Bingemasters</h1>
-                <Link to={`guesswho`}>
-                    <button type="submit">
-                        Start Game      
-                    </button>
-                </Link>
+                <button type="submit">
+                    Start Game      
+                </button>
             </div>
         )   
     }   
