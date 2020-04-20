@@ -1,8 +1,8 @@
 import React from 'react';
-import FetchRandomMovieStar from './components/FetchRandomMovieStar';
+import HomePage from './components/HomePage';
 
 function App() {
-  return <FetchRandomMovieStar/>
+  return <HomePage/>
 }
 
 export default App;

@@ -262,6 +262,7 @@ class GameOver extends React.Component {
     }
 
     render() {
+        
         if (this.state.clicked === false && this.state.clickedHome === false) {
 
         return(
@@ -281,8 +282,7 @@ class GameOver extends React.Component {
                             onClick={this.handleClick.bind(this)}
                             >Play Again
                         </PlayAgain>  
-                    </ButtonLine>
-                            
+                    </ButtonLine>                 
                 </StyledGameOver>
             </GameOverBackground>
         )} else if (this.state.clicked === true && this.state.clickedHome === false) {
