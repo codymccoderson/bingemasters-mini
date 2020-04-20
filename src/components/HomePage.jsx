@@ -2,11 +2,19 @@ import React from 'react';
 import styled from 'styled-components';
 import another_retro_tv from '../another_retro_tv.png';
 import FetchRandomMovieStar from './FetchRandomMovieStar';
+import tv_static2 from '../tv_static2.jpg';
 
 const StartGameBackground = styled.div`
     background: url(${another_retro_tv}) no-repeat center center fixed;
     background-size: 80vw 92vh;
     height: 100vh; 
+
+    @media screen and (max-width: 850px) {
+        background: url(${tv_static2}) no-repeat center center fixed;
+        background-size: cover;
+        height: 100vh;
+
+    }
 `
 const StyledStartGame = styled.div`
     display: flex;
@@ -18,14 +26,30 @@ const StyledStartGame = styled.div`
     padding-left: 0;
     position: relative;
     top: 230px;
-    right: 130px;
+    right: 150px;
 
-    @media screen and (max-width: 1000px) {
-        margin: 0 430px;
+    @media screen and (max-width: 1380px) {
+        margin: 0 590px;
+
+    }
+    @media screen and (max-width: 1320px) {
+        margin: 0 545px;
+    }
+
+    @media screen and (max-width: 1180px) {
+        margin: 0 515px;
+    }
+
+    @media screen and (max-width: 1180px) {
+        margin: 0 500px;
+    }
+
+    @media screen and (max-width: 1080px) {
+        margin: 0 480px;
     }
 
     @media screen and (max-width: 950px) {
-        margin: 0 420px;
+        margin: 0 435px;
     }
 
     @media screen and (max-width: 900px) {
@@ -33,56 +57,64 @@ const StyledStartGame = styled.div`
     }
 
     @media screen and (max-width: 850px) {
-        margin: 0 380px;
+        margin: 0 450px;
+        display: flex;
+        align-items: center;
+        flex-flow: column;
+        width: 200px;
+        height: 200px;
+        padding-left: 0;
+        position: relative;
+        top: 230px;
     }
 
     @media screen and (max-width: 800px) {
-        margin: 0 360px;
+        margin: 0 410px;
     }
 
     @media screen and (max-width: 750px) {
-        margin: 0 340px;
+        margin: 0 400px;
     }
 
     @media screen and (max-width: 700px) {
-        margin: 0 320px;
+        margin: 0 380px;
     }
 
     @media screen and (max-width: 675px) {
-        margin: 0 300px;
+        margin: 0 350px;
     }
 
     @media screen and (max-width: 650px) {
-        margin: 0 290px;
+        margin: 0 340px;
     }
 
     @media screen and (max-width: 625px) {
-        margin: 0 280px;
+        margin: 0 330px;
     }
 
     @media screen and (max-width: 600px) {
-        margin: 0 270px;
+        margin: 0 320px;
     }
 
     @media screen and (max-width: 585px) {
-        margin: 0 255px;
+        margin: 0 310px;
     }
 
     @media screen and (max-width: 575px) {
-        margin: 0 240px;
+        margin: 0 300px;
     }
 `;
 
 const StartGameTitle = styled.h1`
     color: black;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 96px;
 
     @media screen and (max-width: 1380px) {
         font-size: 78px;
     }
 
-    @media screen and (max-width: 1280px) {
+    @media screen and (max-width: 1320px) {
         font-size: 72px;
     }
 
@@ -94,10 +126,13 @@ const StartGameTitle = styled.h1`
         font-size: 48px;
     }
 
-    @media screen and (max-width: 980px) {
-        font-size: 36px;
+    @media screen and (max-width: 850px) {
+        font-size: 60px;
     }
-    
+
+    @media screen and (max-width: 650px) {
+        font-size: 52px;
+    }  
 `;
 
 const ButtonLine = styled.div`
