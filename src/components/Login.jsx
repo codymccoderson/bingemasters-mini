@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import another_retro_tv from '../another_retro_tv.png';
 import HomePage from './HomePage';
 import tv_static2 from '../tv_static2.jpg';
+import GoogleLogin from 'react-google-login';
 
 const StartGameBackground = styled.div`
     background: url(${another_retro_tv}) no-repeat center center fixed;
@@ -137,88 +138,25 @@ const StartGameTitle = styled.h1`
 
 const FormWrapper = styled.div`
 
-    position: relative;
-    bottom: 50px;
 `
 const TheActualForm = styled.form`
-    
-    .userInputEmail {
-        font-size: 14px;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        border-radius: 4px;
-        box-sizing: border-box;
-        border: solid 3px black;
-        margin-bottom: 8px;
-        position: relative;
-        left: 26px
-    }
-
-    .userInputPassword {
-        font-size: 14px;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        border-radius: 4px;
-        box-sizing: border-box;
-        border: solid 3px black;
-        margin-bottom: 8px;
-        position: relative;
-        left: 26px
-    }
-
-    .userInputInitials {
-        font-size: 14px;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        border-radius: 4px;
-        box-sizing: border-box;
-        border: solid 3px black;
-        margin-bottom: 8px;
-        position: relative;
-        left: 26px
-    }
-
-    .userSubmitButton {
-        
-
-        border-radius: 4px;
-        box-sizing: border-box;
-        border: solid 3px black;
-        position: relative;
-        left: 52px;
-
-    }
 `
 
 class Login extends React.Component {
 
     state = {
-        userInputEmail: "",
-        userInputPassword: "",
-        userInputInitials: "",
-        clicked: false
-    }
-
-    handleChange = event => {
-        this.setState({
-            userInputEmail: event.target.value,
-            userInputPassword: event.target.value,
-            userInputInitials: event.target.value
-        })
-    }
-
-    handleSubmit = (event) => {
-        event.preventDefault();
-        const { userInputEmail, userInputPassword, userInputInitials } = this.state;
-    
+        isLoggedIn: false
     }
 
     handleClick () {
         this.setState({
-          clicked: true
+          isLoggedIn: true
         })
       }
 
     render() {
 
-        if (this.state.clicked === false) {
+        if (this.state.isLoggedIn === false) {
 
         return(
             <StartGameBackground>
@@ -227,31 +165,8 @@ class Login extends React.Component {
                         Bingemasters
                     </StartGameTitle>
                     <FormWrapper>
-                        <TheActualForm onSubmit={this.handleSubmit}>
-                            <input className="userInputEmail" 
-                            type="text"
-                            placeholder="Email"
-                            onChange={this.handleChange}
-                            value={this.state.userInputEmail}
-                            required
-                            />
-                            <input className="userInputPassword"
-                            type="text"
-                            placeholder="Password"
-                            onChange={this.handleChange}
-                            value={this.state.userInputPassword}
-                            required
-                            />
-                            <input className="userInputInitials"
-                            type="text"
-                            placeholder="Your Initials"
-                            onChange={this.handleChange}
-                            value={this.state.userInputInitials}
-                            required
-                            />
-                            <button className="userSubmitButton"type="submit" src=""
-                            >
-                            </button>
+                        <TheActualForm onSubmit={this.handleClick.bind(this)}>
+                            <GoogleLogin/>
                         </TheActualForm>
                     </FormWrapper>
                 </StyledStartGame>
