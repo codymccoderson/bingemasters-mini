@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import another_retro_tv from '../another_retro_tv.png';
-import FetchRandomMovieStar from './FetchRandomMovieStar';
-import Instructions from './Instructions';
+import HomePage from './HomePage';
 import tv_static2 from '../tv_static2.jpg';
 
 const StartGameBackground = styled.div`
@@ -21,12 +20,12 @@ const StyledStartGame = styled.div`
     display: flex;
     align-items: center;
     flex-flow: column;
-    width: 200px;
-    height: 200px;
+    width: 700px;
+    height: 700px;
     margin: 0 auto;
     padding-left: 0;
     position: relative;
-    top: 230px;
+    top: 180px;
     right: 150px;
 
     @media screen and (max-width: 1380px) {
@@ -106,35 +105,17 @@ const StyledStartGame = styled.div`
     }
 `;
 
-const StartGameTitle = styled.h1`
-    color: black;
+const HowToPlayTitle = styled.h1`
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 96px;
-
-    @media screen and (max-width: 1380px) {
-        font-size: 78px;
-    }
-
-    @media screen and (max-width: 1320px) {
-        font-size: 72px;
-    }
-
-    @media screen and (max-width: 1180px) {
-        font-size: 60px;
-    }
-
-    @media screen and (max-width: 1080px) {
-        font-size: 48px;
-    }
-
-    @media screen and (max-width: 850px) {
-        font-size: 60px;
-    }
-
-    @media screen and (max-width: 650px) {
-        font-size: 52px;
-    }  
+    font-size: 48px;
+    text-align: center;
 `;
+
+const WhatTheGameIs = styled.h2`
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+`
+
 
 const ButtonLine = styled.div`
     display: flex;
@@ -169,7 +150,7 @@ const ButtonLine = styled.div`
     }
 `
 
-const StartGameButton = styled.button`
+const ReturnHomeButton = styled.button`
     background-color: pink;
     color: black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -231,118 +212,59 @@ const StartGameButton = styled.button`
 
 `;
 
-const HowToPlayButton = styled.button`
-    background-color: pink;
-    color: black;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 18px;
-    padding: 10px;
-    margin: 5px;
-    width: 150px;
-    border-radius: 8px;
-    box-sizing: border-box;
-    border: solid 3px black;
-    position: relative;
-    right: 5px;
 
-    @media screen and (max-width: 850px) {
-        font-size: 14px;
-        width: 120px;
-    }
-
-    @media screen and (max-width: 800px) {
-        font-size: 14px;
-        width: 120px;
-    }
-
-    @media screen and (max-width: 750px) {
-        font-size: 14px;
-        width: 120px;
-    }
-
-    @media screen and (max-width: 700px) {
-        font-size: 14px;
-        width: 120px;
-    }
-
-    @media screen and (max-width: 675px) {
-        font-size: 14px;
-        width: 120px;
-    }
-
-    @media screen and (max-width: 650px) {
-        font-size: 14px;
-        width: 120px;
-    }
-
-    @media screen and (max-width: 625px) {
-        font-size: 14px;
-        width: 120px;
-
-    }
-
-    @media screen and (max-width: 600px) {
-        font-size: 14px;
-        width: 110px;
-    }
-
-    @media screen and (max-width: 575px) {
-        font-size: 14px;
-        width: 100px;
-    }
-
-`;
-
-class HomePage extends React.Component {
+class Instructions extends React.Component {
 
     state = {
-        clickedGame: false,
-        clickedHowTo: false
+        clickedReturn: false
     }
 
-    handleClickGame () {
+    handleClickReturn () {
         this.setState({
-          clickedGame: true,
-          clickedHowTo: false
+          clickedReturn: true
         })
       }
 
-    handleClickHowTo () {
-        this.setState({
-            clickedGame: false,
-            clickedHowTo: true
-        })
-    }
-
     render() {
 
-        if (this.state.clickedGame === false && this.state.clickedHowTo === false) {
+        if (this.state.clickedReturn === false) {
 
         return(
             <StartGameBackground>
                 <StyledStartGame>
-                    <StartGameTitle>
-                        Bingemasters
-                    </StartGameTitle>
+                    <div className="Instructions">
+                        <HowToPlayTitle>
+                            How To Play
+                        </HowToPlayTitle>
+                        <WhatTheGameIs>
+                            Bingemasters is a single player trivia game where you guess the name of the actor that appears on screen.
+                        </WhatTheGameIs>
+                        <ul>
+                            <li>
+                                <p>Players have 45 seconds to guess the actor in question.</p>
+                            </li>
+                            <li>
+                                <p>Players must correctly spell the actor's name in the input field to score a point.</p>
+                            </li>
+                            <li>
+                                <p>The goal of the game is to record the highest streak of correct answers and the highest streaks of all-time will be kept on the global leaderboard.</p>
+                            </li>
+                            <li>
+                                <p>The game will end if your timer reaches zero. But don't fret! You can just play again!</p>
+                            </li>
+                        </ul>
+                    </div>
                     <ButtonLine>
-                        <StartGameButton 
+                        <ReturnHomeButton 
                             type="submit"
-                            onClick={this.handleClickGame.bind(this)}
-                            >Start Game      
-                        </StartGameButton>
-                        <HowToPlayButton
-                            type="submit"
-                            onClick={this.handleClickHowTo.bind(this)}
-                            >How to Play   
-                        </HowToPlayButton>
+                            onClick={this.handleClickReturn.bind(this)}
+                            >Return Home      
+                        </ReturnHomeButton>
                     </ButtonLine>
                 </StyledStartGame>
             </StartGameBackground>
-        )} else if (this.state.clickedGame === true && this.state.clickedHowTo === false) {
-            return <FetchRandomMovieStar/>
-    }      else if (this.state.clickedGame === false && this.state.clickedHowTo === true) {
-            return <Instructions/>
-    }  
-}}
+        )} else {
+            return <HomePage/> 
+}}}
 
-export default HomePage;
+export default Instructions;

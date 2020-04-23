@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import another_retro_tv from '../another_retro_tv.png';
 import HomePage from './HomePage';
 import tv_static2 from '../tv_static2.jpg';
-import GoogleLogin from 'react-google-login';
+
 
 const StartGameBackground = styled.div`
     background: url(${another_retro_tv}) no-repeat center center fixed;
@@ -166,7 +166,7 @@ class Login extends React.Component {
                     </StartGameTitle>
                     <FormWrapper>
                         <TheActualForm onSubmit={this.handleClick.bind(this)}>
-                            <GoogleLogin/>
+                            <a href="auth/google">Sign In With Google</a>
                         </TheActualForm>
                     </FormWrapper>
                 </StyledStartGame>
