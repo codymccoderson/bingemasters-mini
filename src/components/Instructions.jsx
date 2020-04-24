@@ -154,8 +154,7 @@ const HowToPlayTitle = styled.h1`
 
     @media screen and (max-width: 850px) {
         font-size: 42px;
-        color: #666666;
-        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        color: black;
     }
 `;
 

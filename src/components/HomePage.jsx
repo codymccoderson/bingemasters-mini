@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import another_retro_tv from '../another_retro_tv.png';
 import FetchRandomMovieStar from './FetchRandomMovieStar';
 import Instructions from './Instructions';
+import Leaderboard from './Leaderboard';
 import tv_static2 from '../tv_static2.jpg';
 
 const StartGameBackground = styled.div`
@@ -175,7 +176,7 @@ const StartGameButton = styled.button`
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 18px;
     padding: 10px;
-    margin: 5px;
+    margin: 20px;
     width: 150px;
     border-radius: 8px;
     box-sizing: border-box;
@@ -186,37 +187,7 @@ const StartGameButton = styled.button`
     @media screen and (max-width: 850px) {
         font-size: 14px;
         width: 120px;
-    }
-
-    @media screen and (max-width: 800px) {
-        font-size: 14px;
-        width: 120px;
-    }
-
-    @media screen and (max-width: 750px) {
-        font-size: 14px;
-        width: 120px;
-    }
-
-    @media screen and (max-width: 700px) {
-        font-size: 14px;
-        width: 120px;
-    }
-
-    @media screen and (max-width: 675px) {
-        font-size: 14px;
-        width: 120px;
-    }
-
-    @media screen and (max-width: 650px) {
-        font-size: 14px;
-        width: 120px;
-    }
-
-    @media screen and (max-width: 625px) {
-        font-size: 14px;
-        width: 120px;
-
+        margin: 30px;
     }
 
     @media screen and (max-width: 600px) {
@@ -237,7 +208,7 @@ const HowToPlayButton = styled.button`
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 18px;
     padding: 10px;
-    margin: 5px;
+    margin: 20px;
     width: 150px;
     border-radius: 8px;
     box-sizing: border-box;
@@ -248,37 +219,7 @@ const HowToPlayButton = styled.button`
     @media screen and (max-width: 850px) {
         font-size: 14px;
         width: 120px;
-    }
-
-    @media screen and (max-width: 800px) {
-        font-size: 14px;
-        width: 120px;
-    }
-
-    @media screen and (max-width: 750px) {
-        font-size: 14px;
-        width: 120px;
-    }
-
-    @media screen and (max-width: 700px) {
-        font-size: 14px;
-        width: 120px;
-    }
-
-    @media screen and (max-width: 675px) {
-        font-size: 14px;
-        width: 120px;
-    }
-
-    @media screen and (max-width: 650px) {
-        font-size: 14px;
-        width: 120px;
-    }
-
-    @media screen and (max-width: 625px) {
-        font-size: 14px;
-        width: 120px;
-
+        margin: 30px;
     }
 
     @media screen and (max-width: 600px) {
@@ -293,30 +234,105 @@ const HowToPlayButton = styled.button`
 
 `;
 
+const ButtonLine2 = styled.div`
+    display: flex;
+
+
+    @media screen and (max-width: 750px) {
+        margin: 0 360px;
+    }
+
+    @media screen and (max-width: 700px) {
+        margin: 0 340px;
+    }
+
+    @media screen and (max-width: 675px) {
+        margin: 0 320px;
+    }
+
+    @media screen and (max-width: 650px) {
+        margin: 0 300px;
+    }
+
+    @media screen and (max-width: 625px) {
+        margin: 0 290px;
+    }
+
+    @media screen and (max-width: 600px) {
+        margin: 0 270px;
+    }
+
+    @media screen and (max-width: 575px) {
+        margin: 0 235px;
+    }
+`;
+
+const LeaderboardButton = styled.button`
+    background-color: pink;
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    padding: 10px;
+    margin: 5px;
+    width: 130px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    border: solid 3px black;
+    position: relative;
+    top: 10px;
+    right: 5px;
+
+    @media screen and (max-width: 850px) {
+        font-size: 14px;
+        width: 120px;
+    }
+
+    @media screen and (max-width: 600px) {
+        font-size: 14px;
+        width: 110px;
+    }
+
+    @media screen and (max-width: 575px) {
+        font-size: 14px;
+        width: 100px;
+    }
+`;
+
 class HomePage extends React.Component {
 
     state = {
         clickedGame: false,
-        clickedHowTo: false
+        clickedHowTo: false,
+        clickedLeaderboard: false
     }
 
     handleClickGame () {
         this.setState({
           clickedGame: true,
-          clickedHowTo: false
+          clickedHowTo: false,
+          clickedLeaderboard: false
         })
       }
 
     handleClickHowTo () {
         this.setState({
             clickedGame: false,
-            clickedHowTo: true
+            clickedHowTo: true,
+            clickedLeaderboard: false
+        })
+    }
+
+    handleClickLeaderboard () {
+        this.setState({
+            clickedGame: false,
+            clickedHowTo: false,
+            clickedLeaderboard: true
         })
     }
 
     render() {
 
-        if (this.state.clickedGame === false && this.state.clickedHowTo === false) {
+        if (this.state.clickedGame === false && this.state.clickedHowTo === false && this.state.clickedLeaderboard === false) {
 
         return(
             <StartGameBackground>
@@ -336,13 +352,22 @@ class HomePage extends React.Component {
                             >How to Play   
                         </HowToPlayButton>
                     </ButtonLine>
+                    <ButtonLine2>
+                        <LeaderboardButton
+                            type="submit"
+                            onClick={this.handleClickLeaderboard.bind(this)}
+                            >All-Time Leaderboard
+                        </LeaderboardButton>
+                    </ButtonLine2>
                 </StyledStartGame>
             </StartGameBackground>
-        )} else if (this.state.clickedGame === true && this.state.clickedHowTo === false) {
+        )} else if (this.state.clickedGame === true && this.state.clickedHowTo === false && this.state.clickedLeaderboard === false) {
             return <FetchRandomMovieStar/>
-    }      else if (this.state.clickedGame === false && this.state.clickedHowTo === true) {
+    }      else if (this.state.clickedGame === false && this.state.clickedHowTo === true && this.state.clickedLeaderboard === false) {
             return <Instructions/>
-    }  
+    }      else if (this.state.clickedGame === false && this.state.clickedHowTo === false && this.state.clickedLeaderboard === true) {
+            return <Leaderboard/>
+    }
 }}
 
 export default HomePage;
