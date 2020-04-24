@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import another_retro_tv from '../another_retro_tv.png';
 import FetchRandomMovieStar from './FetchRandomMovieStar';
 import HomePage from './HomePage';
+import MultipleChoice from './MultipleChoice';
 
 const GameOverBackground = styled.div`
     background: url(${another_retro_tv}) no-repeat center center fixed;
@@ -286,7 +287,7 @@ class GameOver extends React.Component {
                 </StyledGameOver>
             </GameOverBackground>
         )} else if (this.state.clicked === true && this.state.clickedHome === false) {
-            return <FetchRandomMovieStar/>
+            return <MultipleChoice/>
         }  else if (this.state.clicked === false && this.state.clickedHome === true) {
             return <HomePage/>
         } 
