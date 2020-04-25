@@ -132,8 +132,6 @@ const ImageWrapper = styled.div`
 
 const FormWrapper = styled.div`
 `
-const TheActualForm = styled.form`
-`
 
 const ButtonLine = styled.div`
     display: flex;
@@ -259,16 +257,16 @@ class MultipleChoice extends React.Component {
         console.log(correctActorName);
       }
     
-    handleSubmit = (event) => {
-        event.preventDefault();
+    handleClick = (event) => {
+
+        const value = event.target.value;
         const { actorName } = this.state;
         let { currentScore } = this.state;
 
-        if (event.target.value === actorName) {
+        if (value === actorName) {
            this.setNewPage();
            const newScore = (currentScore += 1);
            this.setState({
-            userGuessInput: "",
             count: 60,
             currentScore: newScore
         }) 
@@ -326,37 +324,39 @@ class MultipleChoice extends React.Component {
                     </ImageAndHintsWrapper>
                     )}
                     <FormWrapper>
-                        <TheActualForm onSubmit={this.handleSubmit}>
                             <ButtonLine>
                                 <OptionOne
                                 type="submit"
+                                onClick={this.handleClick}
                                 value={this.state.actorList[0]}
                                 >{this.state.actorList[0]}
                                 </OptionOne>
                                 <OptionTwo
                                 type="submit"
+                                onClick={this.handleClick}
                                 value={this.state.actorList[1]}
                                 >{this.state.actorList[1]}
                                 </OptionTwo>
                                 <OptionThree
                                 type="submit"
+                                onClick={this.handleClick}
                                 value={this.state.actorList[2]}
                                 >{this.state.actorList[2]}
                                 </OptionThree>
                                 <OptionFour
                                 type="submit"
+                                onClick={this.handleClick}
                                 value={this.state.actorList[3]}
                                 >{this.state.actorList[3]}
                                 </OptionFour>   
-                            </ButtonLine>   
-                        </TheActualForm>
+                            </ButtonLine> 
                     </FormWrapper>
                     <TimeAndScoreWrapper>
                         <h2 className="time">Time left: {count}</h2>
                         {this.state.currentScore ? (
                         <h3 className="score">Streak: {currentScore}</h3>
                         ) : (
-                        <h3 onSubmit={this.handleSubmit}>Streak: {currentScore}</h3>
+                        <h3 onClick={this.handleClick}>Streak: {currentScore}</h3>
                         )}    
                     </TimeAndScoreWrapper>
                 </AppWrapper>
