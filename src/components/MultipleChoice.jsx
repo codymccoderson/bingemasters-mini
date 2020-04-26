@@ -3,9 +3,7 @@ import GameOver from './GameOver';
 import styled from 'styled-components';
 import another_retro_tv from '../another_retro_tv.png';
 import getCorrectActor from '../utils/getCorrectActor';
-import getDudActor1 from '../utils/getDudActor1';
-import getDudActor2 from '../utils/getDudActor2';
-import getDudActor3 from '../utils/getDudActor3';
+import randomizer from '../utils/randomizer';
 
 const HTMLWrapper = styled.div`
 
@@ -206,21 +204,25 @@ class MultipleChoice extends React.Component {
     }
 
     async setNewPage() {
-        let correctActor = await getCorrectActor();
-        let length = (await Object.keys(correctActor.known_for).length) || 0;
+        let actors = await getCorrectActor();
+        let correctActor = await actors[randomizer(4,18)]
         try {
-          while ((await length) <= 2 || (await correctActor.profile_path) === null) {
-            correctActor = await getCorrectActor();
-            length = (await Object.keys(correctActor.known_for).length) || 0;
+          while (
+            await correctActor.known_for.length <= 2 &&
+            await correctActor.profile_path === null &&
+            correctActor.profile_path === undefined &&
+            await correctActor.known_for === undefined
+          ) {
+            correctActor = await actors[randomizer(4,18)]
           }
         } catch (error) {
           console.log(error);
         }
 
-        let dudActor1 = await getDudActor1(); 
-        let dudActor2 = await getDudActor2();
-        let dudActor3 = await getDudActor3();
-
+        let dudActor1 = await actors[1]
+        let dudActor2 = await actors[2]
+        let dudActor3 = await actors[3]
+    
         const correctActorPhotoPath = await correctActor.profile_path;
         const correctActorName = await correctActor.name;
         const movieTheyWereIn = await correctActor.known_for[0].title;
