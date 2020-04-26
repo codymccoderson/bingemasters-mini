@@ -19,8 +19,8 @@ const AppWrapper = styled.div`
     display: flex;
     align-items: center;
     flex-flow: column;
-    width: 500px;
-    height: 500px;
+    width: 200px;
+    height: 200px;
     margin: 0 auto;
     position: relative;
     top: 70px;
@@ -114,13 +114,10 @@ const ImageAndHintsWrapper = styled.div`
     .hint {
         font-size: 18px;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        position: relative;
-        left: 11px;
     }
 `
 
 const ImageWrapper = styled.div`
-
 
     .theActorImg {
         border-radius: 10px;
@@ -154,6 +151,7 @@ const OptionTwo = styled.button`
     border-radius: 4px;
     box-sizing: border-box;
     border: solid 3px black;
+    margin-left: 3em;
 `
 const OptionThree = styled.button`
     background-color: pink;
@@ -163,6 +161,7 @@ const OptionThree = styled.button`
     border-radius: 4px;
     box-sizing: border-box;
     border: solid 3px black;
+    margin-left: 3em;
 `
 const OptionFour = styled.button`
     background-color: pink;
@@ -172,6 +171,7 @@ const OptionFour = styled.button`
     border-radius: 4px;
     box-sizing: border-box;
     border: solid 3px black;
+    margin-left: 3em;
 `
 
 const TimeAndScoreWrapper = styled.div`
@@ -193,7 +193,7 @@ class MultipleChoice extends React.Component {
         actorName: "",
         movieName: "",
         secondMovieName: "",
-        count: 60,
+        count: 10000,
         resetTimer: false,
         currentScore: 0,
         wrongAnswer: false
@@ -207,10 +207,6 @@ class MultipleChoice extends React.Component {
 
     async setNewPage() {
         let correctActor = await getCorrectActor();
-        let dudActor1 = await getDudActor1();
-        let dudActor2 = await getDudActor2();
-        let dudActor3 = await getDudActor3();
-
         let length = (await Object.keys(correctActor.known_for).length) || 0;
         try {
           while ((await length) <= 2 || (await correctActor.profile_path) === null) {
@@ -220,6 +216,11 @@ class MultipleChoice extends React.Component {
         } catch (error) {
           console.log(error);
         }
+
+        let dudActor1 = await getDudActor1(); 
+        let dudActor2 = await getDudActor2();
+        let dudActor3 = await getDudActor3();
+
         const correctActorPhotoPath = await correctActor.profile_path;
         const correctActorName = await correctActor.name;
         const movieTheyWereIn = await correctActor.known_for[0].title;
@@ -324,32 +325,32 @@ class MultipleChoice extends React.Component {
                     </ImageAndHintsWrapper>
                     )}
                     <FormWrapper>
-                            <ButtonLine>
-                                <OptionOne
-                                type="submit"
-                                onClick={this.handleClick}
-                                value={this.state.actorList[0]}
-                                >{this.state.actorList[0]}
-                                </OptionOne>
-                                <OptionTwo
-                                type="submit"
-                                onClick={this.handleClick}
-                                value={this.state.actorList[1]}
-                                >{this.state.actorList[1]}
-                                </OptionTwo>
-                                <OptionThree
-                                type="submit"
-                                onClick={this.handleClick}
-                                value={this.state.actorList[2]}
-                                >{this.state.actorList[2]}
-                                </OptionThree>
-                                <OptionFour
-                                type="submit"
-                                onClick={this.handleClick}
-                                value={this.state.actorList[3]}
-                                >{this.state.actorList[3]}
-                                </OptionFour>   
-                            </ButtonLine> 
+                        <ButtonLine>
+                            <OptionOne
+                            type="submit"
+                            onClick={this.handleClick}
+                            value={this.state.actorList[0]}
+                            >{this.state.actorList[0]}
+                            </OptionOne>
+                            <OptionTwo
+                            type="submit"
+                            onClick={this.handleClick}
+                            value={this.state.actorList[1]}
+                            >{this.state.actorList[1]}
+                            </OptionTwo>
+                            <OptionThree
+                            type="submit"
+                            onClick={this.handleClick}
+                            value={this.state.actorList[2]}
+                            >{this.state.actorList[2]}
+                            </OptionThree>
+                            <OptionFour
+                            type="submit"
+                            onClick={this.handleClick}
+                            value={this.state.actorList[3]}
+                            >{this.state.actorList[3]}
+                            </OptionFour>   
+                        </ButtonLine> 
                     </FormWrapper>
                     <TimeAndScoreWrapper>
                         <h2 className="time">Time left: {count}</h2>
