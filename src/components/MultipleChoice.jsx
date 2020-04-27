@@ -2,7 +2,7 @@ import React from 'react';
 import GameOver from './GameOver';
 import styled from 'styled-components';
 import another_retro_tv from '../another_retro_tv.png';
-import getCorrectActor from '../utils/getCorrectActor';
+import getActorsPage from '../utils/getActorsPage';
 import randomizer from '../utils/randomizer';
 
 const HTMLWrapper = styled.div`
@@ -125,9 +125,6 @@ const ImageWrapper = styled.div`
     
 `
 
-const FormWrapper = styled.div`
-`
-
 const ButtonLine = styled.div`
     display: flex;
 `
@@ -204,24 +201,23 @@ class MultipleChoice extends React.Component {
     }
 
     async setNewPage() {
-        let actors = await getCorrectActor();
-        let correctActor = await actors[randomizer(4,18)]
-        try {
-          while (
-            await correctActor.known_for.length <= 2 &&
-            await correctActor.profile_path === null &&
-            correctActor.profile_path === undefined &&
-            await correctActor.known_for === undefined
-          ) {
-            correctActor = await actors[randomizer(4,18)]
-          }
-        } catch (error) {
-          console.log(error);
-        }
+        let actors = await getActorsPage();
+        let correctActor = await actors[randomizer(1,18)]
 
-        let dudActor1 = await actors[1]
-        let dudActor2 = await actors[2]
-        let dudActor3 = await actors[3]
+          while (
+            !correctActor.known_for ||
+            correctActor.known_for.length <= 2 ||
+            !correctActor.profile_path ||
+            correctActor.popularity <= 7
+          ) {
+            let actors = await getActorsPage();  
+            correctActor = await actors[randomizer(1,18)];
+          }
+        
+
+        let dudActor1 = await actors[(1,6)];
+        let dudActor2 = await actors[(7,12)];
+        let dudActor3 = await actors[(13,17)];
     
         const correctActorPhotoPath = await correctActor.profile_path;
         const correctActorName = await correctActor.name;
@@ -258,6 +254,8 @@ class MultipleChoice extends React.Component {
 
         });
         console.log(correctActorName);
+        console.log(correctActor.popularity);
+        console.log(correctActor.known_for_department);
       }
     
     handleClick = (event) => {
@@ -326,34 +324,32 @@ class MultipleChoice extends React.Component {
                         <p className="hint">Hint: I was in {this.state.movieName} and {this.state.secondMovieName}.</p>)}
                     </ImageAndHintsWrapper>
                     )}
-                    <FormWrapper>
-                        <ButtonLine>
-                            <OptionOne
-                            type="submit"
-                            onClick={this.handleClick}
-                            value={this.state.actorList[0]}
-                            >{this.state.actorList[0]}
-                            </OptionOne>
-                            <OptionTwo
-                            type="submit"
-                            onClick={this.handleClick}
-                            value={this.state.actorList[1]}
-                            >{this.state.actorList[1]}
-                            </OptionTwo>
-                            <OptionThree
-                            type="submit"
-                            onClick={this.handleClick}
-                            value={this.state.actorList[2]}
-                            >{this.state.actorList[2]}
-                            </OptionThree>
-                            <OptionFour
-                            type="submit"
-                            onClick={this.handleClick}
-                            value={this.state.actorList[3]}
-                            >{this.state.actorList[3]}
-                            </OptionFour>   
-                        </ButtonLine> 
-                    </FormWrapper>
+                    <ButtonLine>
+                        <OptionOne
+                        type="submit"
+                        onClick={this.handleClick}
+                        value={this.state.actorList[0]}
+                        >{this.state.actorList[0]}
+                        </OptionOne>
+                        <OptionTwo
+                        type="submit"
+                        onClick={this.handleClick}
+                        value={this.state.actorList[1]}
+                        >{this.state.actorList[1]}
+                        </OptionTwo>
+                        <OptionThree
+                        type="submit"
+                        onClick={this.handleClick}
+                        value={this.state.actorList[2]}
+                        >{this.state.actorList[2]}
+                        </OptionThree>
+                        <OptionFour
+                        type="submit"
+                        onClick={this.handleClick}
+                        value={this.state.actorList[3]}
+                        >{this.state.actorList[3]}
+                        </OptionFour>   
+                    </ButtonLine> 
                     <TimeAndScoreWrapper>
                         <h2 className="time">Time left: {count}</h2>
                         {this.state.currentScore ? (
