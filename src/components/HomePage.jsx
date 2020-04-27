@@ -10,8 +10,9 @@ const StartGameBackground = styled.div`
     background: url(${another_retro_tv}) no-repeat center center fixed;
     background-size: 80vw 92vh;
     height: 100vh; 
+    font-size: 16px;
 
-    @media screen and (max-width: 850px) {
+    @media screen and (max-width: 53.125em) {
         background: url(${tv_static2}) no-repeat center center fixed;
         background-size: cover;
         height: 100vh;
@@ -22,151 +23,139 @@ const StyledStartGame = styled.div`
     display: flex;
     align-items: center;
     flex-flow: column;
-    width: 200px;
-    height: 200px;
+    width: 12.5rem;
+    height: 12.5rem;
     margin: 0 auto;
-    padding-left: 0;
     position: relative;
-    top: 230px;
-    right: 150px;
+    top: 8rem;
+    right: 9rem;
 
-    @media screen and (max-width: 1380px) {
-        margin: 0 590px;
+    @media screen and (max-width: 86.25rem) {
+        margin: 0 36.875rem;
 
     }
-    @media screen and (max-width: 1320px) {
-        margin: 0 545px;
+    @media screen and (max-width: 82.5rem) {
+        margin: 0 34.5rem;
     }
 
-    @media screen and (max-width: 1180px) {
-        margin: 0 515px;
+    @media screen and (max-width: 73.75rem) {
+        margin: 0 32rem;
     }
 
-    @media screen and (max-width: 1180px) {
-        margin: 0 500px;
+    @media screen and (max-width: 67.5rem) {
+        margin: 0 28rem;
     }
 
-    @media screen and (max-width: 1080px) {
-        margin: 0 480px;
+    @media screen and (max-width: 59.375rem) {
+        margin: 0 26.3rem;
     }
 
-    @media screen and (max-width: 950px) {
-        margin: 0 435px;
+    @media screen and (max-width: 56.25rem) {
+        margin: 0 24.5rem;
     }
 
-    @media screen and (max-width: 900px) {
-        margin: 0 400px;
-    }
-
-    @media screen and (max-width: 850px) {
-        margin: 0 450px;
+    @media screen and (max-width: 53.125rem) {
+        margin: 0 28.5rem;
         display: flex;
         align-items: center;
         flex-flow: column;
-        width: 200px;
-        height: 200px;
-        padding-left: 0;
+        width: 12.5rem;
+        height: 12.5rem;
         position: relative;
-        top: 230px;
+        top: 8rem;
     }
 
-    @media screen and (max-width: 800px) {
-        margin: 0 410px;
+    @media screen and (max-width: 46.875rem) {
+        margin: 0 26.5rem;
     }
 
-    @media screen and (max-width: 750px) {
-        margin: 0 400px;
+    @media screen and (max-width: 43.75rem) {
+        margin: 0 24.5rem;
     }
 
-    @media screen and (max-width: 700px) {
-        margin: 0 380px;
+    @media screen and (max-width: 42.188rem) {
+        margin: 0 23rem;
     }
 
-    @media screen and (max-width: 675px) {
-        margin: 0 350px;
+    @media screen and (max-width: 40.625rem) {
+        margin: 0 21.5rem;
     }
 
-    @media screen and (max-width: 650px) {
-        margin: 0 340px;
+    @media screen and (max-width: 39.063rem) {
+        margin: 0 20rem;
     }
 
-    @media screen and (max-width: 625px) {
-        margin: 0 330px;
+    @media screen and (max-width: 37.5rem) {
+        margin: 0 19rem;
     }
 
-    @media screen and (max-width: 600px) {
-        margin: 0 320px;
-    }
-
-    @media screen and (max-width: 585px) {
-        margin: 0 310px;
-    }
-
-    @media screen and (max-width: 575px) {
-        margin: 0 300px;
+    @media screen and (max-width: 35.938rem) {
+        margin: 0 18rem;
     }
 `;
 
 const StartGameTitle = styled.h1`
     color: black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 96px;
+    font-size: 5rem;
 
-    @media screen and (max-width: 1380px) {
-        font-size: 78px;
+    @media screen and (max-width: 86.25rem) {
+        font-size: 4.875rem;
     }
 
-    @media screen and (max-width: 1320px) {
-        font-size: 72px;
+    @media screen and (max-width: 82.5rem) {
+        font-size: 4.5rem;
     }
 
-    @media screen and (max-width: 1180px) {
-        font-size: 60px;
+    @media screen and (max-width: 73.75rem) {
+        font-size: 3.75rem;
     }
 
-    @media screen and (max-width: 1080px) {
-        font-size: 48px;
+    @media screen and (max-width: 67.5rem) {
+        font-size: 3.5rem;
     }
 
-    @media screen and (max-width: 850px) {
-        font-size: 60px;
+    @media screen and (max-width: 53.125rem) {
+        font-size: 3.75rem;
     }
 
-    @media screen and (max-width: 650px) {
-        font-size: 52px;
+    @media screen and (max-width: 40.625rem) {
+        font-size: 3.25rem;
     }  
 `;
 
 const ButtonLine = styled.div`
     display: flex;
+    position: relative;
+    bottom: 1.25rem;
 
 
-    @media screen and (max-width: 750px) {
-        margin: 0 360px;
+    @media screen and (max-width: 46.875rem) {
+        margin: 0 22.5rem;
     }
 
-    @media screen and (max-width: 700px) {
-        margin: 0 340px;
+    @media screen and (max-width: 43.75rem) {
+        margin: 0 21.25rem;
     }
 
-    @media screen and (max-width: 675px) {
-        margin: 0 320px;
+    @media screen and (max-width: 42.188rem) {
+        margin: 0 20rem;
     }
 
-    @media screen and (max-width: 650px) {
-        margin: 0 300px;
+    @media screen and (max-width: 40.625rem) {
+        margin: 0 18.75rem;
     }
 
-    @media screen and (max-width: 625px) {
-        margin: 0 290px;
+    @media screen and (max-width: 39.063rem) {
+        margin: 0 18.125rem;
     }
 
-    @media screen and (max-width: 600px) {
-        margin: 0 270px;
+    @media screen and (max-width: 37.5rem) {
+        margin: 0 16.875rem;
     }
 
-    @media screen and (max-width: 575px) {
-        margin: 0 235px;
+    @media screen and (max-width: 35.938rem) {
+        margin: 0 14.688rem;
     }
 `
 
@@ -174,30 +163,27 @@ const StartGameButton = styled.button`
     background-color: pink;
     color: black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 18px;
-    padding: 10px;
-    margin: 20px;
-    width: 150px;
-    border-radius: 8px;
+    font-size: 0.875rem;
+    padding: 0.625rem;
+    margin: 1.25rem;
+    width: 6rem;
+    border-radius: 0.5rem;
     box-sizing: border-box;
-    border: solid 3px black;
+    border: solid 0.188rem black;
     position: relative;
-    right: 5px;
+    right: 1.813rem;
 
-    @media screen and (max-width: 850px) {
-        font-size: 14px;
-        width: 120px;
-        margin: 30px;
+    @media screen and (max-width: 53.125rem) {
+        width: 7.5rem;
+        margin: 1.875rem;
     }
 
-    @media screen and (max-width: 600px) {
-        font-size: 14px;
-        width: 110px;
+    @media screen and (max-width: 37.5rem) {
+        width: 6.875rem;
     }
 
-    @media screen and (max-width: 575px) {
-        font-size: 14px;
-        width: 100px;
+    @media screen and (max-width: 35.938rem) {
+        width: 6.25rem;
     }
 
 `;
@@ -206,64 +192,63 @@ const HowToPlayButton = styled.button`
     background-color: pink;
     color: black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 18px;
-    padding: 10px;
-    margin: 20px;
-    width: 150px;
-    border-radius: 8px;
+    font-size: 0.875rem;
+    padding: 0.625rem;
+    margin: 1.25rem;
+    width: 6rem;
+    border-radius: 0.5rem;
     box-sizing: border-box;
-    border: solid 3px black;
+    border: solid 0.188rem black;
     position: relative;
-    right: 5px;
+    left: 1.5rem;
 
-    @media screen and (max-width: 850px) {
-        font-size: 14px;
-        width: 120px;
-        margin: 30px;
+    @media screen and (max-width: 53.125rem) {
+        width: 7.5rem;
+        margin: 1.875rem;
     }
 
-    @media screen and (max-width: 600px) {
-        font-size: 14px;
-        width: 110px;
+    @media screen and (max-width: 37.5rem) {
+        width: 6.875rem;
     }
 
-    @media screen and (max-width: 575px) {
-        font-size: 14px;
-        width: 100px;
+    @media screen and (max-width: 35.938rem) {
+        width: 6.25rem;
     }
 
 `;
 
 const ButtonLine2 = styled.div`
     display: flex;
+    position: relative;
+    bottom: 1.25rem;
 
 
-    @media screen and (max-width: 750px) {
-        margin: 0 360px;
+    @media screen and (max-width: 46.875rem) {
+        margin: 0 22.5rem;
     }
 
-    @media screen and (max-width: 700px) {
-        margin: 0 340px;
+    @media screen and (max-width: 43.75rem) {
+        margin: 0 21.25rem;
     }
 
-    @media screen and (max-width: 675px) {
-        margin: 0 320px;
+    @media screen and (max-width: 42.188rem) {
+        margin: 0 20rem;
     }
 
-    @media screen and (max-width: 650px) {
-        margin: 0 300px;
+    @media screen and (max-width: 40.625rem) {
+        margin: 0 18.75rem;
     }
 
-    @media screen and (max-width: 625px) {
-        margin: 0 290px;
+    @media screen and (max-width: 39.063rem) {
+        margin: 0 18.125rem;
     }
 
-    @media screen and (max-width: 600px) {
-        margin: 0 270px;
+    @media screen and (max-width: 37.5rem) {
+        margin: 0 16.875rem;
     }
 
-    @media screen and (max-width: 575px) {
-        margin: 0 235px;
+    @media screen and (max-width: 35.938rem) {
+        margin: 0 14.688rem;
     }
 `;
 
@@ -271,30 +256,28 @@ const LeaderboardButton = styled.button`
     background-color: pink;
     color: black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 18px;
-    padding: 10px;
-    margin: 5px;
-    width: 130px;
-    border-radius: 8px;
+    font-size: 0.875rem;
+    padding: 0.625rem;
+    margin: 0.313rem;
+    width: 6rem;
+    border-radius: 0.5rem;
     box-sizing: border-box;
-    border: solid 3px black;
+    border: solid 0.188rem black;
     position: relative;
-    top: 10px;
-    right: 5px;
+    top: 0.625rem;
+    right: 0.313rem;
 
-    @media screen and (max-width: 850px) {
-        font-size: 14px;
-        width: 120px;
+    @media screen and (max-width: 53.125rem) {
+        font-size: 0.875rem;
+        width: 7.5rem;
     }
 
-    @media screen and (max-width: 600px) {
-        font-size: 14px;
-        width: 110px;
+    @media screen and (max-width: 37.5rem) {
+        width: 6.875rem;
     }
 
-    @media screen and (max-width: 575px) {
-        font-size: 14px;
-        width: 100px;
+    @media screen and (max-width: 35.938rem) {
+        width: 6.25rem;
     }
 `;
 
