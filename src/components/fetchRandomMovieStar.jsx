@@ -3,12 +3,20 @@ import getRandomPage from '../utils/getRandomPage';
 import GameOver from './GameOver';
 import styled from 'styled-components';
 import another_retro_tv from '../another_retro_tv.png';
+import tv_static2 from '../tv_static2.jpg';
 
 const HTMLWrapper = styled.div`
 
     background: url(${another_retro_tv}) no-repeat center center fixed;
     background-size: 82vw 95vh;
-    height: 100vh;    
+    height: 100vh;  
+
+    @media screen and (max-width: 53.125em) {
+        background: url(${tv_static2}) no-repeat center center fixed;
+        background-size: cover;
+        height: 100vh;
+
+    }  
 `
 
 const AppWrapper = styled.div`
