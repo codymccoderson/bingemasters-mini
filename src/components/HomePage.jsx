@@ -65,6 +65,14 @@ const StyledStartGame = styled.div`
         top: 8rem;
     }
 
+    @media screen and (max-width: 51rem) {
+        margin: 0 28rem;
+    }
+
+    @media screen and (max-width: 51rem) {
+        margin: 0 27.5rem;
+    }
+
     @media screen and (max-width: 46.875rem) {
         margin: 0 26.5rem;
     }

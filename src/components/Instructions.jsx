@@ -7,9 +7,10 @@ import tv_static2 from '../tv_static2.jpg';
 const StartGameBackground = styled.div`
     background: url(${another_retro_tv}) no-repeat center center fixed;
     background-size: 80vw 92vh;
-    height: 100vh; 
+    height: 100vh;
+    font-size: 16px; 
 
-    @media screen and (max-width: 850px) {
+    @media screen and (max-width: 53.125rem) {
         background: url(${tv_static2}) no-repeat center center fixed;
         background-size: cover;
         height: 100vh;
@@ -20,154 +21,156 @@ const StyledStartGame = styled.div`
     display: flex;
     align-items: center;
     flex-flow: column;
-    width: 700px;
-    height: 700px;
+    width: 43.75rem;
+    height: 43.75rem;
     margin: 0 auto;
     padding-left: 0;
     position: relative;
-    top: 150px;
-    right: 150px;
+    top: 7.8rem;
+    right: 9.375rem;
 
-    @media screen and (max-width: 1430px) {
-        margin: 0 390px;
-        width: 700px;
-        height: 700px;
-
-    }
-
-    @media screen and (max-width: 1400px) {
-        margin: 0 380px;
-        width: 660px;
-        height: 660px;
-
-    }
-    @media screen and (max-width: 1390px) {
-        margin: 0 370px;
-        width: 620px;
-        height: 620px;
-    }
-
-    @media screen and (max-width: 1340px) {
-        margin: 0 370px;
-        width: 580px;
-        height: 580px;
-    }
-
-    @media screen and (max-width: 1290px) {
-        margin: 0 360px;
-        width: 540px;
-        height: 540px;
-    }
-
-    @media screen and (max-width: 1240px) {
-        margin: 0 360px;
-        width: 500px;
-        height: 500px;
-    }
-
-    @media screen and (max-width: 1190px) {
-        margin: 0 380px;
-        width: 460px;
-        height: 460px;
-    }
-
-    @media screen and (max-width: 1140px) {
-        margin: 0 380px;
-        width: 420px;
-        height: 420px;
-    }
-
-    @media screen and (max-width: 1090px) {
-        margin: 0 340px;
-        width: 420px;
-        height: 420px;
-    }
-
-    @media screen and (max-width: 1040px) {
-        margin: 0 340px;
-        width: 400px;
-        height: 400px;
-    }
-
-    @media screen and (max-width: 990px) {
-        margin: 0 330px;
-        width: 380px;
-        height: 380px;
-    }
-
-    @media screen and (max-width: 940px) {
-        margin: 0 330px;
-        width: 360px;
-        height: 360px;
-    }
-
-    @media screen and (max-width: 890px) {
-        margin: 0 320px;
-        width: 340px;
-        height: 340px;
-    }
-
-    @media screen and (max-width: 850px) {
-        margin: 0 320px;
-        width: 480px;
-        height: 480px;
-    }
-
-    @media screen and (max-width: 840px) {
-        margin: 0 280px;
+    @media screen and (max-width: 91rem) {
+        margin: 0 25rem;
+        width: 43.75rem;
+        height: 43.75rem;
 
     }
 
-    @media screen and (max-width: 790px) {
-        margin: 0 260px;
-        width: 460px;
-        height: 460px;
+    @media screen and (max-width: 89rem) {
+        margin: 0 24.5rem;
+        width: 41.25rem;
+        height: 41.25rem;
+
+    }
+    @media screen and (max-width: 87.5rem) {
+        margin: 0 24rem;
+        width: 38.75rem;
+        height: 38.75rem;
     }
 
-    @media screen and (max-width: 740px) {
-        margin: 0 240px;
-        width: 440px;
-        height: 440px;
+    @media screen and (max-width: 83.75rem) {
+        margin: 0 25rem;
+        width: 36.25rem;
+        height: 36.25rem;
     }
 
-    @media screen and (max-width: 690px) {
-        margin: 0 220px;
-        width: 420px;
-        height: 420px;
+    @media screen and (max-width: 80.625rem) {
+        margin: 0 24rem;
+        width: 33.75rem;
+        height: 33.75rem;
     }
 
-    @media screen and (max-width: 640px) {
-        margin: 0 200px;
-        width: 400px;
-        height: 400px;
+    @media screen and (max-width: 77.5rem) {
+        margin: 0 22.5rem;
+        width: 31.25rem;
+        height: 31.25rem;
+    }
+
+    @media screen and (max-width: 74.375rem) {
+        margin: 0 25rem;
+        width: 28.75rem;
+        height: 28.75rem;
+    }
+
+    @media screen and (max-width: 71.25rem) {
+        margin: 0 24rem;
+        width: 26.25rem;
+        height: 26.25rem;
+    }
+
+    @media screen and (max-width: 68.125rem) {
+        margin: 0 23rem;
+    }
+
+    @media screen and (max-width: 65rem) {
+        position: relative;
+        top: 5rem;
+        margin: 0 22.5rem;
+        width: 25rem;
+        height: 25rem;
+    }
+
+    @media screen and (max-width: 61.875rem) {
+        position: relative;
+        top: 5rem;
+        margin: 0 22rem;
+        width: 23.75rem;
+        height: 23.75rem;
+    }
+
+    @media screen and (max-width: 58.75rem) {
+        position: relative;
+        top: 5rem;
+        margin: 0 21.5rem;
+        width: 22.5rem;
+        height: 22.5rem;
+    }
+
+    @media screen and (max-width: 55.625rem) {
+        position: relative;
+        top: 5rem;
+        margin: 0 21rem;
+        width: 21.25rem;
+        height: 21.25rem;
+    }
+
+    @media screen and (max-width: 53.125rem) {
+        margin: 0 20rem;
+        width: 30rem;
+        height: 30rem;
+    }
+
+    @media screen and (max-width: 52.5rem) {
+        margin: 0 17.5rem;
+
+    }
+
+    @media screen and (max-width: 49.375rem) {
+        margin: 0 16.25rem;
+        width: 28.75rem;
+        height: 28.75rem;
+    }
+
+    @media screen and (max-width: 46.25rem) {
+        margin: 0 15rem;
+        width: 27.5rem;
+        height: 27.5rem;
+    }
+
+    @media screen and (max-width: 43.125rem) {
+        margin: 0 13.75rem;
+        width: 26.25rem;
+        height: 26.25rem;
+    }
+
+    @media screen and (max-width: 40rem) {
+        margin: 0 12.5rem;
+        width: 25rem;
+        height: 25rem;
     }
 `;
 
 const HowToPlayTitle = styled.h1`
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 48px;
+    font-size: 1.8rem;
     text-align: center;
 
-    @media screen and (max-width: 1400px) {
-        font-size: 42px;
-    }
-
-    @media screen and (max-width: 850px) {
-        font-size: 42px;
-        color: black;
+    @media screen and (max-width: 87.5rem) {
+        font-size: 2.25rem;
     }
 `;
 
 const WhatTheGameIs = styled.h2`
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 24px;
+    font-size: 1.2rem;
+    position: relative;
+    bottom: 1.5rem;
 
-    @media screen and (max-width: 1400px) {
-        font-size: 22px;
+    @media screen and (max-width: 87.5rem) {
+        font-size: 1.375rem;
     }
 
-    @media screen and (max-width: 850px) {
-        font-size: 22px;
+    @media screen and (max-width: 53.125rem) {
         font-weight: bolder;
         color: #b7e6f0;
         text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
@@ -175,16 +178,17 @@ const WhatTheGameIs = styled.h2`
     
 `
 
+const UnorderedList = styled.ul`
+    position: relative;
+    right: 1.3rem;
+    bottom: 3.5rem;
+`
+
 const Text = styled.p`
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 18px;
+    font-size: 0.875rem;
 
-    @media screen and (max-width: 1400px) {
-        font-size: 16px;
-    }
-
-    @media screen and (max-width: 850px) {
-        font-size: 16px;
+    @media screen and (max-width: 53.125rem) {
         font-weight: bolder;
         color: pink;
         text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
@@ -193,34 +197,36 @@ const Text = styled.p`
 
 const ButtonLine = styled.div`
     display: flex;
+    position: relative;
+    bottom: 4.5rem;
 
 
-    @media screen and (max-width: 750px) {
-        margin: 0 360px;
+    @media screen and (max-width: 46.875rem) {
+        margin: 0 22.5rem;
     }
 
-    @media screen and (max-width: 700px) {
-        margin: 0 340px;
+    @media screen and (max-width: 43.75rem) {
+        margin: 0 21.25rem;
     }
 
-    @media screen and (max-width: 675px) {
-        margin: 0 320px;
+    @media screen and (max-width: 42.188rem) {
+        margin: 0 20rem;
     }
 
-    @media screen and (max-width: 650px) {
-        margin: 0 300px;
+    @media screen and (max-width: 40.625rem) {
+        margin: 0 18.75rem;
     }
 
-    @media screen and (max-width: 625px) {
-        margin: 0 290px;
+    @media screen and (max-width: 39.063rem) {
+        margin: 0 18.125rem;
     }
 
-    @media screen and (max-width: 600px) {
-        margin: 0 270px;
+    @media screen and (max-width: 37.5rem) {
+        margin: 0 16.875rem;
     }
 
-    @media screen and (max-width: 575px) {
-        margin: 0 235px;
+    @media screen and (max-width: 35.938rem) {
+        margin: 0 14.688rem;
     }
 `
 
@@ -228,60 +234,27 @@ const ReturnHomeButton = styled.button`
     background-color: pink;
     color: black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 18px;
-    padding: 10px;
-    margin: 5px;
-    width: 150px;
-    border-radius: 8px;
+    font-size: 0.875rem;
+    padding: 0.5rem;
+    margin: 0.2rem;
+    width: 6.5rem;
+    border-radius: 0.5rem;
     box-sizing: border-box;
-    border: solid 3px black;
+    border: solid 0.188rem black;
     position: relative;
-    right: 5px;
+    right: 0.313rem;
 
-    @media screen and (max-width: 850px) {
-        font-size: 14px;
-        width: 120px;
+    @media screen and (max-width: 53.125rem) {
+        font-size: 0.875rem;
+        width: 7.5rem;
     }
 
-    @media screen and (max-width: 800px) {
-        font-size: 14px;
-        width: 120px;
+    @media screen and (max-width: 37.5rem) {
+        width: 6.875rem;
     }
 
-    @media screen and (max-width: 750px) {
-        font-size: 14px;
-        width: 120px;
-    }
-
-    @media screen and (max-width: 700px) {
-        font-size: 14px;
-        width: 120px;
-    }
-
-    @media screen and (max-width: 675px) {
-        font-size: 14px;
-        width: 120px;
-    }
-
-    @media screen and (max-width: 650px) {
-        font-size: 14px;
-        width: 120px;
-    }
-
-    @media screen and (max-width: 625px) {
-        font-size: 14px;
-        width: 120px;
-
-    }
-
-    @media screen and (max-width: 600px) {
-        font-size: 14px;
-        width: 110px;
-    }
-
-    @media screen and (max-width: 575px) {
-        font-size: 14px;
-        width: 100px;
+    @media screen and (max-width: 35.936rem) {
+        width: 6.25rem;
     }
 
 `;
@@ -305,36 +278,34 @@ class Instructions extends React.Component {
         return(
             <StartGameBackground>
                 <StyledStartGame>
-                    <div className="Instructions">
-                        <HowToPlayTitle>
-                            How To Play
-                        </HowToPlayTitle>
-                        <WhatTheGameIs>
-                            Bingemasters is a single player trivia game where players guess the name of the actor that appears on screen.
-                        </WhatTheGameIs>
-                        <ul>
-                            <li>
-                                <Text>
-                                    Players have 45 seconds to guess the actor in question.
-                                </Text>
-                            </li>
-                            <li>
-                                <Text>
-                                    Players must correctly spell the actor's name in the input field to score a point.
-                                </Text>
-                            </li>
-                            <li>
-                                <Text>
-                                    The goal of the game is to record the highest streak of correct answers and the highest streaks of all-time will be kept on the global leaderboard.
-                                </Text>
-                            </li>
-                            <li>
-                                <Text>
-                                    The game will end if your timer reaches zero. But don't fret! You can just play again!
-                                </Text>
-                            </li>
-                        </ul>
-                    </div>
+                    <HowToPlayTitle>
+                        How To Play
+                    </HowToPlayTitle>
+                    <WhatTheGameIs>
+                    Bingemasters is a single player trivia game where players guess the name of the actor that appears on screen.
+                    </WhatTheGameIs>
+                    <UnorderedList>
+                        <li>
+                            <Text>
+                                Players have 60 seconds to guess the actor in question. Depending on the difficulty, you will have either mulitple choice options to choose from or an input field to enter the actor's name.
+                            </Text>
+                        </li>
+                        <li>
+                            <Text>
+                                Correct answers are worth 1 point and spelling is of vital importance when typing in names. The slightest error will be punished mercilessly!
+                            </Text>
+                        </li>
+                        <li>
+                            <Text>
+                                The goal of the game is to record the highest streak of correct answers and the highest streaks of all-time will be kept on the global leaderboard.
+                            </Text>
+                        </li>
+                        <li>
+                            <Text>
+                                The game will end if your timer reaches zero or you select the wrong actor in multiple choice. But don't fret! You can just play again!
+                            </Text>
+                        </li>
+                        </UnorderedList>
                     <ButtonLine>
                         <ReturnHomeButton 
                             type="submit"
