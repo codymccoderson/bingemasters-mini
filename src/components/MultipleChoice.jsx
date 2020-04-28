@@ -4,12 +4,43 @@ import styled from 'styled-components';
 import another_retro_tv from '../another_retro_tv.png';
 import getActorsPage from '../utils/getActorsPage';
 import randomizer from '../utils/randomizer';
+import tv_static2 from '../tv_static2.jpg';
 
 const HTMLWrapper = styled.div`
 
     background: url(${another_retro_tv}) no-repeat center center fixed;
     background-size: 82vw 95vh;
-    height: 100vh;    
+    height: 100vh;
+    font-size: 16px;
+
+    @media screen and (max-width: 53.125rem) {
+        background: url(${tv_static2}) no-repeat center center fixed;
+        background-size: cover;
+        height: 100vh;
+
+    }      
+`
+
+const CardWrapper = styled.div`
+    @media screen and (max-width: 53.125rem) {
+        display: flex;
+        align-items: center;
+        flex-flow: column;
+        width: 30rem;
+        height: 34.5rem;
+        margin: 0 auto;
+        position: relative;
+        top: 5rem;
+        right: 1rem;
+        background-color: whitesmoke;
+        border-radius: 0.875rem;
+        box-sizing: border-box;
+        border: solid 0.2rem black;
+    }
+
+    @media screen and (max-width: 36rem) {
+        margin: 0 1.5rem;   
+    }     
 `
 
 const AppWrapper = styled.div`
@@ -17,164 +48,196 @@ const AppWrapper = styled.div`
     display: flex;
     align-items: center;
     flex-flow: column;
-    width: 200px;
-    height: 200px;
+    width: 12.5rem;
+    height: 12.5rem;
     margin: 0 auto;
     position: relative;
-    top: 70px;
-    right: 150px;
+    top: 6rem;
+    right: 9.375rem;
 
-    @media screen and (max-width: 1150px) {
+    @media screen and (max-width: 71.875rem) {
         position: relative;
-        top: 80px;
-        margin: 0 485px;    
+        top: 5rem;
+        margin: 0 30.313rem;    
     }
 
-    @media screen and (max-width: 1100px) {
+    @media screen and (max-width: 64.063rem) {
+        margin: 0 27.188rem;
+    }
+
+    @media screen and (max-width: 59.375rem) {
+        margin: 0 25.938rem;
+    }
+
+    @media screen and (max-width: 54.688rem) {
+        margin: 0 25rem;
+    }
+
+    @media screen and (max-width: 53.125rem) {
+        margin: 0 29rem;
         position: relative;
-        top: 80px;
-        margin: 0 485px;
+        right: 0.1rem;
+        top: -1.8rem;
     }
 
-    @media screen and (max-width: 1075px) {
-        margin: 0 485px;
+    @media screen and (max-width: 50rem) {
+        margin: 0 23.75rem;
     }
 
-    @media screen and (max-width: 1025px) {
-        margin: 0 435px;
+    @media screen and (max-width: 46.875rem) {
+        margin: 0 22.5rem;
     }
 
-    @media screen and (max-width: 950px) {
-        margin: 0 415px;
+    @media screen and (max-width: 43.75rem) {
+        margin: 0 21.25rem;
     }
 
-    @media screen and (max-width: 875px) {
-        margin: 0 400px;
+    @media screen and (max-width: 42.188rem) {
+        margin: 0 20rem;
     }
 
-    @media screen and (max-width: 800px) {
-        margin: 0 380px;
+    @media screen and (max-width: 40.625rem) {
+        margin: 0 18.75rem;
     }
 
-    @media screen and (max-width: 750px) {
-        margin: 0 360px;
+    @media screen and (max-width: 39.063rem) {
+        margin: 0 18.125rem;
     }
 
-    @media screen and (max-width: 700px) {
-        margin: 0 340px;
+    @media screen and (max-width: 37.5rem) {
+        margin: 0 16.875rem;
     }
 
-    @media screen and (max-width: 675px) {
-        margin: 0 320px;
-    }
-
-    @media screen and (max-width: 650px) {
-        position: relative;
-        top: 120px;
-        margin: 0 300px;
-    }
-
-    @media screen and (max-width: 625px) {
-        position: relative;
-        top: 120px;
-        margin: 0 290px;
-    }
-
-    @media screen and (max-width: 600px) {
-        position: relative;
-        top: 120px;
-        margin: 0 270px;
-    }
-
-    @media screen and (max-width: 575px) {
-        position: relative;
-        top: 120px;
-        margin: 0 255px;
+    @media screen and (max-width: 35.938rem) {
+        margin: 0 15.938rem;
     }
 
 `
 
 const MainTitle = styled.h1`
-    font-size: 52px;
+    font-size: 2.2rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
-    @media screen and (max-width: 1150px) {
-        font-size: 46px;
-    }
-
-    @media screen and (max-width: 650px) {
-        font-size: 26px;
+    @media screen and (max-width: 53.125rem) {
+        font-size: 2.5rem;
+        font-weight: bolder;
+        color: pink;
+        text-shadow: -1.1px 0 black, 0 1.1px black, 1.1px 0 black, 0 -1.1px black;
     }
 `
 
 const ImageAndHintsWrapper = styled.div`
+    position: relative;
+    bottom: 1rem;
 
     .hint {
-        font-size: 18px;
+        font-size: 1rem;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        position: relative;
+        left: 0.5rem;
+        bottom: 1rem;
+
+        @media screen and (max-width: 53.125rem) {
+            font-weight: bolder;
+            color: pink;
+            text-shadow: -1.1px 0 black, 0 1.1px black, 1.1px 0 black, 0 -1.1px black;
+        }
     }
 `
 
 const ImageWrapper = styled.div`
 
+
     .theActorImg {
-        border-radius: 10px;
+        border-radius: 0.625rem;
         box-sizing: border-box;
-        border: solid 8px pink;
-    }
-    
+        border: solid 0.5rem pink;
+
+        @media screen and (max-width: 53.125rem) {
+            border: solid 0.5rem black;
+        }
+    }   
 `
 
 const ButtonLine = styled.div`
     display: flex;
+    position: relative;
+    bottom: 2.5rem;
 `
 
 const OptionOne = styled.button`
     background-color: pink;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: black;
-    border-radius: 4px;
+    border-radius: 0.25rem;
     box-sizing: border-box;
-    border: solid 3px black;
+    border: solid 0.188rem black;
+    margin-right: 2.3rem;
 `
 const OptionTwo = styled.button`
     background-color: pink;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: black;
-    border-radius: 4px;
+    border-radius: 0.25rem;
     box-sizing: border-box;
-    border: solid 3px black;
-    margin-left: 3em;
+    border: solid 0.188rem black;
+    margin-right: 2.3rem;
 `
 const OptionThree = styled.button`
     background-color: pink;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: black;
-    border-radius: 4px;
+    border-radius: 0.25rem;
     box-sizing: border-box;
-    border: solid 3px black;
-    margin-left: 3em;
+    border: solid 0.188rem black;
+    margin-right: 2.3rem;
 `
 const OptionFour = styled.button`
     background-color: pink;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: black;
-    border-radius: 4px;
+    border-radius: 0.25rem;
     box-sizing: border-box;
-    border: solid 3px black;
-    margin-left: 3em;
+    border: solid 0.188rem black;
 `
 
 const TimeAndScoreWrapper = styled.div`
 
-    font-size: 16px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
+    position: relative;
+    bottom: 3rem;
 
+    @media screen and (max-width: 53.125rem) {
+        position: relative;
+        bottom: 2rem;    
+    }
+
+    .time {
+        font-size: 1rem;
+
+        @media screen and (max-width: 53.125rem) {
+        font-size: 1.5rem    
+        }
+        
+    }
+
+    h3 {
+        font-size: 1rem;
+        position: relative;
+        bottom: 0.75rem;
+
+        @media screen and (max-width: 53.125rem) {
+        font-size: 1.5rem;
+        font-weight: bolder;
+        color: pink;
+        text-shadow: -1.1px 0 black, 0 1.1px black, 1.1px 0 black, 0 -1.1px black;
+        }
+    }
 `
 
 class MultipleChoice extends React.Component {
@@ -307,58 +370,60 @@ class MultipleChoice extends React.Component {
 
         return(
             <HTMLWrapper>
-                <AppWrapper>
-                    <MainTitle>
-                        Bingemasters
-                    </MainTitle>
-                    {this.state.loading || !this.state.profilePath ? (
-                    <div>loading...</div> 
-                    ) : (
-                    <ImageAndHintsWrapper>
-                        <ImageWrapper>
-                            <img className="theActorImg" src={imageURL} alt="this... is a random actor"/>
-                        </ImageWrapper>
-                        {this.state.movieName === undefined || this.state.secondMovieName === undefined ? (
-                        <p className="hint">You're probably not gonna know who I am.</p>
+                <CardWrapper>
+                    <AppWrapper>
+                        <MainTitle>
+                            Bingemasters
+                        </MainTitle>
+                        {this.state.loading || !this.state.profilePath ? (
+                        <div>loading...</div> 
                         ) : (
-                        <p className="hint">Hint: I was in {this.state.movieName} and {this.state.secondMovieName}.</p>)}
-                    </ImageAndHintsWrapper>
-                    )}
-                    <ButtonLine>
-                        <OptionOne
-                        type="submit"
-                        onClick={this.handleClick}
-                        value={this.state.actorList[0]}
-                        >{this.state.actorList[0]}
-                        </OptionOne>
-                        <OptionTwo
-                        type="submit"
-                        onClick={this.handleClick}
-                        value={this.state.actorList[1]}
-                        >{this.state.actorList[1]}
-                        </OptionTwo>
-                        <OptionThree
-                        type="submit"
-                        onClick={this.handleClick}
-                        value={this.state.actorList[2]}
-                        >{this.state.actorList[2]}
-                        </OptionThree>
-                        <OptionFour
-                        type="submit"
-                        onClick={this.handleClick}
-                        value={this.state.actorList[3]}
-                        >{this.state.actorList[3]}
-                        </OptionFour>   
-                    </ButtonLine> 
-                    <TimeAndScoreWrapper>
-                        <h2 className="time">Time left: {count}</h2>
-                        {this.state.currentScore ? (
-                        <h3 className="score">Streak: {currentScore}</h3>
-                        ) : (
-                        <h3 onClick={this.handleClick}>Streak: {currentScore}</h3>
-                        )}    
-                    </TimeAndScoreWrapper>
-                </AppWrapper>
+                        <ImageAndHintsWrapper>
+                            <ImageWrapper>
+                                <img className="theActorImg" src={imageURL} alt="this... is a random actor"/>
+                            </ImageWrapper>
+                            {this.state.movieName === undefined || this.state.secondMovieName === undefined ? (
+                            <p className="hint">You're probably not gonna know who I am.</p>
+                            ) : (
+                            <p className="hint">Hint: I was in {this.state.movieName} and {this.state.secondMovieName}.</p>)}
+                        </ImageAndHintsWrapper>
+                        )}
+                        <ButtonLine>
+                            <OptionOne
+                            type="submit"
+                            onClick={this.handleClick}
+                            value={this.state.actorList[0]}
+                            >{this.state.actorList[0]}
+                            </OptionOne>
+                            <OptionTwo
+                            type="submit"
+                            onClick={this.handleClick}
+                            value={this.state.actorList[1]}
+                            >{this.state.actorList[1]}
+                            </OptionTwo>
+                            <OptionThree
+                            type="submit"
+                            onClick={this.handleClick}
+                            value={this.state.actorList[2]}
+                            >{this.state.actorList[2]}
+                            </OptionThree>
+                            <OptionFour
+                            type="submit"
+                            onClick={this.handleClick}
+                            value={this.state.actorList[3]}
+                            >{this.state.actorList[3]}
+                            </OptionFour>   
+                        </ButtonLine> 
+                        <TimeAndScoreWrapper>
+                            <h2 className="time">Time left: {count}</h2>
+                            {this.state.currentScore ? (
+                            <h3 className="score">Streak: {currentScore}</h3>
+                            ) : (
+                            <h3 onClick={this.handleClick}>Streak: {currentScore}</h3>
+                            )}    
+                        </TimeAndScoreWrapper>
+                    </AppWrapper>
+                </CardWrapper>
             </HTMLWrapper>
         )} else {
             return <GameOver/>
