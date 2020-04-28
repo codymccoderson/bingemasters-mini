@@ -9,9 +9,10 @@ const HTMLWrapper = styled.div`
 
     background: url(${another_retro_tv}) no-repeat center center fixed;
     background-size: 82vw 95vh;
-    height: 100vh;  
+    height: 100vh;
+    font-size: 16px;  
 
-    @media screen and (max-width: 53.125em) {
+    @media screen and (max-width: 53.125rem) {
         background: url(${tv_static2}) no-repeat center center fixed;
         background-size: cover;
         height: 100vh;
@@ -24,103 +25,100 @@ const AppWrapper = styled.div`
     display: flex;
     align-items: center;
     flex-flow: column;
-    width: 200px;
-    height: 200px;
+    width: 12.5rem;
+    height: 12.5rem;
     margin: 0 auto;
     position: relative;
-    top: 70px;
-    right: 150px;
+    top: 7rem;
+    right: 9.375rem;
 
-    @media screen and (max-width: 1150px) {
+    @media screen and (max-width: 71.875rem) {
         position: relative;
-        top: 80px;
-        margin: 0 485px;    
+        top: 5rem;
+        margin: 0 30.313rem;    
     }
 
-    @media screen and (max-width: 1100px) {
-        position: relative;
-        top: 80px;
-        margin: 0 485px;
+    @media screen and (max-width: 64.063rem) {
+        margin: 0 27.188rem;
     }
 
-    @media screen and (max-width: 1075px) {
-        margin: 0 485px;
+    @media screen and (max-width: 59.375rem) {
+        margin: 0 25.938rem;
     }
 
-    @media screen and (max-width: 1025px) {
-        margin: 0 435px;
+    @media screen and (max-width: 54.688rem) {
+        margin: 0 25rem;
     }
 
-    @media screen and (max-width: 950px) {
-        margin: 0 415px;
+    @media screen and (max-width: 53.125rem) {
+        margin: 0 28.5rem;
     }
 
-    @media screen and (max-width: 875px) {
-        margin: 0 400px;
+    @media screen and (max-width: 50rem) {
+        margin: 0 25.5rem;
     }
 
-    @media screen and (max-width: 800px) {
-        margin: 0 380px;
+    @media screen and (max-width: 46.875rem) {
+        margin: 0 24rem;
     }
 
-    @media screen and (max-width: 750px) {
-        margin: 0 360px;
+    @media screen and (max-width: 43.750rem) {
+        margin: 0 23.5rem;
     }
 
-    @media screen and (max-width: 700px) {
-        margin: 0 340px;
+    @media screen and (max-width: 42.188rem) {
+        margin: 0 23rem;
     }
 
-    @media screen and (max-width: 675px) {
-        margin: 0 320px;
+    @media screen and (max-width: 40.625rem) {
+        margin: 0 22rem;
     }
 
-    @media screen and (max-width: 650px) {
-        position: relative;
-        top: 120px;
-        margin: 0 300px;
+    @media screen and (max-width: 39.063rem) {
+        margin: 0 21rem;
     }
 
-    @media screen and (max-width: 625px) {
-        position: relative;
-        top: 120px;
-        margin: 0 290px;
+    @media screen and (max-width: 37.5rem) {
+        margin: 0 19.5rem;
     }
 
-    @media screen and (max-width: 600px) {
-        position: relative;
-        top: 120px;
-        margin: 0 270px;
-    }
-
-    @media screen and (max-width: 575px) {
-        position: relative;
-        top: 120px;
-        margin: 0 255px;
+    @media screen and (max-width: 35.938rem) {
+        margin: 0 18.5rem;
     }
 
 `
 
 const MainTitle = styled.h1`
-    font-size: 52px;
+    font-size: 2.2rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
-    @media screen and (max-width: 1150px) {
-        font-size: 46px;
-    }
-
-    @media screen and (max-width: 650px) {
-        font-size: 26px;
+    @media screen and (max-width: 53.125rem) {
+        font-size: 2.5rem;
+        font-weight: bolder;
+        color: pink;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     }
 `
 
 const ImageAndHintsWrapper = styled.div`
+    position: relative;
+    bottom: 1rem;
+
 
     .hint {
-        font-size: 18px;
+        font-size: 1rem;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         position: relative;
-        left: 11px;
+        left: 0.5rem;
+        bottom: 1rem;
+
+        @media screen and (max-width: 53.125rem) {
+            font-weight: bolder;
+            color: pink;
+            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        }
+
+
     }
 `
 
@@ -128,46 +126,82 @@ const ImageWrapper = styled.div`
 
 
     .theActorImg {
-        border-radius: 10px;
+        border-radius: 0.625rem;
         box-sizing: border-box;
-        border: solid 8px pink;
+        border: solid 0.5rem pink;
+
+        @media screen and (max-width: 53.125rem) {
+            border: solid 0.5rem black;
+        }
     }
     
 `
 
 const FormWrapper = styled.div`
+    position: relative;
+    bottom: 2.5rem;
+
 `
 const TheActualForm = styled.form`
     
     .userInput {
-        font-size: 14px;
+        font-size: 0.875rem;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        border-radius: 4px;
+        border-radius: 0.25rem;
         box-sizing: border-box;
-        border: solid 3px black;
-        margin-bottom: 8px;
+        border: solid 0.188rem black;
+        margin-bottom: 0.5rem;
         position: relative;
-        left: 26px
+        left: 1.625rem
     }
 
     .userSubmitButton {
         background-color: pink;
-        font-size: 14px;
+        font-size: 0.875rem;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         color: black;
-        border-radius: 4px;
+        border-radius: 0.25rem;
         box-sizing: border-box;
-        border: solid 3px black;
+        border: solid 0.188rem black;
         position: relative;
-        left: 52px;
+        left: 3.25rem;
 
     }
 `
 const TimeAndScoreWrapper = styled.div`
 
-    font-size: 16px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
+    position: relative;
+    bottom: 3rem;
+
+    @media screen and (max-width: 53.125rem) {
+        position: relative;
+        bottom: 2rem;    
+    }
+
+    .time {
+        font-size: 1rem;
+
+        @media screen and (max-width: 53.125rem) {
+        font-size: 1.5rem    
+        }
+        
+    }
+
+    h3 {
+        font-size: 1rem;
+        position: relative;
+        bottom: 0.75rem;
+
+        @media screen and (max-width: 53.125rem) {
+        font-size: 1.5rem;
+        font-weight: bolder;
+        color: pink;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        }
+
+    }
 
 `
 
@@ -183,7 +217,7 @@ class FetchRandomMovieStar extends React.Component {
         actorName: "",
         movieName: "",
         secondMovieName: "",
-        count: 60,
+        count: 100000,
         resetTimer: false,
         currentScore: 0,
         gameOver: false
@@ -243,7 +277,7 @@ class FetchRandomMovieStar extends React.Component {
            const newScore = (currentScore += 1);
            this.setState({
             userGuessInput: "",
-            count: 30,
+            count: 60,
             currentScore: newScore
         }) 
         } else {
@@ -258,7 +292,7 @@ class FetchRandomMovieStar extends React.Component {
     resetClock () {
         clearInterval(this.myInterval)
         this.setState({
-            count: 30
+            count: 60
         })
     }
 
