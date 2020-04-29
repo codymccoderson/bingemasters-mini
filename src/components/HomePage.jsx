@@ -4,7 +4,6 @@ import another_retro_tv from '../another_retro_tv.png';
 import Instructions from './Instructions';
 import Leaderboard from './Leaderboard';
 import tv_static2 from '../tv_static2.jpg';
-import MultipleChoice from './MultipleChoice';
 import FetchRandomMovieStar from './FetchRandomMovieStar';
 
 const StartGameBackground = styled.div`
