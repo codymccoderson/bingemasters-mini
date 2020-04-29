@@ -121,18 +121,20 @@ const StyledLeaderboard = styled.div`
         height: 27.5rem;
     }
 
-    @media screen and (max-width: 46.25rem) {
-        margin: 0 17rem;
-    }
-
     @media screen and (max-width: 43.125rem) {
-        margin: 0 16rem;
+        margin: 0 17rem;
         width: 26.25rem;
         height: 26.25rem;
     }
 
     @media screen and (max-width: 41.6rem) {
-        margin: 0 15.25rem;
+        margin: 0 16rem;
+        width: 25rem;
+        height: 25rem;
+    }
+
+    @media screen and (max-width: 40.8rem) {
+        margin: 0 13rem;
         width: 25rem;
         height: 25rem;
     }

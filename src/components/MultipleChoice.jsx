@@ -38,9 +38,29 @@ const CardWrapper = styled.div`
         border: solid 0.2rem black;
     }
 
+    @media screen and (max-width: 48rem) {
+        margin: 0 10rem;   
+    } 
+
     @media screen and (max-width: 36rem) {
         margin: 0 1.5rem;   
-    }     
+    }
+
+    @media screen and (max-width: 26.563rem) {
+        margin: 0 1.75rem;
+        position: relative;
+        top: 3rem;
+        width: 25rem;
+        height: 42rem;   
+    }
+
+    @media screen and (max-width: 23.438rem) {
+        margin: 0 1.75rem;
+        position: relative;
+        top: 3rem;
+        width: 22rem;
+        height: 42rem;   
+    }          
 `
 
 const AppWrapper = styled.div`
@@ -52,17 +72,16 @@ const AppWrapper = styled.div`
     height: 12.5rem;
     margin: 0 auto;
     position: relative;
-    top: 6rem;
+    top: 10rem;
     right: 9.375rem;
 
     @media screen and (max-width: 71.875rem) {
-        position: relative;
-        top: 5rem;
         margin: 0 30.313rem;    
     }
 
-    @media screen and (max-width: 64.063rem) {
-        margin: 0 27.188rem;
+    @media screen and (max-width: 64rem) {
+        margin: 0 29rem;
+
     }
 
     @media screen and (max-width: 59.375rem) {
@@ -112,6 +131,11 @@ const AppWrapper = styled.div`
         margin: 0 15.938rem;
     }
 
+    @media screen and (max-width: 26.563rem) {
+        position: relative;
+        top: 1rem;   
+    } 
+
 `
 
 const MainTitle = styled.h1`
@@ -142,6 +166,10 @@ const ImageAndHintsWrapper = styled.div`
             color: pink;
             text-shadow: -1.1px 0 black, 0 1.1px black, 1.1px 0 black, 0 -1.1px black;
         }
+
+        @media screen and (max-width: 23.438rem) {
+        font-size: 0.875rem;   
+        }   
     }
 `
 
@@ -163,6 +191,11 @@ const ButtonLine = styled.div`
     display: flex;
     position: relative;
     bottom: 2.5rem;
+
+    @media screen and (max-width: 26.563rem) {
+        position: relative;
+        bottom: 2rem;   
+    }          
 `
 
 const OptionOne = styled.button`
@@ -174,6 +207,15 @@ const OptionOne = styled.button`
     box-sizing: border-box;
     border: solid 0.188rem black;
     margin-right: 2.3rem;
+
+    @media screen and (max-width: 26.563rem) {
+        margin-right: 1.5rem;   
+    }
+
+    @media screen and (max-width: 23.438rem) {
+        margin-right: 0.875rem;
+        font-size: 0.750rem;   
+    }  
 `
 const OptionTwo = styled.button`
     background-color: pink;
@@ -184,6 +226,15 @@ const OptionTwo = styled.button`
     box-sizing: border-box;
     border: solid 0.188rem black;
     margin-right: 2.3rem;
+
+    @media screen and (max-width: 26.563rem) {
+        margin-right: 1.5rem;   
+    }
+
+    @media screen and (max-width: 23.438rem) {
+        margin-right: 0.875rem;
+        font-size: 0.750rem;   
+    }   
 `
 const OptionThree = styled.button`
     background-color: pink;
@@ -194,6 +245,15 @@ const OptionThree = styled.button`
     box-sizing: border-box;
     border: solid 0.188rem black;
     margin-right: 2.3rem;
+
+    @media screen and (max-width: 26.563rem) {
+        margin-right: 1.5rem;   
+    }
+
+    @media screen and (max-width: 23.438rem) {
+        margin-right: 0.875rem;
+        font-size: 0.750rem;   
+    }   
 `
 const OptionFour = styled.button`
     background-color: pink;
@@ -203,6 +263,10 @@ const OptionFour = styled.button`
     border-radius: 0.25rem;
     box-sizing: border-box;
     border: solid 0.188rem black;
+
+    @media screen and (max-width: 23.438rem) {
+        font-size: 0.750rem;   
+    }  
 `
 
 const TimeAndScoreWrapper = styled.div`
@@ -251,7 +315,7 @@ class MultipleChoice extends React.Component {
         actorName: "",
         movieName: "",
         secondMovieName: "",
-        count: 60,
+        count: 10000,
         resetTimer: false,
         currentScore: 0,
         wrongAnswer: false
@@ -265,16 +329,32 @@ class MultipleChoice extends React.Component {
 
     async setNewPage() {
         let actors = await getActorsPage();
-        let correctActor = await actors[randomizer(1,18)]
+        let correctActor = await actors[randomizer(1,19)]
 
           while (
             !correctActor.known_for ||
             correctActor.known_for.length <= 2 ||
             !correctActor.profile_path ||
-            correctActor.popularity <= 7
+            correctActor.popularity <= 7 ||
+            correctActor.adult === "true" ||
+            correctActor.name === "R. Sarathkumar" ||
+            correctActor.name === "Peyton List" ||
+            correctActor.name === "Temuera Morrison" ||
+            correctActor.name === "Gal Gadot" ||
+            correctActor.name === "Eloise Smyth" ||
+            correctActor.name.normalize("NFD").replace(/[\u0300-\u036f]/g, "") === "Eiza Gonzalez" ||
+            correctActor.name === "Aubrey Plaza" ||
+            correctActor.name === "Kathleen Robertson" ||
+            correctActor.name === "Yoon Se-na" ||
+            correctActor.name === "Geraldine Chaplin" ||
+            correctActor.name === "Alice Pagani" ||
+            correctActor.name === "Dylan O'Brien" ||
+            correctActor.name === "Clara Lago" ||
+            correctActor.name === "Colin Farrell" ||
+            correctActor.known_for_department !== "Acting"
           ) {
             let actors = await getActorsPage();  
-            correctActor = await actors[randomizer(1,18)];
+            correctActor = await actors[randomizer(1,19)];
           }
         
 

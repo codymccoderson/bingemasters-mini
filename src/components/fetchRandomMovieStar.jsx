@@ -264,7 +264,23 @@ class FetchRandomMovieStar extends React.Component {
             !correctActor.known_for ||
             correctActor.known_for.length <= 2 ||
             !correctActor.profile_path ||
-            correctActor.popularity <= 7
+            correctActor.popularity <= 7 ||
+            correctActor.adult === "true" ||
+            correctActor.name === "R. Sarathkumar" ||
+            correctActor.name === "Peyton List" ||
+            correctActor.name === "Temuera Morrison" ||
+            correctActor.name === "Gal Gadot" ||
+            correctActor.name === "Eloise Smyth" ||
+            correctActor.name.normalize("NFD").replace(/[\u0300-\u036f]/g, "") === "Eiza Gonzalez" ||
+            correctActor.name === "Aubrey Plaza" ||
+            correctActor.name === "Kathleen Robertson" ||
+            correctActor.name === "Yoon Se-na" ||
+            correctActor.name === "Geraldine Chaplin" ||
+            correctActor.name === "Alice Pagani" ||
+            correctActor.name === "Dylan O'Brien" ||
+            correctActor.name === "Clara Lago" ||
+            correctActor.name === "Colin Farrell" ||
+            correctActor.known_for_department !== "Acting"
           ) {
             let actors = await getActorsPage();  
             correctActor = await actors[randomizer(1,18)];
