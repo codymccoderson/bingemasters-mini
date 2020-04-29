@@ -29,6 +29,11 @@ const StyledStartGame = styled.div`
     top: 8rem;
     right: 9rem;
 
+    @media screen and (max-width: 90rem) {
+        margin: 0 39.5rem;
+
+    }
+
     @media screen and (max-width: 86.25rem) {
         margin: 0 36.875rem;
 
@@ -42,7 +47,11 @@ const StyledStartGame = styled.div`
     }
 
     @media screen and (max-width: 67.5rem) {
-        margin: 0 28rem;
+        margin: 0 30rem;
+    }
+
+    @media screen and (max-width: 64rem) {
+        margin: 0 28.5rem;
     }
 
     @media screen and (max-width: 59.375rem) {
@@ -68,12 +77,12 @@ const StyledStartGame = styled.div`
         margin: 0 28rem;
     }
 
-    @media screen and (max-width: 51rem) {
-        margin: 0 27.5rem;
+    @media screen and (max-width: 48rem) {
+        margin: 0 26.8rem;
     }
 
     @media screen and (max-width: 46.875rem) {
-        margin: 0 26.5rem;
+        margin: 0 25.6rem;
     }
 
     @media screen and (max-width: 43.75rem) {
@@ -98,6 +107,14 @@ const StyledStartGame = styled.div`
 
     @media screen and (max-width: 35.938rem) {
         margin: 0 18rem;
+    }
+
+    @media screen and (max-width: 26.563rem) {
+        margin: 0 16rem;
+    }
+
+    @media screen and (max-width: 23.438rem) {
+        margin: 0 14.5rem;
     }
 `;
 
@@ -128,7 +145,17 @@ const StartGameTitle = styled.h1`
 
     @media screen and (max-width: 40.625rem) {
         font-size: 3.25rem;
-    }  
+    }
+
+    @media screen and (max-width: 23.438rem) {
+        font-size: 3rem;
+    }
+
+    @media screen and (max-width: 20rem) {
+        font-size: 2.5rem;
+        position: relative;
+        right: 1.7rem;
+    }    
 `;
 
 const ButtonLine = styled.div`
@@ -164,6 +191,12 @@ const ButtonLine = styled.div`
     @media screen and (max-width: 35.938rem) {
         margin: 0 14.688rem;
     }
+
+    @media screen and (max-width: 20rem) {
+        position: relative;
+        right: 1.1rem;
+    }  
+
 `
 
 const StartGameButton = styled.button`
@@ -193,6 +226,12 @@ const StartGameButton = styled.button`
         width: 6.25rem;
     }
 
+    @media screen and (max-width: 20rem) {
+        padding: 0.3rem;
+        position: relative;
+        right: -0.5rem;
+    }    
+
 `;
 
 const HowToPlayButton = styled.button`
@@ -221,6 +260,11 @@ const HowToPlayButton = styled.button`
     @media screen and (max-width: 35.938rem) {
         width: 6.25rem;
     }
+
+    @media screen and (max-width: 20rem) {
+        padding: 0.3rem;
+        left: -1.5rem;
+    }  
 
 `;
 
@@ -257,6 +301,13 @@ const ButtonLine2 = styled.div`
     @media screen and (max-width: 35.938rem) {
         margin: 0 14.688rem;
     }
+
+    @media screen and (max-width: 20rem) {
+        padding: 0.3rem;
+        position: relative;
+        right: 1.4rem;
+        top: -2rem;
+    }    
 `;
 
 const LeaderboardButton = styled.button`
@@ -264,7 +315,7 @@ const LeaderboardButton = styled.button`
     color: black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 0.875rem;
-    padding: 0.625rem;
+    padding: 0.3rem;
     margin: 0.313rem;
     width: 6rem;
     border-radius: 0.5rem;
