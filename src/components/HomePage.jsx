@@ -109,11 +109,31 @@ const StyledStartGame = styled.div`
         margin: 0 18rem;
     }
 
+    @media screen and (max-width: 27.5rem) {
+        margin: 0 16.5rem;
+    }
+
     @media screen and (max-width: 26.563rem) {
         margin: 0 16rem;
     }
 
+    @media screen and (max-width: 25rem) {
+        margin: 0 16.8rem;
+    }
+
+    @media screen and (max-width: 24.2rem) {
+        margin: 0 15.6rem;
+    }
+
     @media screen and (max-width: 23.438rem) {
+        margin: 0 16.2rem;
+    }
+
+    @media screen and (max-width: 21.5rem) {
+        margin: 0 15.6rem;
+    }
+
+    @media screen and (max-width: 20rem) {
         margin: 0 14.5rem;
     }
 `;
@@ -147,14 +167,18 @@ const StartGameTitle = styled.h1`
         font-size: 3.25rem;
     }
 
-    @media screen and (max-width: 23.438rem) {
+    @media screen and (max-width: 26.25rem) {
         font-size: 3rem;
     }
 
-    @media screen and (max-width: 20rem) {
+    @media screen and (max-width: 25rem) {
         font-size: 2.5rem;
         position: relative;
         right: 1.7rem;
+    } 
+
+    @media screen and (max-width: 20rem) {
+        font-size: 2.25rem;
     }    
 `;
 
@@ -192,7 +216,7 @@ const ButtonLine = styled.div`
         margin: 0 14.688rem;
     }
 
-    @media screen and (max-width: 20rem) {
+    @media screen and (max-width: 25rem) {
         position: relative;
         right: 1.1rem;
     }  
@@ -226,7 +250,7 @@ const StartGameButton = styled.button`
         width: 6.25rem;
     }
 
-    @media screen and (max-width: 20rem) {
+    @media screen and (max-width: 25rem) {
         padding: 0.3rem;
         position: relative;
         right: -0.5rem;
@@ -261,7 +285,7 @@ const HowToPlayButton = styled.button`
         width: 6.25rem;
     }
 
-    @media screen and (max-width: 20rem) {
+    @media screen and (max-width: 25rem) {
         padding: 0.3rem;
         left: -1.5rem;
     }  
@@ -302,7 +326,7 @@ const ButtonLine2 = styled.div`
         margin: 0 14.688rem;
     }
 
-    @media screen and (max-width: 20rem) {
+    @media screen and (max-width: 25rem) {
         padding: 0.3rem;
         position: relative;
         right: 1.4rem;
@@ -336,6 +360,11 @@ const LeaderboardButton = styled.button`
 
     @media screen and (max-width: 35.938rem) {
         width: 6.25rem;
+    }
+
+    @media screen and (max-width: 23.438rem) {
+        position: relative;
+        top: -0.5rem;
     }
 `;
 

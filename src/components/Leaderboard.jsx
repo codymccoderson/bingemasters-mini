@@ -4,7 +4,7 @@ import another_retro_tv from '../another_retro_tv.png';
 import HomePage from './HomePage';
 import tv_static2 from '../tv_static2.jpg';
 
-const StartGameBackground = styled.div`
+const LeaderboardBackground = styled.div`
     background: url(${another_retro_tv}) no-repeat center center fixed;
     background-size: 80vw 92vh;
     height: 100vh;
@@ -17,7 +17,7 @@ const StartGameBackground = styled.div`
 
     }
 `
-const StyledStartGame = styled.div`
+const StyledLeaderboard = styled.div`
     display: flex;
     align-items: center;
     flex-flow: column;
@@ -25,11 +25,14 @@ const StyledStartGame = styled.div`
     height: 43.75rem;
     margin: 0 auto;
     position: relative;
-    top: 6.25rem;
-    right: 9.375rem;
+    top: 14rem;
+    right: 10rem;
 
-    @media screen and (max-width: 89.375rem) {
+    @media screen and (max-width: 90rem) {
         margin: 0 24.375rem;
+        position: relative;
+        top: 11rem;
+        right: 10rem;
         width: 43.75rem;
         height: 43.75rem;
 
@@ -74,10 +77,11 @@ const StyledStartGame = styled.div`
     }
 
     @media screen and (max-width: 68.125rem) {
-        margin: 0 21.25rem;
+        margin: 0 23rem;
     }
 
-    @media screen and (max-width: 65rem) {
+    @media screen and (max-width: 64rem) {
+        margin: 0 20.5rem;
         width: 25rem;
         height: 25rem;
     }
@@ -111,26 +115,38 @@ const StyledStartGame = styled.div`
         height: 28.75rem;
     }
 
-    @media screen and (max-width: 46.25rem) {
-        margin: 0 15rem;
+    @media screen and (max-width: 48rem) {
+        margin: 0 18rem;
         width: 27.5rem;
         height: 27.5rem;
     }
 
+    @media screen and (max-width: 46.25rem) {
+        margin: 0 17rem;
+    }
+
     @media screen and (max-width: 43.125rem) {
-        margin: 0 13.75rem;
+        margin: 0 16rem;
         width: 26.25rem;
         height: 26.25rem;
     }
 
     @media screen and (max-width: 41.6rem) {
-        margin: 0 11.5rem;
+        margin: 0 15.25rem;
         width: 25rem;
         height: 25rem;
     }
 
     @media screen and (max-width: 40rem) {
         margin: 0 10rem;
+    }
+
+    @media screen and (max-width: 26.563rem) {
+        margin: 0 9rem;
+    }
+
+    @media screen and (max-width: 23.438rem) {
+        margin: 0 7.5rem;
     }
 `;
 
@@ -148,9 +164,13 @@ const LeaderboardTitle = styled.h1`
     }
 
     @media screen and (max-width: 75rem) {
-        font-size: 1.5rem;
         position: relative;
         left: 3rem;
+    }
+
+    @media screen and (max-width: 64rem) {
+        position: relative;
+        left: 3.4rem;
     }
 
     @media screen and (max-width: 62.5rem) {
@@ -161,6 +181,27 @@ const LeaderboardTitle = styled.h1`
     @media screen and (max-width: 53.125rem) {
         position: relative;
         left: 2rem;
+        font-size: 2.5rem;
+    }
+
+    @media screen and (max-width: 48em) {
+        font-size: 2rem;
+    }
+
+    @media screen and (max-width: 26.563rem) {
+        font-size: 1.5rem;
+    }
+
+    @media screen and (max-width: 23.438rem) {
+        position: relative;
+        left: 1.5rem;
+        font-size: 1.2rem;
+    }
+
+    @media screen and (max-width: 21.875rem) {
+        position: relative;
+        left: 0.2rem;
+        font-size: 1.2rem;
     }
 `;
 
@@ -177,6 +218,16 @@ const LeaderboardTable = styled.table`
     @media screen and (max-width: 53.125rem) {
         position: relative;
         left: 10rem;
+    }
+
+    @media screen and (max-width: 23.438rem) {
+        position: relative;
+        left: 8rem;
+    }
+
+    @media screen and (max-width: 21.875rem) {
+        position: relative;
+        left: 5.3rem;
     }
 
     th {
@@ -206,7 +257,20 @@ const LeaderboardTable = styled.table`
             -moz-column-gap: 12rem;
             column-gap: 12rem;
         }
+
+        @media screen and (max-width: 23.438rem) {
+            -webkit-column-gap: 9rem;
+            -moz-column-gap: 9rem;
+            column-gap: 9rem;
+            font-size: 1rem;
+        }
+
+        @media screen and (max-width: 21.875rem) {
+            -webkit-column-gap: 7rem;
+            -moz-column-gap: 7rem;
+            column-gap: 7rem;
     }
+}
 
     td {
         font-size: 1rem;
@@ -246,6 +310,11 @@ const ReturnHomeButton = styled.button`
         position: relative;
         left: 1.5rem;
     }
+
+    @media screen and (max-width: 20rem) {
+        position: relative;
+        left: -0.2rem;
+    }
 `;
 
 class Leaderboard extends React.Component {
@@ -265,8 +334,8 @@ class Leaderboard extends React.Component {
         if (this.state.clickedReturn === false) {
 
         return(
-            <StartGameBackground>
-                <StyledStartGame>
+            <LeaderboardBackground>
+                <StyledLeaderboard>
                     <div className="LeaderboardWrapper">
                         <LeaderboardTitle>
                             Greatest Bingemasters
@@ -373,8 +442,8 @@ class Leaderboard extends React.Component {
                             >Return Home      
                         </ReturnHomeButton>
                     </ButtonLine>
-                </StyledStartGame>
-            </StartGameBackground>
+                </StyledLeaderboard>
+            </LeaderboardBackground>
         )} else {
             return <HomePage/> 
 }}}
