@@ -210,7 +210,7 @@ const TimeAndScoreWrapper = styled.div`
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
     position: relative;
-    bottom: 3rem;
+    bottom: 2rem;
 
     @media screen and (max-width: 53.125rem) {
         position: relative;
@@ -251,7 +251,7 @@ class MultipleChoice extends React.Component {
         actorName: "",
         movieName: "",
         secondMovieName: "",
-        count: 10000,
+        count: 60,
         resetTimer: false,
         currentScore: 0,
         wrongAnswer: false
