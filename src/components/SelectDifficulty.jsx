@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import another_retro_tv from '../another_retro_tv.png';
-import Instructions from './Instructions';
-import Leaderboard from './Leaderboard';
 import tv_static2 from '../tv_static2.jpg';
-import SelectDifficulty from './SelectDifficulty';
+import HomePage from './HomePage';
+import MultipleChoice from './MultipleChoice';
+import FetchRandomMovieStar from './FetchRandomMovieStar';
 
-const StartGameBackground = styled.div`
+const SelectDifficultyBackground = styled.div`
     background: url(${another_retro_tv}) no-repeat center center fixed;
     background-size: 80vw 92vh;
     height: 100vh; 
@@ -18,7 +18,7 @@ const StartGameBackground = styled.div`
         height: 100vh;
     }
 `
-const StyledStartGame = styled.div`
+const StyledSelectDifficulty = styled.div`
     display: flex;
     align-items: center;
     flex-flow: column;
@@ -101,7 +101,7 @@ const StyledStartGame = styled.div`
     }
 `;
 
-const StartGameTitle = styled.h1`
+const SelectDifficultyTitle = styled.h1`
     color: black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 5rem;
@@ -166,7 +166,7 @@ const ButtonLine = styled.div`
     }
 `
 
-const StartGameButton = styled.button`
+const EasyButton = styled.button`
     background-color: pink;
     color: black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -195,7 +195,7 @@ const StartGameButton = styled.button`
 
 `;
 
-const HowToPlayButton = styled.button`
+const HardButton = styled.button`
     background-color: pink;
     color: black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -259,7 +259,7 @@ const ButtonLine2 = styled.div`
     }
 `;
 
-const LeaderboardButton = styled.button`
+const HomeButton = styled.button`
     background-color: pink;
     color: black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -288,76 +288,76 @@ const LeaderboardButton = styled.button`
     }
 `;
 
-class HomePage extends React.Component {
+class SelectDifficulty extends React.Component {
 
     state = {
-        clickedGame: false,
-        clickedHowTo: false,
-        clickedLeaderboard: false
+        clickedEasy: false,
+        clickedHard: false,
+        clickedHome: false
     }
 
-    handleClickGame () {
+    handleClickEasy () {
         this.setState({
-          clickedGame: true,
-          clickedHowTo: false,
-          clickedLeaderboard: false
+          clickedEasy: true,
+          clickedHard: false,
+          clickedHome: false
         })
       }
 
-    handleClickHowTo () {
+    handleClickHard () {
         this.setState({
-            clickedGame: false,
-            clickedHowTo: true,
-            clickedLeaderboard: false
+            clickedEasy: false,
+            clickedHard: true,
+            clickedHome: false
         })
     }
 
-    handleClickLeaderboard () {
+    handleClickHome () {
         this.setState({
-            clickedGame: false,
-            clickedHowTo: false,
-            clickedLeaderboard: true
+            clickedEasy: false,
+            clickedHard: false,
+            clickedHome: true
         })
     }
 
     render() {
 
-        if (this.state.clickedGame === false && this.state.clickedHowTo === false && this.state.clickedLeaderboard === false) {
+        if (this.state.clickedEasy === false && this.state.clickedHard === false && this.state.clickedHome === false) {
 
         return(
-            <StartGameBackground>
-                <StyledStartGame>
-                    <StartGameTitle>
+            <SelectDifficultyBackground>
+                <StyledSelectDifficulty>
+                    <SelectDifficultyTitle>
                         Bingemasters
-                    </StartGameTitle>
+                    </SelectDifficultyTitle>
                     <ButtonLine>
-                        <StartGameButton 
+                        <EasyButton 
                             type="submit"
-                            onClick={this.handleClickGame.bind(this)}
-                            >Start Game      
-                        </StartGameButton>
-                        <HowToPlayButton
+                            onClick={this.handleClickEasy.bind(this)}
+                            >Easy   
+                        </EasyButton>
+                        <HardButton
                             type="submit"
-                            onClick={this.handleClickHowTo.bind(this)}
-                            >How to Play   
-                        </HowToPlayButton>
+                            onClick={this.handleClickHard.bind(this)}
+                            >Hard   
+                        </HardButton>
                     </ButtonLine>
                     <ButtonLine2>
-                        <LeaderboardButton
+                        <HomeButton
                             type="submit"
-                            onClick={this.handleClickLeaderboard.bind(this)}
-                            >All-Time Leaderboard
-                        </LeaderboardButton>
+                            onClick={this.handleClickHome.bind(this)}
+                            >Return Home
+                        </HomeButton>
                     </ButtonLine2>
-                </StyledStartGame>
-            </StartGameBackground>
-        )} else if (this.state.clickedGame === true && this.state.clickedHowTo === false && this.state.clickedLeaderboard === false) {
-            return <SelectDifficulty/>
-    }      else if (this.state.clickedGame === false && this.state.clickedHowTo === true && this.state.clickedLeaderboard === false) {
-            return <Instructions/>
-    }      else if (this.state.clickedGame === false && this.state.clickedHowTo === false && this.state.clickedLeaderboard === true) {
-            return <Leaderboard/>
+                </StyledSelectDifficulty>
+            </SelectDifficultyBackground>
+        )} else if (this.state.clickedEasy === true && this.state.clickedHard === false && this.state.clickedHome === false) {
+            return <MultipleChoice/>
+    }      else if (this.state.clickedEasy === false && this.state.clickedHard === true && this.state.clickedHome === false) {
+            return <FetchRandomMovieStar/>
+    }      else if (this.state.clickedEasy === false && this.state.clickedHard === false && this.state.clickedHome === true) {
+            return <HomePage/>
     }
 }}
 
-export default HomePage;
+export default SelectDifficulty;

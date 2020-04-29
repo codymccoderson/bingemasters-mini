@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import another_retro_tv from '../another_retro_tv.png';
 import HomePage from './HomePage';
-import FetchRandomMovieStar from './FetchRandomMovieStar';
+import SelectDifficulty from './SelectDifficulty';
 import tv_static2 from '../tv_static2.jpg';
 
 const GameOverBackground = styled.div`
@@ -152,8 +152,6 @@ const PlayAgain = styled.button`
     }
 `;
 
-
-
 const ReturnHomeButton = styled.button`
     background-color: pink;
     color: black;
@@ -177,27 +175,27 @@ const ReturnHomeButton = styled.button`
 class GameOver extends React.Component {
 
     state = {
-        clicked: false,
+        clickedGame: false,
         clickedHome: false
     }
 
-    handleClick () {
+    handleClickGame () {
         this.setState({
-          clicked: true,
+          clickedGame: true,
           clickedHome: false
         })
       }
     
     handleClickHome () {
         this.setState({
-            clicked: false,
+            clickedGame: false,
             clickedHome: true
         })
     }
 
     render() {
         
-        if (this.state.clicked === false && this.state.clickedHome === false) {
+        if (this.state.clickedGame === false && this.state.clickedHome === false) {
 
         return(
             <GameOverBackground>
@@ -213,15 +211,15 @@ class GameOver extends React.Component {
                         </ReturnHomeButton>
                         <PlayAgain 
                             type="submit"
-                            onClick={this.handleClick.bind(this)}
+                            onClick={this.handleClickGame.bind(this)}
                             >Play Again
                         </PlayAgain>  
                     </ButtonLine>                 
                 </StyledGameOver>
             </GameOverBackground>
-        )} else if (this.state.clicked === true && this.state.clickedHome === false) {
-            return <FetchRandomMovieStar/>
-        }  else if (this.state.clicked === false && this.state.clickedHome === true) {
+        )} else if (this.state.clickedGame === true && this.state.clickedHome === false) {
+            return <SelectDifficulty/>
+        }  else if (this.state.clickedGame === false && this.state.clickedHome === true) {
             return <HomePage/>
         } 
     }   
