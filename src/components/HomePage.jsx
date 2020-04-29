@@ -5,6 +5,7 @@ import Instructions from './Instructions';
 import Leaderboard from './Leaderboard';
 import tv_static2 from '../tv_static2.jpg';
 import MultipleChoice from './MultipleChoice';
+import FetchRandomMovieStar from './FetchRandomMovieStar';
 
 const StartGameBackground = styled.div`
     background: url(${another_retro_tv}) no-repeat center center fixed;
@@ -353,7 +354,7 @@ class HomePage extends React.Component {
                 </StyledStartGame>
             </StartGameBackground>
         )} else if (this.state.clickedGame === true && this.state.clickedHowTo === false && this.state.clickedLeaderboard === false) {
-            return <MultipleChoice/>
+            return <FetchRandomMovieStar/>
     }      else if (this.state.clickedGame === false && this.state.clickedHowTo === true && this.state.clickedLeaderboard === false) {
             return <Instructions/>
     }      else if (this.state.clickedGame === false && this.state.clickedHowTo === false && this.state.clickedLeaderboard === true) {

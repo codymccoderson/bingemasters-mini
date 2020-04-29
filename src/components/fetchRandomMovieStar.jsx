@@ -1,9 +1,11 @@
 import React from 'react';
-import getRandomPage from '../utils/getRandomPage';
+// import getRandomPage from '../utils/getRandomPage';
 import GameOver from './GameOver';
 import styled from 'styled-components';
 import another_retro_tv from '../another_retro_tv.png';
 import tv_static2 from '../tv_static2.jpg';
+import getActorsPage from '../utils/getActorsPage';
+import randomizer from '../utils/randomizer';
 
 const HTMLWrapper = styled.div`
 
@@ -56,8 +58,6 @@ const AppWrapper = styled.div`
     right: 9.375rem;
 
     @media screen and (max-width: 71.875rem) {
-        position: relative;
-        top: 5rem;
         margin: 0 30.313rem;    
     }
 
@@ -257,25 +257,29 @@ class FetchRandomMovieStar extends React.Component {
     }
 
     async setRandomPage() {
-        let actor = await getRandomPage();
-        let length = (await Object.keys(actor.known_for).length) || 0;
-        try {
-          while ((await length) <= 2 || (await actor.profile_path) === null) {
-            actor = await getRandomPage();
-            length = (await Object.keys(actor.known_for).length) || 0;
-          }
-        } catch (error) {
-          console.log(error);
-        }
-        const randomActorPhotoPath = await actor.profile_path;
-        const randomActorName = await actor.name;
-        const noAccentName = await randomActorName.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-        const movieTheyWereIn = await actor.known_for[0].title;
-        const secondMovieTheyWereIn = await actor.known_for[1].title;
+        
+        let actors = await getActorsPage();
+        let correctActor = await actors[randomizer(1,18)]
 
-        await this.setState({
+          while (
+            !correctActor.known_for ||
+            correctActor.known_for.length <= 2 ||
+            !correctActor.profile_path ||
+            correctActor.popularity <= 7
+          ) {
+            let actors = await getActorsPage();  
+            correctActor = await actors[randomizer(1,18)];
+          }
+
+        const randomActorPhotoPath = await correctActor.profile_path;
+        const randomActorName = await correctActor.name;
+        const noAccentName = await randomActorName.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+        const movieTheyWereIn = await correctActor.known_for[0].title;
+        const secondMovieTheyWereIn = await correctActor.known_for[1].title;
+
+        this.setState({
           loading: false,
-          randomPage: actor,
+          randomPage: correctActor,
           profilePath: randomActorPhotoPath,
           userGuessInput: "",
           actorName: noAccentName,

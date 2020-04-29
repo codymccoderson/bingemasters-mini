@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import another_retro_tv from '../another_retro_tv.png';
 import HomePage from './HomePage';
-import MultipleChoice from './MultipleChoice';
+import FetchRandomMovieStar from './FetchRandomMovieStar';
 import tv_static2 from '../tv_static2.jpg';
 
 const GameOverBackground = styled.div`
@@ -220,7 +220,7 @@ class GameOver extends React.Component {
                 </StyledGameOver>
             </GameOverBackground>
         )} else if (this.state.clicked === true && this.state.clickedHome === false) {
-            return <MultipleChoice/>
+            return <FetchRandomMovieStar/>
         }  else if (this.state.clicked === false && this.state.clickedHome === true) {
             return <HomePage/>
         } 
