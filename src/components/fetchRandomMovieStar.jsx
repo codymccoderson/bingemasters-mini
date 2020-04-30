@@ -5,6 +5,7 @@ import another_retro_tv from '../another_retro_tv.png';
 import tv_static2 from '../tv_static2.jpg';
 import getActorsPage from '../utils/getActorsPage';
 import randomizer from '../utils/randomizer';
+import HomePage from './HomePage';
 
 const HTMLWrapper = styled.div`
 
@@ -26,11 +27,11 @@ const CardWrapper = styled.div`
         display: flex;
         align-items: center;
         flex-flow: column;
-        width: 21rem;
-        height: 34.5rem;
+        width: 30rem;
+        height: 39rem;
         margin: 0 auto;
         position: relative;
-        top: 5rem;
+        top: 3rem;
         right: 1rem;
         background-color: whitesmoke;
         border-radius: 0.875rem;
@@ -38,8 +39,46 @@ const CardWrapper = styled.div`
         border: solid 0.2rem black;
     }
 
+    @media screen and (max-width: 48rem) {
+        margin: 0 14rem;
+        width: 22rem;
+        height: 42rem;   
+    }
+
+    @media screen and (max-width: 44rem) {
+        margin: 0 11rem;   
+    }  
+
+    @media screen and (max-width: 40rem) {
+        margin: 0 8rem;   
+    }
+
     @media screen and (max-width: 36rem) {
-        margin: 0 5.7rem;   
+        margin: 0 5rem;   
+    }
+
+    @media screen and (max-width: 34rem) {
+        margin: 0 4rem;   
+    } 
+
+    @media screen and (max-width: 26.563rem) {
+        margin: 0 3.2rem;
+        position: relative;
+        top: 3rem;  
+    }
+
+    @media screen and (max-width: 23.438rem) {
+        margin: 0 2.7rem;
+        position: relative;
+        width: 20rem;  
+    }
+
+    @media screen and (max-width: 20rem) {
+        margin: 0 1.5rem;
+        position: relative;
+        top: 3rem;
+        width: 19.2rem;
+        height: 39rem;   
     }  
     
 `
@@ -53,7 +92,7 @@ const AppWrapper = styled.div`
     height: 12.5rem;
     margin: 0 auto;
     position: relative;
-    top: 7rem;
+    top: 6rem;
     right: 9.375rem;
 
     @media screen and (max-width: 71.875rem) {
@@ -231,6 +270,29 @@ const TimeAndScoreWrapper = styled.div`
 
 `
 
+const ButtonLine2 = styled.div`
+    display: flex;
+    position: relative;
+    left: 1rem;
+    bottom: 4rem;
+
+    @media screen and (max-width: 48rem) {
+        position: relative;
+        bottom: 3rem;
+    }
+`
+const QuitButton = styled.button`
+    background-color: black;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: pink;
+    border-radius: 0.25rem;
+    box-sizing: border-box;
+    border: solid 0.188rem black;
+    margin-right: 2.3rem;   
+`
+
 class FetchRandomMovieStar extends React.Component {
 
     state = {
@@ -246,7 +308,8 @@ class FetchRandomMovieStar extends React.Component {
         count: 60,
         resetTimer: false,
         currentScore: 0,
-        gameOver: false
+        gameOver: false,
+        clickHome: false
 
     };
 
@@ -258,7 +321,7 @@ class FetchRandomMovieStar extends React.Component {
     async setRandomPage() {
         
         let actors = await getActorsPage();
-        let correctActor = await actors[randomizer(1,18)]
+        let correctActor = await actors[randomizer(1,19)]
 
           while (
             !correctActor.known_for ||
@@ -283,7 +346,7 @@ class FetchRandomMovieStar extends React.Component {
             correctActor.known_for_department !== "Acting"
           ) {
             let actors = await getActorsPage();  
-            correctActor = await actors[randomizer(1,18)];
+            correctActor = await actors[randomizer(1,19)];
           }
 
         const randomActorPhotoPath = await correctActor.profile_path;
@@ -335,6 +398,13 @@ class FetchRandomMovieStar extends React.Component {
 
     }
 
+    handleClickHome = (event) => {
+        event.preventDefault();
+        this.setState({
+            clickHome: true
+        })
+    }
+
     resetClock () {
         clearInterval(this.myInterval)
         this.setState({
@@ -360,7 +430,7 @@ class FetchRandomMovieStar extends React.Component {
         const { count } = this.state;
         const { currentScore } = this.state;
         
-        if (this.state.count >= 1) {
+        if (this.state.count >= 1 && this.state.clickHome === false) {
 
         return(
             <HTMLWrapper>
@@ -404,10 +474,19 @@ class FetchRandomMovieStar extends React.Component {
                             <h3 onSubmit={this.handleSubmit}>Streak: {currentScore}</h3>
                             )}    
                         </TimeAndScoreWrapper>
+                        <ButtonLine2>
+                            <QuitButton
+                            type="submit"
+                            onClick={this.handleClickHome}
+                            >Quit Game
+                            </QuitButton>
+                        </ButtonLine2>
                     </AppWrapper>
                 </CardWrapper>
             </HTMLWrapper>
-        )} else {
+        )} else if (this.state.clickHome === true) {
+            return <HomePage/>
+        }    else {
             return <GameOver/>
         }
     }

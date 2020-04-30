@@ -68,17 +68,12 @@ const CardWrapper = styled.div`
     }
 
     @media screen and (max-width: 23.438rem) {
-        margin: 0 1.75rem;
-        position: relative;
-        top: 3rem;
-        width: 22rem;
-        height: 42rem;   
+        width: 22rem;  
     }
 
     @media screen and (max-width: 20rem) {
         margin: 0 1.5rem;
         position: relative;
-        top: 3rem;
         width: 19.2rem;
         height: 42rem;   
     }            
@@ -385,7 +380,7 @@ class MultipleChoice extends React.Component {
         actorName: "",
         movieName: "",
         secondMovieName: "",
-        count: 10000,
+        count: 60,
         resetTimer: false,
         currentScore: 0,
         wrongAnswer: false,
@@ -425,7 +420,6 @@ class MultipleChoice extends React.Component {
             correctActor.name === "Richard Harris" ||
             correctActor.name === "Tara Reid" ||
             correctActor.name === "Cobie Smulders" ||
-            correctActor.name === "Enrique Arce" ||
             correctActor.name === "Ty Panitz" ||
             correctActor.name === "Millie Bobby Brown" ||
             correctActor.known_for_department !== "Acting"
