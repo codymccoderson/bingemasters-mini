@@ -5,6 +5,7 @@ import another_retro_tv from '../another_retro_tv.png';
 import getActorsPage from '../utils/getActorsPage';
 import randomizer from '../utils/randomizer';
 import tv_static2 from '../tv_static2.jpg';
+import HomePage from './HomePage';
 
 const HTMLWrapper = styled.div`
 
@@ -27,10 +28,10 @@ const CardWrapper = styled.div`
         align-items: center;
         flex-flow: column;
         width: 30rem;
-        height: 34.5rem;
+        height: 39rem;
         margin: 0 auto;
         position: relative;
-        top: 5rem;
+        top: 4rem;
         right: 1rem;
         background-color: whitesmoke;
         border-radius: 0.875rem;
@@ -42,8 +43,20 @@ const CardWrapper = styled.div`
         margin: 0 10rem;   
     } 
 
+    @media screen and (max-width: 44rem) {
+        margin: 0 7rem;   
+    }
+
+    @media screen and (max-width: 40rem) {
+        margin: 0 4rem;   
+    } 
+
     @media screen and (max-width: 36rem) {
-        margin: 0 1.5rem;   
+        margin: 0 2.5rem;   
+    }
+
+    @media screen and (max-width: 34rem) {
+        margin: 0 1.8rem;   
     }
 
     @media screen and (max-width: 26.563rem) {
@@ -60,7 +73,15 @@ const CardWrapper = styled.div`
         top: 3rem;
         width: 22rem;
         height: 42rem;   
-    }          
+    }
+
+    @media screen and (max-width: 20rem) {
+        margin: 0 1.5rem;
+        position: relative;
+        top: 3rem;
+        width: 19.2rem;
+        height: 42rem;   
+    }            
 `
 
 const AppWrapper = styled.div`
@@ -72,7 +93,7 @@ const AppWrapper = styled.div`
     height: 12.5rem;
     margin: 0 auto;
     position: relative;
-    top: 10rem;
+    top: 9rem;
     right: 9.375rem;
 
     @media screen and (max-width: 71.875rem) {
@@ -80,6 +101,8 @@ const AppWrapper = styled.div`
     }
 
     @media screen and (max-width: 64rem) {
+        position: relative;
+        top: 6rem;
         margin: 0 29rem;
 
     }
@@ -90,6 +113,7 @@ const AppWrapper = styled.div`
 
     @media screen and (max-width: 54.688rem) {
         margin: 0 25rem;
+        top: 7rem;
     }
 
     @media screen and (max-width: 53.125rem) {
@@ -148,6 +172,10 @@ const MainTitle = styled.h1`
         color: pink;
         text-shadow: -1.1px 0 black, 0 1.1px black, 1.1px 0 black, 0 -1.1px black;
     }
+
+    @media screen and (max-width: 20rem) {
+        font-size: 2rem;
+        }    
 `
 
 const ImageAndHintsWrapper = styled.div`
@@ -169,7 +197,12 @@ const ImageAndHintsWrapper = styled.div`
 
         @media screen and (max-width: 23.438rem) {
         font-size: 0.875rem;   
-        }   
+        }
+
+        @media screen and (max-width: 20rem) {
+        font-size: 0.75rem;
+        bottom: 0.75rem;
+        }    
     }
 `
 
@@ -215,7 +248,12 @@ const OptionOne = styled.button`
     @media screen and (max-width: 23.438rem) {
         margin-right: 0.875rem;
         font-size: 0.750rem;   
-    }  
+    }
+
+    @media screen and (max-width: 20rem) {
+        margin-right: 0.3rem;
+        font-size: 0.688rem;
+    }   
 `
 const OptionTwo = styled.button`
     background-color: pink;
@@ -234,7 +272,12 @@ const OptionTwo = styled.button`
     @media screen and (max-width: 23.438rem) {
         margin-right: 0.875rem;
         font-size: 0.750rem;   
-    }   
+    }
+
+    @media screen and (max-width: 20rem) {
+        margin-right: 0.3rem;
+        font-size: 0.688rem;
+    }    
 `
 const OptionThree = styled.button`
     background-color: pink;
@@ -253,6 +296,11 @@ const OptionThree = styled.button`
     @media screen and (max-width: 23.438rem) {
         margin-right: 0.875rem;
         font-size: 0.750rem;   
+    }
+
+    @media screen and (max-width: 20rem) {
+        margin-right: 0.3rem;
+        font-size: 0.688rem;
     }   
 `
 const OptionFour = styled.button`
@@ -266,7 +314,11 @@ const OptionFour = styled.button`
 
     @media screen and (max-width: 23.438rem) {
         font-size: 0.750rem;   
-    }  
+    }
+
+    @media screen and (max-width: 20rem) {
+        font-size: 0.688rem;
+    }     
 `
 
 const TimeAndScoreWrapper = styled.div`
@@ -303,6 +355,24 @@ const TimeAndScoreWrapper = styled.div`
         }
     }
 `
+const ButtonLine2 = styled.div`
+    display: flex;
+    position: relative;
+    left: 1rem;
+    bottom: 2.5rem;        
+`
+
+const QuitButton = styled.button`
+    background-color: black;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: pink;
+    border-radius: 0.25rem;
+    box-sizing: border-box;
+    border: solid 0.188rem black;
+    margin-right: 2.3rem;    
+`
 
 class MultipleChoice extends React.Component {
 
@@ -318,7 +388,8 @@ class MultipleChoice extends React.Component {
         count: 10000,
         resetTimer: false,
         currentScore: 0,
-        wrongAnswer: false
+        wrongAnswer: false,
+        clickHome: false
 
     };
 
@@ -351,6 +422,12 @@ class MultipleChoice extends React.Component {
             correctActor.name === "Dylan O'Brien" ||
             correctActor.name === "Clara Lago" ||
             correctActor.name === "Colin Farrell" ||
+            correctActor.name === "Richard Harris" ||
+            correctActor.name === "Tara Reid" ||
+            correctActor.name === "Cobie Smulders" ||
+            correctActor.name === "Enrique Arce" ||
+            correctActor.name === "Ty Panitz" ||
+            correctActor.name === "Millie Bobby Brown" ||
             correctActor.known_for_department !== "Acting"
           ) {
             let actors = await getActorsPage();  
@@ -360,7 +437,7 @@ class MultipleChoice extends React.Component {
 
         let dudActor1 = await actors[(1,6)];
         let dudActor2 = await actors[(7,12)];
-        let dudActor3 = await actors[(13,17)];
+        let dudActor3 = await actors[(13,18)];
     
         const correctActorPhotoPath = await correctActor.profile_path;
         const correctActorName = await correctActor.name;
@@ -421,6 +498,13 @@ class MultipleChoice extends React.Component {
         }
     }
 
+    handleClickHome = (event) => {
+        event.preventDefault();
+        this.setState({
+            clickHome: true
+        })
+    }
+
     resetClock () {
         clearInterval(this.myInterval)
         this.setState({
@@ -446,7 +530,7 @@ class MultipleChoice extends React.Component {
         const { count } = this.state;
         const { currentScore } = this.state;
         
-        if (this.state.count >= 1 && this.state.wrongAnswer === false) {
+        if (this.state.count >= 1 && this.state.wrongAnswer === false && this.state.clickHome === false) {
 
         return(
             <HTMLWrapper>
@@ -502,10 +586,19 @@ class MultipleChoice extends React.Component {
                             <h3 onClick={this.handleClick}>Streak: {currentScore}</h3>
                             )}    
                         </TimeAndScoreWrapper>
+                        <ButtonLine2>
+                            <QuitButton
+                            type="submit"
+                            onClick={this.handleClickHome}
+                            >Quit Game
+                            </QuitButton>
+                        </ButtonLine2>
                     </AppWrapper>
                 </CardWrapper>
             </HTMLWrapper>
-        )} else {
+        )} else if (this.state.clickHome === true) {
+            return <HomePage/>
+        }  else {
             return <GameOver/>
         }
     }
