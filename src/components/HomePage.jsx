@@ -218,7 +218,7 @@ const ButtonLine = styled.div`
 
     @media screen and (max-width: 25rem) {
         position: relative;
-        right: 1.1rem;
+        right: 1.2rem;
     }  
 
 `
@@ -329,7 +329,7 @@ const ButtonLine2 = styled.div`
     @media screen and (max-width: 25rem) {
         padding: 0.3rem;
         position: relative;
-        right: 1.4rem;
+        right: 1.5rem;
         top: -2rem;
     }    
 `;

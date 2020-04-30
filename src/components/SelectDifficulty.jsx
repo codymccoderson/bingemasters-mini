@@ -27,7 +27,7 @@ const StyledSelectDifficulty = styled.div`
     margin: 0 auto;
     position: relative;
     top: 8rem;
-    right: 9rem;
+    right: 8.5rem;
 
     @media screen and (max-width: 86.25rem) {
         margin: 0 36.875rem;
@@ -72,8 +72,8 @@ const StyledSelectDifficulty = styled.div`
         margin: 0 27.5rem;
     }
 
-    @media screen and (max-width: 46.875rem) {
-        margin: 0 26.5rem;
+    @media screen and (max-width: 48rem) {
+        margin: 0 26.3rem;
     }
 
     @media screen and (max-width: 43.75rem) {
@@ -98,6 +98,22 @@ const StyledSelectDifficulty = styled.div`
 
     @media screen and (max-width: 35.938rem) {
         margin: 0 18rem;
+    }
+
+    @media screen and (max-width: 26.563rem) {
+        margin: 0 15.5rem;
+    }
+
+    @media screen and (max-width: 26.563rem) {
+        margin: 0 15.5rem;
+    }
+
+    @media screen and (max-width: 23.438rem) {
+        margin: 0 14rem;
+    }
+
+    @media screen and (max-width: 20rem) {
+        margin: 0 12.3rem;
     }
 `;
 
@@ -129,6 +145,14 @@ const SelectDifficultyTitle = styled.h1`
     @media screen and (max-width: 40.625rem) {
         font-size: 3.25rem;
     }  
+
+    @media screen and (max-width: 23.438rem) {
+        font-size: 2.5rem;
+    }
+
+    @media screen and (max-width: 20rem) {
+        font-size: 2.25rem;
+    }   
 `;
 
 const ButtonLine = styled.div`
@@ -164,6 +188,11 @@ const ButtonLine = styled.div`
     @media screen and (max-width: 35.938rem) {
         margin: 0 14.688rem;
     }
+
+    @media screen and (max-width: 25rem) {
+        position: relative;
+        left: 0.5rem;
+    }  
 `
 
 const EasyButton = styled.button`
@@ -193,6 +222,12 @@ const EasyButton = styled.button`
         width: 6.25rem;
     }
 
+    @media screen and (max-width: 25rem) {
+        padding: 0.3rem;
+        position: relative;
+        right: -0.5rem;
+    }    
+
 `;
 
 const HardButton = styled.button`
@@ -221,6 +256,11 @@ const HardButton = styled.button`
     @media screen and (max-width: 35.938rem) {
         width: 6.25rem;
     }
+
+    @media screen and (max-width: 25rem) {
+        padding: 0.3rem;
+        left: -1.5rem;
+    }  
 
 `;
 
@@ -257,6 +297,13 @@ const ButtonLine2 = styled.div`
     @media screen and (max-width: 35.938rem) {
         margin: 0 14.688rem;
     }
+
+    @media screen and (max-width: 25rem) {
+        padding: 0.3rem;
+        position: relative;
+        bottom: 3rem;
+        left: 0.25rem;
+    }   
 `;
 
 const HomeButton = styled.button`
@@ -286,6 +333,10 @@ const HomeButton = styled.button`
     @media screen and (max-width: 35.938rem) {
         width: 6.25rem;
     }
+
+    @media screen and (max-width: 25rem) {
+        width: 7rem;
+    } 
 `;
 
 class SelectDifficulty extends React.Component {
