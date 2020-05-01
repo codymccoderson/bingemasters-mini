@@ -428,10 +428,23 @@ class MultipleChoice extends React.Component {
             correctActor = await actors[randomizer(1,19)];
           }
         
+        let dudActor1 = await actors[(1,19)];
+        let dudActor2 = await actors[(1,18)];
+        let dudActor3 = await actors[(1,17)];
 
-        let dudActor1 = await actors[(1,6)];
-        let dudActor2 = await actors[(7,12)];
-        let dudActor3 = await actors[(13,18)];
+        while (
+            dudActor1.name === correctActor.name ||
+            dudActor1.name === dudActor2.name ||
+            dudActor1.name === dudActor3.name ||
+            dudActor1.gender !== correctActor.gender ||
+            dudActor2.gender !== correctActor.gender ||
+            dudActor3.gender !== correctActor.gender 
+        ) {
+            let actors = await getActorsPage();
+            dudActor1 = await actors[(1,19)];
+            dudActor2 = await actors[(1,18)];
+            dudActor3 = await actors[(1,17)];
+        }
     
         const correctActorPhotoPath = await correctActor.profile_path;
         const correctActorName = await correctActor.name;
