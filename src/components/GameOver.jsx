@@ -27,8 +27,8 @@ const StyledGameOver = styled.div`
     height: 12.5rem;
     margin: 0 auto;
     position: relative;
-    top: 20.625rem;
-    right: 8.125rem;
+    top: 15rem;
+    right: 9rem;
 
     @media screen and (max-width: 68rem) {
         margin: 0 30rem;
@@ -46,7 +46,7 @@ const StyledGameOver = styled.div`
         margin: 0 26.25rem;
     }
 
-    @media screen and (max-width: 56.250rem) {
+    @media screen and (max-width: 54.375rem) {
         margin: 0 25rem;
     }
 
@@ -56,8 +56,8 @@ const StyledGameOver = styled.div`
         bottom: 4rem;
     }
 
-    @media screen and (max-width: 50rem) {
-        margin: 0 26rem;
+    @media screen and (max-width: 48rem) {
+        margin: 0 27rem;
     }
 
     @media screen and (max-width: 46.875rem) {
@@ -90,6 +90,18 @@ const StyledGameOver = styled.div`
 
     @media screen and (max-width: 35.938rem) {
         margin: 0 17rem;
+    }
+
+    @media screen and (max-width: 26.563rem) {
+        margin: 0 16rem;
+    }
+
+    @media screen and (max-width: 23.438rem) {
+        margin: 0 14.7rem;
+    }
+
+    @media screen and (max-width: 20rem) {
+        margin: 0 13rem;
     }
 `;
 

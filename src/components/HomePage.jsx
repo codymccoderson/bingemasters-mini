@@ -78,11 +78,7 @@ const StyledStartGame = styled.div`
     }
 
     @media screen and (max-width: 48rem) {
-        margin: 0 26.8rem;
-    }
-
-    @media screen and (max-width: 46.875rem) {
-        margin: 0 25.6rem;
+        margin: 0 26.5rem;
     }
 
     @media screen and (max-width: 43.75rem) {
@@ -109,32 +105,16 @@ const StyledStartGame = styled.div`
         margin: 0 18rem;
     }
 
-    @media screen and (max-width: 27.5rem) {
+    @media screen and (max-width: 26.563rem) {
         margin: 0 16.5rem;
     }
 
-    @media screen and (max-width: 26.563rem) {
-        margin: 0 16rem;
-    }
-
-    @media screen and (max-width: 25rem) {
-        margin: 0 16.8rem;
-    }
-
-    @media screen and (max-width: 24.2rem) {
-        margin: 0 15.6rem;
-    }
-
     @media screen and (max-width: 23.438rem) {
-        margin: 0 16.2rem;
-    }
-
-    @media screen and (max-width: 21.5rem) {
-        margin: 0 15.6rem;
+        margin: 0 15.8rem;
     }
 
     @media screen and (max-width: 20rem) {
-        margin: 0 14.5rem;
+        margin: 0 14.4rem;
     }
 `;
 
@@ -167,12 +147,13 @@ const StartGameTitle = styled.h1`
         font-size: 3.25rem;
     }
 
-    @media screen and (max-width: 26.25rem) {
-        font-size: 3rem;
+    @media screen and (max-width: 26.563rem) {
+        font-size: 2.5rem;
+        position: relative;
+        right: 0.7rem;
     }
 
     @media screen and (max-width: 25rem) {
-        font-size: 2.5rem;
         position: relative;
         right: 1.7rem;
     } 
@@ -250,6 +231,11 @@ const StartGameButton = styled.button`
         width: 6.25rem;
     }
 
+    @media screen and (max-width: 26.563rem) {
+        position: relative;
+        right: 0.2rem;
+    }
+
     @media screen and (max-width: 25rem) {
         padding: 0.3rem;
         position: relative;
@@ -283,6 +269,11 @@ const HowToPlayButton = styled.button`
 
     @media screen and (max-width: 35.938rem) {
         width: 6.25rem;
+    }
+
+    @media screen and (max-width: 26.563rem) {
+        position: relative;
+        left: -1.3rem;
     }
 
     @media screen and (max-width: 25rem) {
@@ -324,6 +315,12 @@ const ButtonLine2 = styled.div`
 
     @media screen and (max-width: 35.938rem) {
         margin: 0 14.688rem;
+    }
+
+    @media screen and (max-width: 26.563rem) {
+        position: relative;
+        top: -2.5rem;
+        right: 0.5rem;
     }
 
     @media screen and (max-width: 25rem) {

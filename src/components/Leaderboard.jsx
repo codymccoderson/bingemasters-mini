@@ -17,6 +17,71 @@ const LeaderboardBackground = styled.div`
 
     }
 `
+const CardWrapper = styled.div`
+
+    @media screen and (max-width: 53.125rem) {
+        display: flex;
+        align-items: center;
+        flex-flow: column;
+        width: 30rem;
+        height: 34rem;
+        margin: 0 auto;
+        position: relative;
+        top: 8rem;
+        background-color: whitesmoke;
+        border-radius: 0.875rem;
+        box-sizing: border-box;
+        border: solid 0.2rem black;
+    }
+
+    @media screen and (max-width: 48rem) {
+        position: relative;
+        top: 5rem;
+        margin: 0 8rem;
+        height: 32rem;   
+    } 
+
+    @media screen and (max-width: 44rem) {
+        margin: 0 7rem;   
+    }
+
+    @media screen and (max-width: 40rem) {
+        margin: 0 4rem;   
+    } 
+
+    @media screen and (max-width: 36rem) {
+        margin: 0 2.5rem;   
+    }
+
+    @media screen and (max-width: 34rem) {
+        margin: 0 1.8rem;   
+    }
+
+    @media screen and (max-width: 34rem) {
+        margin: 0 1.4rem;   
+    }
+
+    @media screen and (max-width: 26.563rem) {
+        margin: 0 0.8rem;
+        position: relative;
+        top: 8rem;
+        width: 25rem;
+        height: 30rem;   
+    }
+
+    @media screen and (max-width: 23.438rem) {
+        width: 20.5rem;
+        margin: 0 1.4rem;  
+    }
+
+    @media screen and (max-width: 20rem) {
+        top: 6rem;
+        margin: 0 1.5rem;
+        position: relative;
+        width: 17rem; 
+    }            
+`
+
 const StyledLeaderboard = styled.div`
     display: flex;
     align-items: center;
@@ -25,13 +90,12 @@ const StyledLeaderboard = styled.div`
     height: 43.75rem;
     margin: 0 auto;
     position: relative;
-    top: 14rem;
+    top: 9rem;
     right: 10rem;
 
     @media screen and (max-width: 90rem) {
         margin: 0 24.375rem;
         position: relative;
-        top: 11rem;
         right: 10rem;
         width: 43.75rem;
         height: 43.75rem;
@@ -104,6 +168,9 @@ const StyledLeaderboard = styled.div`
     }
 
     @media screen and (max-width: 53.125rem) {
+        position: relative;
+        top: 3.5rem;
+        right: 2.1rem;
         margin: 0 17.5rem;
         width: 30rem;
         height: 30rem;
@@ -116,6 +183,8 @@ const StyledLeaderboard = styled.div`
     }
 
     @media screen and (max-width: 48rem) {
+        position: relative;
+        top: 2rem;
         margin: 0 18rem;
         width: 27.5rem;
         height: 27.5rem;
@@ -149,6 +218,8 @@ const StyledLeaderboard = styled.div`
 
     @media screen and (max-width: 23.438rem) {
         margin: 0 7.5rem;
+        position: relative;
+        right: 1.7rem;
     }
 `;
 
@@ -182,8 +253,8 @@ const LeaderboardTitle = styled.h1`
 
     @media screen and (max-width: 53.125rem) {
         position: relative;
-        left: 2rem;
-        font-size: 2.5rem;
+        left: 2.2rem;
+        font-size: 2rem;
     }
 
     @media screen and (max-width: 48em) {
@@ -196,15 +267,10 @@ const LeaderboardTitle = styled.h1`
 
     @media screen and (max-width: 23.438rem) {
         position: relative;
-        left: 1.5rem;
+        left: 1.7rem;
         font-size: 1.2rem;
     }
 
-    @media screen and (max-width: 21.875rem) {
-        position: relative;
-        left: 0.2rem;
-        font-size: 1.2rem;
-    }
 `;
 
 const LeaderboardTable = styled.table`
@@ -219,7 +285,7 @@ const LeaderboardTable = styled.table`
 
     @media screen and (max-width: 53.125rem) {
         position: relative;
-        left: 10rem;
+        left: 9.85rem;
     }
 
     @media screen and (max-width: 23.438rem) {
@@ -227,9 +293,9 @@ const LeaderboardTable = styled.table`
         left: 8rem;
     }
 
-    @media screen and (max-width: 21.875rem) {
+    @media screen and (max-width: 20rem) {
         position: relative;
-        left: 5.3rem;
+        left: 6.2rem;
     }
 
     th {
@@ -267,11 +333,12 @@ const LeaderboardTable = styled.table`
             font-size: 1rem;
         }
 
-        @media screen and (max-width: 21.875rem) {
-            -webkit-column-gap: 7rem;
-            -moz-column-gap: 7rem;
-            column-gap: 7rem;
-    }
+        @media screen and (max-width: 20rem) {
+            -webkit-column-gap: 6rem;
+            -moz-column-gap: 6rem;
+            column-gap: 6rem;
+            font-size: 0.875rem;
+    }  
 }
 
     td {
@@ -279,6 +346,10 @@ const LeaderboardTable = styled.table`
         font-weight: bolder;
         color: pink;
         text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+        @media screen and (max-width: 20rem) {
+        font-size: 0.875rem;
+        }
     }
     
 `
@@ -311,11 +382,12 @@ const ReturnHomeButton = styled.button`
         width: 7rem;
         position: relative;
         left: 1.5rem;
+        top: 2rem;
     }
 
     @media screen and (max-width: 20rem) {
         position: relative;
-        left: -0.2rem;
+        left: 1.2rem;
     }
 `;
 
@@ -337,114 +409,116 @@ class Leaderboard extends React.Component {
 
         return(
             <LeaderboardBackground>
-                <StyledLeaderboard>
-                    <div className="LeaderboardWrapper">
-                        <LeaderboardTitle>
-                            Greatest Bingemasters
-                        </LeaderboardTitle>
-                        <LeaderboardTable>
-                            <thead>
-                                <tr>
-                                    <th>
-                                        Name
-                                    </th>
-                                    <th>
-                                        Streak
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        PGJ
-                                    </td>
-                                    <td>
-                                        20
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        WPM
-                                    </td>
-                                    <td>
-                                        19
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        GPN
-                                    </td>
-                                    <td>
-                                        18
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        AMU
-                                    </td>
-                                    <td>
-                                        17
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        NBV
-                                    </td>
-                                    <td>
-                                        16
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        GGG
-                                    </td>
-                                    <td>
-                                        15
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        VHY
-                                    </td>
-                                    <td>
-                                        14
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        REB
-                                    </td>
-                                    <td>
-                                        13
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        CSS
-                                    </td>
-                                    <td>
-                                        12
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        XML
-                                    </td>
-                                    <td>
-                                        11
-                                    </td>
-                                </tr>
-                            </tbody>
+                <CardWrapper>
+                    <StyledLeaderboard>
+                        <div className="LeaderboardWrapper">
+                            <LeaderboardTitle>
+                                Greatest Bingemasters
+                            </LeaderboardTitle>
+                            <LeaderboardTable>
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            Name
+                                        </th>
+                                        <th>
+                                            Streak
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            PGJ
+                                        </td>
+                                        <td>
+                                            20
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            WPM
+                                        </td>
+                                        <td>
+                                            19
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            GPN
+                                        </td>
+                                        <td>
+                                            18
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            AMU
+                                        </td>
+                                        <td>
+                                            17
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            NBV
+                                        </td>
+                                        <td>
+                                            16
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            GGG
+                                        </td>
+                                        <td>
+                                            15
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            VHY
+                                        </td>
+                                        <td>
+                                            14
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            REB
+                                        </td>
+                                        <td>
+                                            13
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            CSS
+                                        </td>
+                                        <td>
+                                            12
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            XML
+                                        </td>
+                                        <td>
+                                            11
+                                        </td>
+                                    </tr>
+                                </tbody>
                         </LeaderboardTable>
-                    </div>
-                    <ButtonLine>
-                        <ReturnHomeButton 
+                        </div>
+                        <ButtonLine>
+                            <ReturnHomeButton 
                             type="submit"
                             onClick={this.handleClickReturn.bind(this)}
                             >Return Home      
-                        </ReturnHomeButton>
-                    </ButtonLine>
-                </StyledLeaderboard>
+                            </ReturnHomeButton>
+                        </ButtonLine>
+                    </StyledLeaderboard>
+                </CardWrapper>
             </LeaderboardBackground>
         )} else {
             return <HomePage/> 
