@@ -223,7 +223,7 @@ const StyledHowToPlay = styled.div`
 `;
 
 const HowToPlayTitle = styled.h1`
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Retro', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 1.8rem;
     text-align: center;
 

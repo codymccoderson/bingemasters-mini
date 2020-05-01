@@ -107,8 +107,8 @@ const StyledGameOver = styled.div`
 
 const GameOverTitle = styled.h1`
     color: black;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 2.25rem;
+    font-family: 'Retro', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2rem;
 `;
 
 const ButtonLine = styled.div`

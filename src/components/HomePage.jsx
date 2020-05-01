@@ -5,6 +5,7 @@ import Instructions from './Instructions';
 import Leaderboard from './Leaderboard';
 import tv_static2 from '../tv_static2.jpg';
 import SelectDifficulty from './SelectDifficulty';
+import silhouette from '../silhouette.jpg';
 
 const StartGameBackground = styled.div`
     background: url(${another_retro_tv}) no-repeat center center fixed;
@@ -110,17 +111,17 @@ const StyledStartGame = styled.div`
     }
 
     @media screen and (max-width: 23.438rem) {
-        margin: 0 15.8rem;
+        margin: 0 15.6rem;
     }
 
     @media screen and (max-width: 20rem) {
-        margin: 0 14.4rem;
+        margin: 0 14rem;
     }
 `;
 
 const StartGameTitle = styled.h1`
     color: black;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Retro', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 5rem;
 
     @media screen and (max-width: 86.25rem) {
@@ -141,6 +142,9 @@ const StartGameTitle = styled.h1`
 
     @media screen and (max-width: 53.125rem) {
         font-size: 3.75rem;
+        font-weight: bolder;
+        color: pink;
+        text-shadow: -1.1px 0 black, 0 1.1px black, 1.1px 0 black, 0 -1.1px black;
     }
 
     @media screen and (max-width: 40.625rem) {
@@ -150,23 +154,58 @@ const StartGameTitle = styled.h1`
     @media screen and (max-width: 26.563rem) {
         font-size: 2.5rem;
         position: relative;
-        right: 0.7rem;
+        right: 0.35rem;
     }
 
-    @media screen and (max-width: 25rem) {
+    @media screen and (max-width: 23.438rem) {
         position: relative;
-        right: 1.7rem;
-    } 
+        right: 1rem;
+    }
 
     @media screen and (max-width: 20rem) {
         font-size: 2.25rem;
     }    
 `;
 
+const ImageWrapper = styled.div`
+
+    position: relative;
+    bottom: 2rem;
+    right: 0.2rem;
+
+    @media screen and (max-width: 53.125rem) {
+        position: relative;
+        bottom: 1rem;
+    }
+
+    @media screen and (max-width: 26.563rem) {
+        position: relative;
+        right: 0.5rem;
+    }
+
+    @media screen and (max-width: 23.438rem) {
+        position: relative;
+        right: 1.3rem;
+    }
+
+    .theActorImg {
+        border-radius: 0.625rem;
+        box-sizing: border-box;
+        border: solid 0.5rem pink;
+        width: 14.688rem;
+        height: 14.688rem;
+
+        @media screen and (max-width: 53.125rem) {
+            border: solid 0.5rem black;
+        }
+    }
+`
+
 const ButtonLine = styled.div`
     display: flex;
     position: relative;
-    bottom: 1.25rem;
+    bottom: 1rem;
+    left: 0.5rem;
 
 
     @media screen and (max-width: 46.875rem) {
@@ -195,11 +234,6 @@ const ButtonLine = styled.div`
 
     @media screen and (max-width: 35.938rem) {
         margin: 0 14.688rem;
-    }
-
-    @media screen and (max-width: 25rem) {
-        position: relative;
-        right: 1.2rem;
     }  
 
 `
@@ -210,37 +244,26 @@ const StartGameButton = styled.button`
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 0.875rem;
     padding: 0.625rem;
-    margin: 1.25rem;
+    margin: 1.9rem;
     width: 6rem;
     border-radius: 0.5rem;
     box-sizing: border-box;
     border: solid 0.188rem black;
-    position: relative;
-    right: 1.813rem;
-
-    @media screen and (max-width: 53.125rem) {
-        width: 7.5rem;
-        margin: 1.875rem;
-    }
-
-    @media screen and (max-width: 37.5rem) {
-        width: 6.875rem;
-    }
-
-    @media screen and (max-width: 35.938rem) {
-        width: 6.25rem;
-    }
 
     @media screen and (max-width: 26.563rem) {
         position: relative;
-        right: 0.2rem;
+        right: -0.8rem;
+    }
+    
+    @media screen and (max-width: 23.438rem) {
+        position: relative;
+        right: -1rem;
     }
 
-    @media screen and (max-width: 25rem) {
-        padding: 0.3rem;
+    @media screen and (max-width: 20rem) {
         position: relative;
-        right: -0.5rem;
-    }    
+        right: -1.5rem;
+    }  
 
 `;
 
@@ -250,35 +273,27 @@ const HowToPlayButton = styled.button`
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 0.875rem;
     padding: 0.625rem;
-    margin: 1.25rem;
+    margin: 1.9rem;
     width: 6rem;
     border-radius: 0.5rem;
     box-sizing: border-box;
     border: solid 0.188rem black;
     position: relative;
-    left: 1.5rem;
-
-    @media screen and (max-width: 53.125rem) {
-        width: 7.5rem;
-        margin: 1.875rem;
-    }
-
-    @media screen and (max-width: 37.5rem) {
-        width: 6.875rem;
-    }
-
-    @media screen and (max-width: 35.938rem) {
-        width: 6.25rem;
-    }
+    right: 0.95rem;
 
     @media screen and (max-width: 26.563rem) {
         position: relative;
-        left: -1.3rem;
+        right: 1.1rem;
+    }
+    
+    @media screen and (max-width: 23.438rem) {
+        position: relative;
+        right: 1.9rem;
     }
 
-    @media screen and (max-width: 25rem) {
-        padding: 0.3rem;
-        left: -1.5rem;
+    @media screen and (max-width: 20rem) {
+        position: relative;
+        right: 1.8rem;
     }  
 
 `;
@@ -336,33 +351,29 @@ const LeaderboardButton = styled.button`
     color: black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 0.875rem;
-    padding: 0.3rem;
-    margin: 0.313rem;
+    padding: 0.625rem;
+    margin: 1.9rem;
     width: 6rem;
     border-radius: 0.5rem;
     box-sizing: border-box;
     border: solid 0.188rem black;
     position: relative;
-    top: 0.625rem;
-    right: 0.313rem;
+    right: 1.5rem;
 
-    @media screen and (max-width: 53.125rem) {
-        font-size: 0.875rem;
-        width: 7.5rem;
-    }
-
-    @media screen and (max-width: 37.5rem) {
-        width: 6.875rem;
-    }
-
-    @media screen and (max-width: 35.938rem) {
-        width: 6.25rem;
+    @media screen and (max-width: 26.563rem) {
+        position: relative;
+        right: 3rem;
     }
 
     @media screen and (max-width: 23.438rem) {
         position: relative;
-        top: -0.5rem;
+        right: 4.8rem;
     }
+
+    @media screen and (max-width: 20rem) {
+        position: relative;
+        right: 5.1rem;
+    }  
 `;
 
 class HomePage extends React.Component {
@@ -407,6 +418,9 @@ class HomePage extends React.Component {
                     <StartGameTitle>
                         Bingemasters
                     </StartGameTitle>
+                    <ImageWrapper>
+                        <img className="theActorImg" src={silhouette} alt="this... is a random actor"/>
+                    </ImageWrapper>
                     <ButtonLine>
                         <StartGameButton 
                             type="submit"
@@ -418,13 +432,13 @@ class HomePage extends React.Component {
                             onClick={this.handleClickHowTo.bind(this)}
                             >How to Play   
                         </HowToPlayButton>
-                    </ButtonLine>
-                    <ButtonLine2>
                         <LeaderboardButton
                             type="submit"
                             onClick={this.handleClickLeaderboard.bind(this)}
-                            >All-Time Leaderboard
+                            >Leaderboard
                         </LeaderboardButton>
+                    </ButtonLine>
+                    <ButtonLine2>
                     </ButtonLine2>
                 </StyledStartGame>
             </StartGameBackground>

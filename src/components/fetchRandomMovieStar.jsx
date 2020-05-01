@@ -155,7 +155,7 @@ const AppWrapper = styled.div`
 
 const MainTitle = styled.h1`
     font-size: 2.2rem;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Retro', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
     @media screen and (max-width: 53.125rem) {
         font-size: 2.5rem;

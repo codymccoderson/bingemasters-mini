@@ -119,7 +119,7 @@ const StyledSelectDifficulty = styled.div`
 
 const SelectDifficultyTitle = styled.h1`
     color: black;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Retro', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 5rem;
 
     @media screen and (max-width: 86.25rem) {

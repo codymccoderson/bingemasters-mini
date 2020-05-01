@@ -224,7 +224,7 @@ const StyledLeaderboard = styled.div`
 `;
 
 const LeaderboardTitle = styled.h1`
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Retro', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 2.5rem;
     text-align: center;
     position: relative;

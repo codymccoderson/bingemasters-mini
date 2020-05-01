@@ -88,7 +88,7 @@ const AppWrapper = styled.div`
     height: 12.5rem;
     margin: 0 auto;
     position: relative;
-    top: 9rem;
+    top: 6rem;
     right: 9.375rem;
 
     @media screen and (max-width: 71.875rem) {
@@ -96,8 +96,6 @@ const AppWrapper = styled.div`
     }
 
     @media screen and (max-width: 64rem) {
-        position: relative;
-        top: 6rem;
         margin: 0 29rem;
 
     }
@@ -159,7 +157,7 @@ const AppWrapper = styled.div`
 
 const MainTitle = styled.h1`
     font-size: 2.2rem;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Retro', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
     @media screen and (max-width: 53.125rem) {
         font-size: 2.5rem;
@@ -178,7 +176,7 @@ const ImageAndHintsWrapper = styled.div`
     bottom: 1rem;
 
     .hint {
-        font-size: 1rem;
+        font-size: 0.875rem;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         position: relative;
         left: 0.5rem;
@@ -188,10 +186,6 @@ const ImageAndHintsWrapper = styled.div`
             font-weight: bolder;
             color: pink;
             text-shadow: -1.1px 0 black, 0 1.1px black, 1.1px 0 black, 0 -1.1px black;
-        }
-
-        @media screen and (max-width: 23.438rem) {
-        font-size: 0.875rem;   
         }
 
         @media screen and (max-width: 20rem) {
@@ -321,7 +315,7 @@ const TimeAndScoreWrapper = styled.div`
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
     position: relative;
-    bottom: 2rem;
+    bottom: 2.5rem;
 
     @media screen and (max-width: 53.125rem) {
         position: relative;
@@ -366,7 +360,9 @@ const QuitButton = styled.button`
     border-radius: 0.25rem;
     box-sizing: border-box;
     border: solid 0.188rem black;
-    margin-right: 2.3rem;    
+    margin-right: 2.3rem;
+    position: relative;
+    bottom: 1.5rem;
 `
 
 class MultipleChoice extends React.Component {
