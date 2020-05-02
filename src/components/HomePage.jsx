@@ -13,7 +13,7 @@ const StartGameBackground = styled.div`
     height: 100vh; 
     font-size: 16px;
 
-    @media screen and (max-width: 53.125em) {
+    @media screen and (max-width: 64rem) {
         background: url(${tv_static2}) no-repeat center center fixed;
         background-size: cover;
         height: 100vh;
@@ -52,26 +52,17 @@ const StyledStartGame = styled.div`
     }
 
     @media screen and (max-width: 64rem) {
-        margin: 0 28.5rem;
-    }
-
-    @media screen and (max-width: 59.375rem) {
-        margin: 0 26.3rem;
-    }
-
-    @media screen and (max-width: 56.25rem) {
-        margin: 0 24.5rem;
-    }
-
-    @media screen and (max-width: 53.125rem) {
-        margin: 0 28.5rem;
+        margin: 0 35rem;
         display: flex;
         align-items: center;
         flex-flow: column;
         width: 12.5rem;
         height: 12.5rem;
         position: relative;
-        top: 8rem;
+    }
+
+    @media screen and (max-width: 60rem) {
+        margin: 0 32rem;
     }
 
     @media screen and (max-width: 51rem) {
@@ -79,7 +70,7 @@ const StyledStartGame = styled.div`
     }
 
     @media screen and (max-width: 48rem) {
-        margin: 0 26.5rem;
+        margin: 0 27rem;
     }
 
     @media screen and (max-width: 43.75rem) {
@@ -110,12 +101,21 @@ const StyledStartGame = styled.div`
         margin: 0 16.5rem;
     }
 
+    @media screen and (max-width: 25.875rem) {
+        margin: 0 16.1rem;
+    }
+
     @media screen and (max-width: 23.438rem) {
-        margin: 0 15.6rem;
+        margin: 0 15.7rem;
     }
 
     @media screen and (max-width: 20rem) {
-        margin: 0 14rem;
+        margin: 0 14.3rem;
+    }
+
+    @media screen and (max-height: 35.5rem) {
+        position: relative;
+        top: 4rem;
     }
 `;
 
@@ -140,11 +140,15 @@ const StartGameTitle = styled.h1`
         font-size: 3.5rem;
     }
 
-    @media screen and (max-width: 53.125rem) {
-        font-size: 3.75rem;
+    @media screen and (max-width: 64rem) {
+        font-size: 4.5rem;
         font-weight: bolder;
         color: pink;
         text-shadow: -1.1px 0 black, 0 1.1px black, 1.1px 0 black, 0 -1.1px black;
+    }
+
+    @media screen and (max-width: 60rem) {
+        font-size: 3.5rem;
     }
 
     @media screen and (max-width: 40.625rem) {
@@ -157,9 +161,19 @@ const StartGameTitle = styled.h1`
         right: 0.35rem;
     }
 
+    @media screen and (max-width: 25.688rem) {
+        position: relative;
+        right: 0.2rem;
+    }
+
     @media screen and (max-width: 23.438rem) {
         position: relative;
         right: 1rem;
+    }
+
+    @media screen and (max-width: 22.5rem) {
+        position: relative;
+        right: 1.5rem;
     }
 
     @media screen and (max-width: 20rem) {
@@ -173,7 +187,7 @@ const ImageWrapper = styled.div`
     bottom: 2rem;
     right: 0.2rem;
 
-    @media screen and (max-width: 53.125rem) {
+    @media screen and (max-width: 64rem) {
         position: relative;
         bottom: 1rem;
     }
@@ -188,6 +202,11 @@ const ImageWrapper = styled.div`
         right: 1.3rem;
     }
 
+    @media screen and (max-width: 22.5rem) {
+        position: relative;
+        right: 1.7rem;
+    }
+
     .theActorImg {
         border-radius: 0.625rem;
         box-sizing: border-box;
@@ -195,8 +214,15 @@ const ImageWrapper = styled.div`
         width: 14.688rem;
         height: 14.688rem;
 
-        @media screen and (max-width: 53.125rem) {
+        @media screen and (max-width: 64rem) {
             border: solid 0.5rem black;
+            width: 16rem;
+            height: 16rem;
+        }
+
+        @media screen and (max-width: 60rem) {
+            width: 14.688rem;
+            height: 14.688rem;
         }
     }
 `
@@ -207,6 +233,17 @@ const ButtonLine = styled.div`
     bottom: 1rem;
     left: 0.5rem;
 
+    @media screen and (max-width: 64rem) {
+        position: relative;
+        bottom: -1rem;
+        left: 0.2rem;
+    }
+
+    @media screen and (max-width: 60rem) {
+        position: relative;
+        bottom: 1rem;
+        left: 0.5rem;
+    }
 
     @media screen and (max-width: 46.875rem) {
         margin: 0 22.5rem;
@@ -234,8 +271,22 @@ const ButtonLine = styled.div`
 
     @media screen and (max-width: 35.938rem) {
         margin: 0 14.688rem;
-    }  
+    }
 
+    @media screen and (max-width: 25.688rem) {
+        position: relative;
+        left: 0.2rem;
+    }
+
+    @media screen and (max-width: 23.438rem) {
+        position: relative;
+        left: 0.5rem;
+    }
+
+    @media screen and (max-width: 22.5rem) {
+        position: relative;
+        left: 0.2rem;
+    }
 `
 
 const StartGameButton = styled.button`
@@ -250,7 +301,19 @@ const StartGameButton = styled.button`
     box-sizing: border-box;
     border: solid 0.188rem black;
 
+    @media screen and (max-width: 64rem) {
+        font-size: 1.5rem;
+        width: 10rem;
+    }
+
+    @media screen and (max-width: 48rem) {
+        font-size: 1rem;
+        width: 7rem;
+    }
+
     @media screen and (max-width: 26.563rem) {
+        font-size: 0.875rem;
+        width: 6rem;
         position: relative;
         right: -0.8rem;
     }
@@ -258,6 +321,11 @@ const StartGameButton = styled.button`
     @media screen and (max-width: 23.438rem) {
         position: relative;
         right: -1rem;
+    }
+
+    @media screen and (max-width: 22.5rem) {
+        position: relative;
+        right: -1.25rem;
     }
 
     @media screen and (max-width: 20rem) {
@@ -281,9 +349,23 @@ const HowToPlayButton = styled.button`
     position: relative;
     right: 0.95rem;
 
+    @media screen and (max-width: 64rem) {
+        font-size: 1.5rem;
+        width: 10rem;
+        position: relative;
+        right: 0.6rem;
+    }
+
+    @media screen and (max-width: 48rem) {
+        font-size: 1rem;
+        width: 7rem;
+    }
+
     @media screen and (max-width: 26.563rem) {
         position: relative;
         right: 1.1rem;
+        font-size: 0.875rem;
+        width: 6rem;
     }
     
     @media screen and (max-width: 23.438rem) {
@@ -360,14 +442,33 @@ const LeaderboardButton = styled.button`
     position: relative;
     right: 1.5rem;
 
+    @media screen and (max-width: 64rem) {
+        font-size: 1.5rem;
+        width: 10rem;
+    }
+
+    @media screen and (max-width: 48rem) {
+        font-size: 1rem;
+        width: 7rem;
+        position: relative;
+        right: 1.8rem;
+    }
+
     @media screen and (max-width: 26.563rem) {
         position: relative;
         right: 3rem;
+        font-size: 0.875rem;
+        width: 6rem;
     }
 
     @media screen and (max-width: 23.438rem) {
         position: relative;
         right: 4.8rem;
+    }
+
+    @media screen and (max-width: 22.5rem) {
+        position: relative;
+        right: 5rem;
     }
 
     @media screen and (max-width: 20rem) {
