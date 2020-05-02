@@ -10,7 +10,7 @@ const HowToPlayBackground = styled.div`
     height: 100vh;
     font-size: 16px; 
 
-    @media screen and (max-width: 53.125rem) {
+    @media screen and (max-width: 64rem) {
         background: url(${tv_static2}) no-repeat center center fixed;
         background-size: cover;
         height: 100vh;
@@ -18,7 +18,8 @@ const HowToPlayBackground = styled.div`
     }
 `
 const CardWrapper = styled.div`
-    @media screen and (max-width: 53.125rem) {
+
+    @media screen and (max-width: 64rem) {
         display: flex;
         align-items: center;
         flex-flow: column;
@@ -26,7 +27,7 @@ const CardWrapper = styled.div`
         height: 36rem;
         margin: 0 auto;
         position: relative;
-        top: 5rem;
+        top: 8rem;
         right: 0.5rem;
         background-color: whitesmoke;
         border-radius: 0.875rem;
@@ -34,9 +35,32 @@ const CardWrapper = styled.div`
         border: solid 0.2rem black;
     }
 
+    @media (width: 64rem) and (height: 85.375rem) {
+        position: relative;
+        top: 18rem;
+        width: 38rem;
+        height: 46rem;
+    }
+
+    @media (width: 64rem) and (height: 63.5rem) {
+        position: relative;
+        top: 8rem;
+        width: 38rem;
+        height: 46rem;
+    }
+
+
     @media screen and (max-width: 48rem) {
         margin: 0 10rem;   
-    } 
+    }
+    
+    @media (width: 48rem) and (height: 64rem) {
+        width: 32rem;
+        height: 40rem;
+        position: relative;
+        top: 11rem;
+        right: 2rem;
+    }
 
     @media screen and (max-width: 44rem) {
         margin: 0 7rem;   
@@ -66,16 +90,96 @@ const CardWrapper = styled.div`
         height: 42rem;   
     }
 
+    @media (width: 26.563rem) and (height: 47.625rem) {
+        position: relative;
+        top: 0.5rem;
+        height: 46.5rem;
+    }
+
+    @media (width: 25.875rem) and (height: 46rem) {
+        position: relative;
+        top: 0.5rem;
+        right: 0.9rem;
+        height: 45rem;
+    }
+
+    @media screen and (max-width: 25.688rem) {
+        width: 23.5rem;
+        height: 38rem;
+        margin: 0 1.6rem;
+        position: relative;
+        top: 3.5rem;
+    }
+
+    @media (width: 25.688rem) and (height: 51.438rem) {
+        position: relative;
+        top: 1rem;
+        height: 49rem;
+    }
+
+    @media (width: 25.688rem) and (height: 45.688rem) {
+        position: relative;
+        top: 1.2rem;
+        right: 0.6rem;
+        height: 43.5rem;
+    }
+
     @media screen and (max-width: 23.438rem) {
-        width: 22rem;  
+        width: 22rem;
+        height: 42rem;
+        margin: 0 1.3rem; 
+        position: relative;
+        top: 3rem; 
+    }
+
+    @media (width: 23.438rem) and (height: 50.75rem) {
+        position: relative;
+        top: 1rem;
+        right: 0.6rem;
+        height: 49rem;
+    }
+
+    @media (width: 23.438rem) and (height: 47.625rem) {
+        position: relative;
+        top: 1rem;
+        right: 0.6rem;
+        height: 45.5rem;
+    }
+
+    @media (width: 23.438rem) and (height: 41.688rem) {
+        position: relative;
+        top: 0.9rem;
+        right: 0.6rem;
+        height: 39.8rem;
+    }
+
+    @media screen and (max-width: 22.5rem) {
+        width: 20.8rem;
+        height: 38rem;
+        position: relative;
+        top: 1rem;  
     }
 
     @media screen and (max-width: 20rem) {
         margin: 0 0.9rem;
         position: relative;
+        top: 3rem;
         width: 19.2rem;
         height: 42rem;   
-    }            
+    }
+
+    @media (width: 20rem) and (height: 47.625rem) {
+        position: relative;
+        top: 0.5rem; 
+        height: 46.8rem;   
+    }
+
+    @media (width: 20rem) and (height: 35.5rem) {
+        position: relative;
+        top: 0.5rem;
+        height: 34.5rem;
+    }
+    
 `
 
 const StyledHowToPlay = styled.div`
@@ -141,49 +245,41 @@ const StyledHowToPlay = styled.div`
 
     @media screen and (max-width: 64rem) {
         position: relative;
-        top: 7rem;
+        top: 1rem;
+        right: -0.8rem;
         margin: 0 22.5rem;
         width: 28rem;
         height: 28rem;
     }
 
-    @media screen and (max-width: 61.875rem) {
+    @media (width: 64rem) and (height: 85.375rem) {
         position: relative;
-        top: 5rem;
-        margin: 0 22rem;
-        width: 23.75rem;
-        height: 23.75rem;
+        top: 2.5rem;
+        left: 0.2rem;
+        width: 30rem;
     }
 
-    @media screen and (max-width: 58.75rem) {
-        margin: 0 21.5rem;
-        width: 22.5rem;
-        height: 22.5rem;
-    }
-
-    @media screen and (max-width: 55.625rem) {
-        margin: 0 21rem;
-        width: 21.25rem;
-        height: 21.25rem;
-    }
-
-    @media screen and (max-width: 53.125rem) {
+    @media (width: 64rem) and (height: 63.5rem) {
         position: relative;
-        top: 2rem;
-        right: -0.5rem;
-        width: 28rem;
-        height: 28rem;
-    }
-
-    @media screen and (max-width: 52.5rem) {
-        margin: 0 17.5rem;
-
+        top: 2.5rem;
+        left: 0.2rem;
+        width: 30rem;
     }
 
     @media screen and (max-width: 48rem) {
         margin: 0 20rem;
         width: 28.75rem;
         height: 28.75rem;
+    }
+
+    @media (width: 48rem) and (height: 64rem) {
+        position: relative;
+        top: -1rem;
+    }
+
+    @media (width: 48rem) and (height: 47.625rem) {
+        position: relative;
+        top: -0.5rem;
     }
 
     @media screen and (max-width: 46.25rem) {
@@ -210,11 +306,41 @@ const StyledHowToPlay = styled.div`
         width: 22rem;
     }
 
+    @media (width: 26.563rem) and (height: 47.625rem) {
+        position: relative;
+        top: 0.5rem;
+    }
+
+    @media (width: 25.875rem) and (height: 46rem) {
+        position: relative;
+        top: 0.5rem;
+    }
+
+    @media screen and (max-width: 25.688rem) {
+        position: relative;
+        top: 1rem;
+    }
+
     @media screen and (max-width: 23.438rem) {
         position: relative;
         top: 1rem;
         right: -0.2rem;
         width: 18rem;
+    }
+
+    @media (width: 23.438rem) and (height: 50.75rem) {
+        position: relative;
+        top: 0.5rem;
+    }
+
+    @media (width: 23.438rem) and (height: 47.625rem) {
+        position: relative;
+        top: -0.5rem
+    }
+
+    @media screen and (max-width: 22.5rem) {
+        position: relative;
+        top: -0.5rem;
     }
 
     @media screen and (max-width: 20rem) {
@@ -230,6 +356,35 @@ const HowToPlayTitle = styled.h1`
     @media screen and (max-width: 87.5rem) {
         font-size: 2.25rem;
     }
+
+    @media screen and (max-width: 64rem) {
+        position: relative;
+        right: 0.4rem;
+    }
+
+    @media (width: 48rem) and (height: 64rem) {
+        position: relative;
+        right: 0.4rem;
+    }
+
+    @media (width: 48rem) and (height: 47.625rem) {
+        position: relative;
+        right: 0.4rem;
+    }
+
+    @media (width: 25.688rem) and (height: 51.438rem) {
+        position: relative;
+        right: 0.5rem;
+    }
+
+    @media (width: 25.688rem) and (height: 45.688rem) {
+        position: relative;
+        right: 0.2rem;
+    }
+
+    @media (width: 20rem) and (height: 35.5rem) {
+        font-size: 2rem;
+    }
 `;
 
 const WhatTheGameIs = styled.h2`
@@ -241,13 +396,59 @@ const WhatTheGameIs = styled.h2`
     color: pink;
     text-shadow: -1.1px 0 black, 0 1.1px black, 1.1px 0 black, 0 -1.1px black;
 
+    @media screen and (max-width: 64rem) {
+        font-size: 1rem;
+    }
+
     @media screen and (max-width: 53.125rem) {
+        font-size: 1rem;
+    }
+
+    @media (width: 48rem) and (height: 64rem) {
+        font-size: 1.125rem;
+    }
+
+    @media (width: 48rem) and (height: 47.625rem) {
         font-size: 1rem;
     }
 
     @media screen and (max-width: 26.563rem) {
         font-size: 0.8rem;
-    }   
+    }
+
+    @media (width: 26.563rem) and (height: 47.625rem) {
+        font-size: 1.125rem;
+    }
+
+    @media (width: 25.875rem) and (height: 46rem) {
+        font-size: 1.125rem;
+    }
+
+    @media (width: 25.688rem) and (height: 51.438rem) {
+        font-size: 1.125rem;
+    }
+
+    @media (width: 25.688rem) and (height: 45.688rem) {
+        font-size: 1rem;
+        position: relative;
+        right: 0.2rem;
+    }
+
+    @media (width: 23.438rem) and (height: 50.75rem) {
+        font-size: 1rem;
+    }
+
+    @media (width: 23.438rem) and (height: 47.625rem) {
+        font-size: 1rem;
+    }
+
+    @media (width: 20rem) and (height: 47.625rem) {
+        font-size: 1rem;
+    }
+    
+    @media (width: 20rem) and (height: 35.5rem) {
+        font-size: 0.8rem;
+    }
 `
 
 const UnorderedList = styled.ul`
@@ -266,6 +467,58 @@ const Text = styled.p`
     font-size: 0.875rem;
     font-weight: bolder;
     color: black;
+
+    @media screen and (max-width: 64rem) {
+        font-size: 0.875rem;
+    }
+
+    @media (width: 64rem) and (height: 85.375rem) {
+        font-size: 1.125rem;
+    }
+
+    @media (width: 64rem) and (height: 63.5rem) {
+        font-size: 1.125rem;
+    }
+
+    @media (width: 48rem) and (height: 64rem) {
+        font-size: 1.125rem;
+    }
+
+    @media (width: 48rem) and (height: 47.625rem) {
+        font-size: 1rem;
+    }
+
+    @media (width: 26.563rem) and (height: 47.625rem) {
+        font-size: 1.125rem;
+    }
+
+    @media (width: 25.875rem) and (height: 46rem) {
+        font-size: 1rem;
+    }
+
+    @media (width: 25.688rem) and (height: 51.438rem) {
+        font-size: 1.125rem;
+    }
+
+    @media (width: 25.688rem) and (height: 45.688rem) {
+        font-size: 1rem;
+    }
+
+    @media (width: 23.438rem) and (height: 50.75rem) {
+        font-size: 1rem;
+    }
+
+    @media (width: 23.438rem) and (height: 47.625rem) {
+        font-size: 1rem;
+    }
+
+    @media (width: 20rem) and (height: 47.625rem) {
+        font-size: 1rem;
+    }
+
+    @media (width: 20rem) and (height: 35.5rem) {
+        font-size: 0.8rem;
+    }
 `
 
 const ButtonLine = styled.div`
@@ -307,10 +560,10 @@ const ReturnHomeButton = styled.button`
     background-color: pink;
     color: black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 0.875rem;
+    font-size: 1.125rem;
     padding: 0.5rem;
     margin: 0.2rem;
-    width: 6.5rem;
+    width: 8rem;
     border-radius: 0.5rem;
     box-sizing: border-box;
     border: solid 0.188rem black;
@@ -318,19 +571,83 @@ const ReturnHomeButton = styled.button`
     top: 1rem;
     right: 0.4rem;
 
-    @media screen and (max-width: 54.375rem) {
+    @media screen and (max-width: 64rem) {
+        font-size: 1.125rem;
         position: relative;
-        top: -0.2rem;
+        right: 1rem;
     }
 
-    @media screen and (max-width: 53.125rem) {
-        font-size: 0.875rem;
-        width: 7.5rem;
+    @media (width: 64rem) and (height: 85.375rem) {
+        font-size: 1.125rem;
+    }
+
+    @media (width: 64rem) and (height: 63.5rem) {
+        font-size: 1.125rem;
+    }
+
+    @media (width: 48rem) and (height: 64rem) {
+        font-size: 1.125rem;
+        position: relative;
+        top: 0.2rem;
+        right: 1rem;
+    }
+
+    @media (width: 48rem) and (height: 47.625rem) {
+        font-size: 1rem;
+        position: relative;
+        right: 0.8rem;
+        top: 1rem;
+    }
+
+    @media (width: 26.563rem) and (height: 47.625rem) {
+        position: relative;
+        top: -1rem;
+        font-size: 1.125rem;
+    }
+
+    @media (width: 25.875rem) and (height: 46rem) {
+        font-size: 1.125rem;
+        top: 1rem;
+    }
+
+    @media screen and (max-width: 25.688rem) {
+        position: relative;
+        top: 1rem;
+    }
+
+    @media (width: 25.688rem) and (height: 51.438rem) {
+        position: relative;
+        top: -0.5rem;
+        right: 0.8rem;
+        font-size: 1.125rem;
+    }
+
+    @media (width: 25.688rem) and (height: 45.688rem) {
+        font-size: 1.125rem;
     }
 
     @media screen and (max-width: 23.438rem) {
         position: relative;
         top: 0.5rem;
+    }
+
+    @media (width: 23.438rem) and (height: 50.75rem) {
+        font-size: 1rem;
+    }
+
+    @media (width: 23.438rem) and (height: 47.625rem) {
+        font-size: 1rem;
+        width: 8rem;
+        position: relative;
+        top: -0.2rem;
+        right: 0.4rem;
+    }
+
+    @media (width: 20rem) and (height: 47.625rem) {
+        font-size: 1rem;
+        position: relative;
+        top: 0.2rem;
+        right: 0.4rem;
     }
 `;
 
