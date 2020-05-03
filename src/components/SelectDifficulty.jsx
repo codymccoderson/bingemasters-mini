@@ -12,7 +12,7 @@ const SelectDifficultyBackground = styled.div`
     height: 100vh; 
     font-size: 16px;
 
-    @media screen and (max-width: 53.125em) {
+    @media screen and (max-width: 64rem) {
         background: url(${tv_static2}) no-repeat center center fixed;
         background-size: cover;
         height: 100vh;
@@ -45,15 +45,7 @@ const StyledSelectDifficulty = styled.div`
         margin: 0 28rem;
     }
 
-    @media screen and (max-width: 59.375rem) {
-        margin: 0 26.3rem;
-    }
-
-    @media screen and (max-width: 56.25rem) {
-        margin: 0 24.5rem;
-    }
-
-    @media screen and (max-width: 53.125rem) {
+    @media screen and (max-width: 64rem) {
         margin: 0 28.5rem;
         display: flex;
         align-items: center;
@@ -64,12 +56,16 @@ const StyledSelectDifficulty = styled.div`
         top: 8rem;
     }
 
-    @media screen and (max-width: 51rem) {
-        margin: 0 28rem;
+    @media (width: 64rem) and (height: 85.375rem) {
+        margin: 0 35rem;
+    }
+
+    @media (width: 64rem) and (height: 63.5rem) {
+        margin: 0 35rem;
     }
 
     @media screen and (max-width: 51rem) {
-        margin: 0 27.5rem;
+        margin: 0 28rem;
     }
 
     @media screen and (max-width: 48rem) {
@@ -137,9 +133,21 @@ const SelectDifficultyTitle = styled.h1`
     @media screen and (max-width: 67.5rem) {
         font-size: 3.5rem;
     }
-
-    @media screen and (max-width: 53.125rem) {
+    
+    @media screen and (max-width: 64rem) {
         font-size: 3.75rem;
+    }
+
+    @media (width: 64rem) and (height: 85.375rem) {
+        font-size: 6rem;
+    }
+
+    @media (width: 64rem) and (height: 63.5rem) {
+        font-size: 6rem;
+    }
+
+    @media (width: 48rem) and (height: 64rem) {
+        font-size: 6rem;
     }
 
     @media screen and (max-width: 40.625rem) {
@@ -148,6 +156,11 @@ const SelectDifficultyTitle = styled.h1`
 
     @media screen and (max-width: 23.438rem) {
         font-size: 2.5rem;
+    }
+
+    @media (width: 22.5rem) and (height: 40rem) {
+        position: relative;
+        right: 0.3rem;
     }
 
     @media screen and (max-width: 20rem) {
@@ -159,7 +172,12 @@ const ButtonLine = styled.div`
     display: flex;
     position: relative;
     bottom: 1.25rem;
+    right: 0.5rem;
 
+    @media (width: 64rem) and (height: 85.375rem) {
+        position: relative;
+        right: 1.5rem;
+    }
 
     @media screen and (max-width: 46.875rem) {
         margin: 0 22.5rem;
@@ -189,29 +207,72 @@ const ButtonLine = styled.div`
         margin: 0 14.688rem;
     }
 
+    @media (width: 25.875rem) and (height: 46rem) {
+        position: relative;
+        left: -0.5rem;
+    }
+
     @media screen and (max-width: 25rem) {
         position: relative;
         left: 0.5rem;
-    }  
+    }
+
+    @media (width: 23.438rem) and (height: 50.75rem) {
+        position: relative;
+        left: 0.2rem;
+    }
+
+    @media (width: 23.438rem) and (height: 47.625rem) {
+        position: relative;
+        left: 0.3rem;
+    }
+
+    @media (width: 23.438rem) and (height: 41.688rem) {
+        position: relative;
+        left: 0.2rem;
+    }
+
+    @media (width: 22.5rem) and (height: 40rem) {
+        position: relative;
+        left: -0.1rem;
+    }
+    
+    @media screen and (max-width: 20rem) {
+        position: relative;
+        left: 0.2rem;
+    }
 `
 
 const EasyButton = styled.button`
     background-color: pink;
     color: black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 0.875rem;
+    font-size: 1.5rem;
     padding: 0.625rem;
     margin: 1.25rem;
-    width: 6rem;
+    width: 12rem;
     border-radius: 0.5rem;
     box-sizing: border-box;
     border: solid 0.188rem black;
-    position: relative;
-    right: 1.813rem;
 
-    @media screen and (max-width: 53.125rem) {
-        width: 7.5rem;
-        margin: 1.875rem;
+    @media (width: 64rem) and (height: 85.375rem) {
+        font-size: 1.5rem;
+        width: 12rem;
+    }
+
+    @media (width: 64rem) and (height: 63.5rem) {
+        font-size: 1.5rem;
+        width: 12rem;
+    }
+
+    @media screen and (max-width: 48rem) {
+        font-size: 0.875rem;
+        width: 8rem;
+    }
+
+    @media (width: 48rem) and (height: 64rem) {
+        font-size: 1.5rem;
+        width: 12rem;
     }
 
     @media screen and (max-width: 37.5rem) {
@@ -222,11 +283,20 @@ const EasyButton = styled.button`
         width: 6.25rem;
     }
 
+    @media (width: 25.688rem) and (length: 45.688rem) {
+        position: relative;
+        right: 1.5rem;
+    }
+
     @media screen and (max-width: 25rem) {
         padding: 0.3rem;
         position: relative;
         right: -0.5rem;
-    }    
+    }  
+    
+    @media (width: 23.438rem) and (height: 47.625rem) {
+        margin-right: 3rem;
+    }
 
 `;
 
@@ -234,19 +304,34 @@ const HardButton = styled.button`
     background-color: pink;
     color: black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 0.875rem;
+    font-size: 1.5rem;
     padding: 0.625rem;
     margin: 1.25rem;
-    width: 6rem;
+    width: 12rem;
     border-radius: 0.5rem;
     box-sizing: border-box;
     border: solid 0.188rem black;
     position: relative;
-    left: 1.5rem;
+    left: 0.2rem;
 
-    @media screen and (max-width: 53.125rem) {
-        width: 7.5rem;
-        margin: 1.875rem;
+    @media (width: 64rem) and (height: 85.375rem) {
+        font-size: 1.5rem;
+        width: 12rem;
+    }
+
+    @media (width: 64rem) and (height: 63.5rem) {
+        font-size: 1.5rem;
+        width: 12rem;
+    }
+
+    @media screen and (max-width: 48rem) {
+        font-size: 0.875rem;
+        width: 8rem;
+    }
+
+    @media (width: 48rem) and (height: 64rem) {
+        font-size: 1.5rem;
+        width: 12rem;
     }
 
     @media screen and (max-width: 37.5rem) {
@@ -260,15 +345,19 @@ const HardButton = styled.button`
     @media screen and (max-width: 25rem) {
         padding: 0.3rem;
         left: -1.5rem;
-    }  
-
+    } 
 `;
 
 const ButtonLine2 = styled.div`
     display: flex;
     position: relative;
     bottom: 1.25rem;
+    right: 0.1rem;
 
+    @media (width: 64rem) and (height: 85.375rem) {
+        position: relative;
+        right: 1rem;
+    }
 
     @media screen and (max-width: 46.875rem) {
         margin: 0 22.5rem;
@@ -298,22 +387,55 @@ const ButtonLine2 = styled.div`
         margin: 0 14.688rem;
     }
 
+    @media (width: 25.688rem) and (height: 51.438rem) {
+        left: -0.3rem;
+    }
+
+    @media (width: 25.688rem) and (height: 45.688rem) {
+        left: -0.3rem;
+    }
+
     @media screen and (max-width: 25rem) {
         padding: 0.3rem;
         position: relative;
         bottom: 3rem;
         left: 0.25rem;
-    }   
+    }
+
+    @media (width: 23.438rem) and (height: 50.75rem) {
+        position: relative;
+        left: -0.2rem;
+    }
+
+    @media (width: 23.438rem) and (height: 41.688rem) {
+        position: relative;
+        left: -0.1rem;
+    }
+    
+    @media (width: 22.5rem) and (height: 40rem) {
+        position: relative;
+        left: -0.5rem;
+    }
+
+    @media (width: 23.438rem) and (height: 47.625rem) {
+        position: relative;
+        left: -0.1rem;
+    }
+    
+    @media screen and (max-width: 20rem) {
+        position: relative;
+        left: -0.2rem;
+    }
 `;
 
 const HomeButton = styled.button`
     background-color: pink;
     color: black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 0.875rem;
+    font-size: 1.5rem;
     padding: 0.625rem;
     margin: 0.313rem;
-    width: 6rem;
+    width: 15rem;
     border-radius: 0.5rem;
     box-sizing: border-box;
     border: solid 0.188rem black;
@@ -321,9 +443,35 @@ const HomeButton = styled.button`
     top: 0.625rem;
     right: 0.313rem;
 
-    @media screen and (max-width: 53.125rem) {
+
+    @media (width: 64rem) and (height: 85.375rem) {
+        font-size: 1.5rem;
+        width: 15rem;
+        position: relative;
+        right: 0.8rem;
+    }
+
+    @media (width: 64rem) and (height: 63.5rem) {
+        font-size: 1.5rem;
+        width: 15rem;
+        position: relative;
+        right: 0.8rem;
+    }
+
+    @media screen and (max-width: 48rem) {
         font-size: 0.875rem;
-        width: 7.5rem;
+        width: 8rem;
+    }
+
+    @media (width: 48rem) and (height: 64rem) {
+        font-size: 1.5rem;
+        width: 15rem;
+        position: relative;
+        right: 0.8rem;
+    }
+
+    @media (width: 48rem) and (height: 47.625rem) {
+        width: 10rem;
     }
 
     @media screen and (max-width: 37.5rem) {
@@ -334,9 +482,22 @@ const HomeButton = styled.button`
         width: 6.25rem;
     }
 
+    @media (width: 26.563rem) and (height: 47.625rem) {
+        width: 8rem;
+        position: relative;
+        left: -0.5rem;
+    }
+
+    @media (width: 25.875rem) and (height: 46rem) {
+        position: relative;
+        left: -0.5rem;
+    }
+
     @media screen and (max-width: 25rem) {
         width: 7rem;
-    } 
+    }
+
+    
 `;
 
 class SelectDifficulty extends React.Component {

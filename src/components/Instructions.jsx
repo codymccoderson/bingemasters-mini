@@ -431,7 +431,7 @@ const WhatTheGameIs = styled.h2`
     @media (width: 25.688rem) and (height: 45.688rem) {
         font-size: 1rem;
         position: relative;
-        right: 0.2rem;
+        right: 0.6rem;
     }
 
     @media (width: 23.438rem) and (height: 50.75rem) {
