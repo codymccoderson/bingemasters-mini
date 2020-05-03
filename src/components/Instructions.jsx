@@ -633,6 +633,8 @@ const ReturnHomeButton = styled.button`
 
     @media (width: 23.438rem) and (height: 50.75rem) {
         font-size: 1rem;
+        position: relative;
+        right: 0.5rem;
     }
 
     @media (width: 23.438rem) and (height: 47.625rem) {
@@ -643,11 +645,21 @@ const ReturnHomeButton = styled.button`
         right: 0.4rem;
     }
 
+    @media (width: 23.438rem) and (height: 41.688rem) {
+        position: relative;
+        right: 0.5rem;
+    }
+
     @media (width: 20rem) and (height: 47.625rem) {
         font-size: 1rem;
         position: relative;
         top: 0.2rem;
         right: 0.4rem;
+    }
+
+    @media (width: 20rem) and (height: 35.5rem) {
+        position: relative;
+        right: 0.5rem;
     }
 `;
 

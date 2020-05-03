@@ -14,7 +14,7 @@ const HTMLWrapper = styled.div`
     height: 100vh;
     font-size: 16px;
 
-    @media screen and (max-width: 53.125rem) {
+    @media screen and (max-width: 64rem) {
         background: url(${tv_static2}) no-repeat center center fixed;
         background-size: cover;
         height: 100vh;
@@ -23,7 +23,8 @@ const HTMLWrapper = styled.div`
 `
 
 const CardWrapper = styled.div`
-    @media screen and (max-width: 53.125rem) {
+
+    @media screen and (max-width: 64rem) {
         display: flex;
         align-items: center;
         flex-flow: column;
@@ -39,9 +40,50 @@ const CardWrapper = styled.div`
         border: solid 0.2rem black;
     }
 
+    @media (width: 64rem) and (height: 85.375rem) {
+        width: 62rem;
+        height: 83.375rem;
+        position: relative;
+        top: 0.8rem;
+        right: 0.1rem;
+
+    }
+
+    @media (width: 64rem) and (height: 63.625rem) {
+        width: 62rem;
+        height: 61.5rem;
+        position: relative;
+        top: 0.9rem;
+        right: -0.1rem;    
+    }
+
+    @media (width: 64rem) and (height: 63.5rem) {
+        width: 62rem;
+        height: 61.5rem;
+        position: relative;
+        top: 0.9rem;
+        right: -0.1rem;
+    }
+
     @media screen and (max-width: 48rem) {
         margin: 0 10rem;   
-    } 
+    }
+    
+    @media (width: 48rem) and (height: 64rem) {
+        position: relative;
+        top: 1rem;
+        right: 9rem;
+        width: 46rem;
+        height: 62rem;
+    }
+
+    @media (width: 48rem) and (height: 47.75rem) {
+        position: relative;
+        top: 0.5rem;
+        right: 9.5rem;
+        width: 47rem;
+        height: 46.75rem;
+    }
 
     @media screen and (max-width: 44rem) {
         margin: 0 7rem;   
@@ -67,16 +109,93 @@ const CardWrapper = styled.div`
         height: 42rem;   
     }
 
+    @media (width: 26.563rem) and (height: 47.75rem) {
+        position: relative;
+        top: 0.3rem;
+        right: 1.45rem;
+        width: 25.963rem;
+        height: 47.15rem;
+    }
+
+    @media (width: 25.875rem) and (height: 46rem) {
+        position: relative;
+        top: 0.3rem;
+        right: 1.3rem;
+        height: 45.4rem;
+    }
+ 
+    @media (width: 25.688rem) and (height: 51.438rem) {
+        position: relative;
+        top: 0.3rem;
+        right: 1.4rem;
+        height: 50.838rem;
+
+    }
+
+    @media (width: 25.688rem) and (height: 45.688rem) {
+        position: relative;
+        top: 0.3rem;
+        right: 1.45rem;
+        height: 45rem;
+    }
+
     @media screen and (max-width: 23.438rem) {
         width: 22rem;  
     }
 
+    @media (width: 23.438rem) and (height: 50.75rem) {
+        position: relative;
+        top: 0.3rem;
+        right: 1.43rem;
+        width: 22.838rem;
+        height: 50.15rem;
+    }
+
+    @media (width: 23.438rem) and (height: 47.75rem) {
+        position: relative;
+        top: 0.3rem;
+        right: 1.43rem;
+        width: 22.838rem;
+        height: 47.15rem;
+    }
+
+    @media (width: 23.438rem) and (height: 41.688rem) {
+        position: relative;
+        top: 0.3rem;
+        right: 1.33rem;
+        width: 22.5rem;
+        height: 41.088rem;
+    }
+
+    @media (width: 22.5rem) and (height: 40rem) {
+        width: 22rem;
+        height: 39.5rem;
+        position: relative;
+        top: 0.2rem;
+        right: 1.5rem;
+    }
+
     @media screen and (max-width: 20rem) {
         margin: 0 1.5rem;
-        position: relative;
         width: 19.2rem;
         height: 42rem;   
-    }            
+    }
+
+    @media (width: 20rem) and (height: 47.75rem) {
+        position: relative;
+        top: 0.3rem;
+        right: 1.2rem;
+        width: 19.4rem;
+        height: 47.15rem;
+    }
+    
+    @media (width: 20rem) and (height: 35.5rem) {
+        position: relative;
+        top: 0.3rem;
+        right: 1.25rem;
+        width: 19.5rem;
+        height: 34.7rem;
+    }
 `
 
 const AppWrapper = styled.div`
@@ -91,13 +210,26 @@ const AppWrapper = styled.div`
     top: 6rem;
     right: 9.375rem;
 
+    @media (width: 90rem) and (height: 79.563rem) {
+        position: relative;
+        top: 8rem;
+        right: 8.5rem;
+    }
+
     @media screen and (max-width: 71.875rem) {
         margin: 0 30.313rem;    
     }
 
     @media screen and (max-width: 64rem) {
         margin: 0 29rem;
+        position: relative;
+        right: 0.1rem;
+        top: -1.8rem;
 
+    }
+
+    @media (width: 64rem) and (height: 85.375rem) {
+        top: 1.5rem;
     }
 
     @media screen and (max-width: 59.375rem) {
@@ -106,18 +238,15 @@ const AppWrapper = styled.div`
 
     @media screen and (max-width: 54.688rem) {
         margin: 0 25rem;
-        top: 7rem;
-    }
-
-    @media screen and (max-width: 53.125rem) {
-        margin: 0 29rem;
-        position: relative;
-        right: 0.1rem;
-        top: -1.8rem;
     }
 
     @media screen and (max-width: 50rem) {
         margin: 0 23.75rem;
+    }
+
+    @media (width: 48rem) and (height: 64rem) {
+        position: relative;
+        top: 0.5rem;
     }
 
     @media screen and (max-width: 46.875rem) {
@@ -151,29 +280,155 @@ const AppWrapper = styled.div`
     @media screen and (max-width: 26.563rem) {
         position: relative;
         top: 1rem;   
-    } 
+    }
 
+    @media (width: 26.563rem) and (height: 47.75rem) {
+        position: relative;
+        top: 3.5rem;
+    }
+
+    @media (width: 25.688rem) and (height: 51.438rem) {
+        position: relative;
+        top: 2rem;
+    }
+
+    @media (width: 25.688rem) and (height: 45.688rem) {
+        position: relative;
+        top: -1rem;
+    }
+
+    @media (width: 23.438rem) and (height: 50.75rem) {
+        position: relative;
+        top: 4.5rem;
+    }
+
+    @media (width: 23.438rem) and (height: 47.75rem) {
+        position: relative;
+        top: 4rem;
+    }
+    
+    @media (width: 22.5rem) and (height: 40rem) {
+        position: relative;
+        top: -1rem;
+    }
+
+    @media (width: 20rem) and (height: 47.75rem) {
+        position: relative;
+        top: 4.5rem;
+    }
+
+    @media (width: 20rem) and (height: 35.5rem) {
+        position: relative;
+        top: -1rem;
+    }
 `
 
 const MainTitle = styled.h1`
     font-size: 2.2rem;
     font-family: 'Retro', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
-    @media screen and (max-width: 53.125rem) {
+    @media (width: 90rem) and (height: 79.563rem) {
+        font-size: 5rem;
+    }
+
+    @media screen and (max-width: 64rem) {
         font-size: 2.5rem;
         font-weight: bolder;
         color: pink;
         text-shadow: -1.1px 0 black, 0 1.1px black, 1.1px 0 black, 0 -1.1px black;
     }
 
+    @media (width: 64rem) and (height: 85.375rem) {
+        font-size: 7rem;
+        position: relative;
+        left: 0.5rem;
+    }
+
+    @media (width: 64rem) and (height: 63.625rem) {
+        font-size: 6rem;
+        position: relative;
+        left: 0.5rem;     
+    }
+
+    @media (width: 64rem) and (height: 63.5rem) {
+        font-size: 7rem;
+        position: relative;
+        left: 0.5rem;    
+    }
+
+    @media (width: 48rem) and (height: 64rem) {
+        font-size: 5rem;
+        position: relative;
+        left: 0.5rem;
+    }
+
+    @media (width: 48rem) and (height: 47.75rem) {
+        font-size: 5rem;
+    }
+
+    @media (width: 25.875rem) and (height: 46rem) {
+        font-size: 3rem;
+        position: relative;
+        left: 0.2rem;
+    }
+
+    @media (width: 25.688rem) and (height: 51.438rem) {
+        font-size: 3rem;
+        position: relative;
+        left: 0.2rem;
+    }
+
+    @media (width: 25.688rem) and (height: 45.688rem) {
+        font-size: 3rem;
+        position: relative;
+        left: 0.2rem;
+    }
+
+    @media (width: 23.438rem) and (height: 50.75rem) {
+        font-size: 2.5rem;
+        position: relative;
+        left: 0.2rem;
+    }
+
+    @media (width: 23.438rem) and (height: 41.688rem) {
+        position: relative;
+        left: 0.2rem;
+    }
+
+    @media (width: 22.5rem) and (height: 40rem) {
+        position: relative;
+        left: 0.2rem;
+    }
+
     @media screen and (max-width: 20rem) {
         font-size: 2rem;
-        }    
+        position: relative;
+        left: 0.2rem;
+    } 
+    
+    @media (width: 20rem) and (height: 47.75rem) {
+        font-size: 2.2rem;
+    } 
 `
 
 const ImageAndHintsWrapper = styled.div`
     position: relative;
     bottom: 1rem;
+
+    @media (width: 64rem) and (height: 63.625rem) {
+        position: relative;
+        bottom: 4rem;     
+    }
+
+    @media (width: 64rem) and (height: 63.5rem) {
+        position: relative;
+        bottom: 4rem;
+    }
+
+    @media (width: 48rem) and (height: 47.75rem) {
+        position: relative;
+        bottom: 3rem;
+    }
 
     .hint {
         font-size: 0.875rem;
@@ -182,15 +437,43 @@ const ImageAndHintsWrapper = styled.div`
         left: 0.5rem;
         bottom: 1rem;
 
-        @media screen and (max-width: 53.125rem) {
+        @media (width: 90rem) and (height: 79.563rem) {
+            font-size: 1.5rem;
+        }
+
+        @media screen and (max-width: 64rem) {
             font-weight: bolder;
             color: pink;
             text-shadow: -1.1px 0 black, 0 1.1px black, 1.1px 0 black, 0 -1.1px black;
         }
 
+        @media (width: 64rem) and (height: 85.375rem) {
+            font-size: 1.5rem;
+        }
+
+        @media (width: 64rem) and (height: 63.625rem) {
+            font-size: 1.125rem;     
+        }
+
+        @media (width: 64rem) and (height: 63.5rem) {
+            font-size: 1.125rem;
+        }
+
+        @media (width: 48rem) and (height: 64rem) {
+            font-size: 1.125rem;
+        }
+
+        @media (width: 25.875rem) and (height: 46rem) {
+            font-size: 1rem;   
+        }
+
+        @media (width: 23.438rem) and (height: 50.75rem) {
+            font-size: 1rem;
+        }
+
         @media screen and (max-width: 20rem) {
-        font-size: 0.75rem;
-        bottom: 0.75rem;
+            font-size: 0.75rem;
+            bottom: 0.75rem;
         }    
     }
 `
@@ -203,9 +486,39 @@ const ImageWrapper = styled.div`
         box-sizing: border-box;
         border: solid 0.5rem pink;
 
-        @media screen and (max-width: 53.125rem) {
+        @media (width: 90rem) and (height: 79.563rem) {
+            width: 23rem;
+            height: 23rem;
+        }
+
+        @media screen and (max-width: 64rem) {
             border: solid 0.5rem black;
         }
+
+        @media (width: 64rem) and (height: 85.375rem) {
+            width: 25rem;
+            height: 25rem;
+        }
+
+        @media (width: 64rem) and (height: 63.625rem) {
+            width: 23rem;
+            height: 23rem;    
+        }
+        
+        @media (width: 64rem) and (height: 63.5rem) {
+            width: 23rem;
+            height: 23rem;
+        }
+
+        @media (width: 48rem) and (height: 64rem) {
+            width: 21.875rem;
+            height: 21.875rem;
+        }
+
+        @media (width: 48rem) and (height: 47.75rem) {
+            width: 20rem;
+            height: 20rem;
+        }   
     }   
 `
 
@@ -213,11 +526,41 @@ const ButtonLine = styled.div`
     display: flex;
     position: relative;
     bottom: 2.5rem;
+    
+    @media (width: 64rem) and (height: 63.625rem) {
+        position: relative;
+        bottom: 4.5rem;
+    }
+
+    @media (width: 64rem) and (height: 63.5rem) {
+        position: relative;
+        bottom: 4.5rem;
+    }
+
+    @media (width: 48rem) and (height: 47.75rem) {
+        position: relative;
+        bottom: 4.25rem;
+    }
 
     @media screen and (max-width: 26.563rem) {
         position: relative;
         bottom: 2rem;   
-    }          
+    }
+
+    @media (width: 25.688rem) and (height: 51.438rem) {
+        position: relative;
+        bottom: 1rem;
+    }
+    
+    @media (width: 25.688rem) and (height: 45.688rem) {
+        position: relative;
+        bottom: 1rem;
+    }
+
+    @media (width: 20rem) and (height: 47.75rem) {
+        position: relative;
+        bottom: 1.5rem;
+    } 
 `
 
 const OptionOne = styled.button`
@@ -230,13 +573,62 @@ const OptionOne = styled.button`
     border: solid 0.188rem black;
     margin-right: 2.3rem;
 
+    @media (width: 90rem) and (height: 79.563rem) {
+        font-size: 1.25rem;
+        width: 9rem;
+        border-radius: 0.5rem;
+    }
+
+    @media (width: 64rem) and (height: 85.375rem) {
+        font-size: 1.5rem;
+        width: 10rem;
+        border-radius: 0.5rem;
+    }
+
+    @media (width: 64rem) and (height: 63.625rem) {
+        font-size: 1.35rem;
+        width: 10rem;
+        border-radius: 0.5rem;
+    }
+
+    @media (width: 64rem) and (height: 63.5rem) {
+        font-size: 1.35rem;
+        width: 10rem;
+        border-radius: 0.5rem;
+    }
+
+    @media (width: 48rem) and (height: 64rem) {
+        font-size: 1.125rem;
+        width: 8rem;
+        border-radius: 0.5rem;
+    }
+    
+    @media (width: 48rem) and (height: 47.75rem) {
+        font-size: 1.125rem;
+        width: 8rem;
+        border-radius: 0.5rem;
+    }
+
     @media screen and (max-width: 26.563rem) {
         margin-right: 1.5rem;   
+    }
+
+    @media (width: 25.688rem) and (height: 51.438rem) {
+        margin-right: 1rem;
+        font-size: 1rem;
     }
 
     @media screen and (max-width: 23.438rem) {
         margin-right: 0.875rem;
         font-size: 0.750rem;   
+    }
+
+    @media (width: 23.438rem) and (height: 50.75rem) {
+        font-size: 0.9rem;
+    }
+
+    @media (width: 23.438rem) and (height: 41.688rem) {
+        font-size: 0.8rem;
     }
 
     @media screen and (max-width: 20rem) {
@@ -254,13 +646,62 @@ const OptionTwo = styled.button`
     border: solid 0.188rem black;
     margin-right: 2.3rem;
 
+    @media (width: 90rem) and (height: 79.563rem) {
+        font-size: 1.25rem;
+        width: 9rem;
+        border-radius: 0.5rem;
+    }
+
+    @media (width: 64rem) and (height: 85.375rem) {
+        font-size: 1.5rem;
+        width: 10rem;
+        border-radius: 0.5rem;
+    }
+
+    @media (width: 64rem) and (height: 63.625rem) {
+        font-size: 1.35rem;
+        width: 10rem;
+        border-radius: 0.5rem;
+    }
+
+    @media (width: 64rem) and (height: 63.5rem) {
+        font-size: 1.35rem;
+        width: 10rem;
+        border-radius: 0.5rem;
+    }
+
+    @media (width: 48rem) and (height: 64rem) {
+        font-size: 1.125rem;
+        width: 8rem;
+        border-radius: 0.5rem;
+    }
+
+    @media (width: 48rem) and (height: 47.75rem) {
+        font-size: 1.125rem;
+        width: 8rem;
+        border-radius: 0.5rem;
+    }
+
     @media screen and (max-width: 26.563rem) {
         margin-right: 1.5rem;   
+    }
+
+    @media (width: 25.688rem) and (height: 51.438rem) {
+        margin-right: 1rem;
+        font-size: 1rem;
     }
 
     @media screen and (max-width: 23.438rem) {
         margin-right: 0.875rem;
         font-size: 0.750rem;   
+    }
+
+    @media (width: 23.438rem) and (height: 50.75rem) {
+        font-size: 0.9rem;
+    }
+
+    @media (width: 23.438rem) and (height: 41.688rem) {
+        font-size: 0.8rem;
     }
 
     @media screen and (max-width: 20rem) {
@@ -278,13 +719,62 @@ const OptionThree = styled.button`
     border: solid 0.188rem black;
     margin-right: 2.3rem;
 
+    @media (width: 90rem) and (height: 79.563rem) {
+        font-size: 1.25rem;
+        width: 9rem;
+        border-radius: 0.5rem;
+    }
+
+    @media (width: 64rem) and (height: 85.375rem) {
+        font-size: 1.5rem;
+        width: 10rem;
+        border-radius: 0.5rem;
+    }
+
+    @media (width: 64rem) and (height: 63.625rem) {
+        font-size: 1.35rem;
+        width: 10rem;
+        border-radius: 0.5rem;
+    }
+
+    @media (width: 64rem) and (height: 63.5rem) {
+        font-size: 1.35rem;
+        width: 10rem;
+        border-radius: 0.5rem;
+    }
+
+    @media (width: 48rem) and (height: 64rem) {
+        font-size: 1.125rem;
+        width: 8rem;
+        border-radius: 0.5rem;
+    }
+
+    @media (width: 48rem) and (height: 47.75rem) {
+        font-size: 1.125rem;
+        width: 8rem;
+        border-radius: 0.5rem;
+    }
+
     @media screen and (max-width: 26.563rem) {
         margin-right: 1.5rem;   
+    }
+
+    @media (width: 25.688rem) and (height: 51.438rem) {
+        margin-right: 1rem;
+        font-size: 1rem;
     }
 
     @media screen and (max-width: 23.438rem) {
         margin-right: 0.875rem;
         font-size: 0.750rem;   
+    }
+
+    @media (width: 23.438rem) and (height: 50.75rem) {
+        font-size: 0.9rem;
+    }
+
+    @media (width: 23.438rem) and (height: 41.688rem) {
+        font-size: 0.8rem;
     }
 
     @media screen and (max-width: 20rem) {
@@ -301,8 +791,56 @@ const OptionFour = styled.button`
     box-sizing: border-box;
     border: solid 0.188rem black;
 
+    @media (width: 90rem) and (height: 79.563rem) {
+        font-size: 1.25rem;
+        width: 9rem;
+        border-radius: 0.5rem;
+    }
+
+    @media (width: 64rem) and (height: 85.375rem) {
+        font-size: 1.5rem;
+        width: 10rem;
+        border-radius: 0.5rem;
+    }
+
+    @media (width: 64rem) and (height: 63.625rem) {
+        font-size: 1.35rem;
+        width: 10rem;
+        border-radius: 0.5rem;
+    }
+
+    @media (width: 64rem) and (height: 63.5rem) {
+        font-size: 1.35rem;
+        width: 10rem;
+        border-radius: 0.5rem;
+    }
+
+    @media (width: 48rem) and (height: 64rem) {
+        font-size: 1.125rem;
+        width: 8rem;
+        border-radius: 0.5rem;
+    }
+
+    @media (width: 48rem) and (height: 47.75rem) {
+        font-size: 1.125rem;
+        width: 8rem;
+        border-radius: 0.5rem;
+    }
+
+    @media (width: 25.688rem) and (height: 51.438rem) {
+        font-size: 1rem;
+    }
+
     @media screen and (max-width: 23.438rem) {
         font-size: 0.750rem;   
+    }
+
+    @media (width: 23.438rem) and (height: 50.75rem) {
+        font-size: 0.9rem;
+    }
+
+    @media (width: 23.438rem) and (height: 41.688rem) {
+        font-size: 0.8rem;
     }
 
     @media screen and (max-width: 20rem) {
@@ -317,30 +855,115 @@ const TimeAndScoreWrapper = styled.div`
     position: relative;
     bottom: 2.5rem;
 
-    @media screen and (max-width: 53.125rem) {
+    @media (width: 90rem) and (height: 79.563rem) {
+        position: relative;
+        bottom: 2rem;
+    }
+
+    @media screen and (max-width: 64rem) {
         position: relative;
         bottom: 2rem;    
+    }
+
+    @media (width: 64rem) and (height: 85.375rem) {
+        position: relative;
+        bottom: 2rem;
+    }
+
+    @media (width: 64rem) and (height: 63.625rem) {
+        position: relative;
+        bottom: 4rem;
+    }
+
+    @media (width: 64rem) and (height: 63.5rem) {
+        position: relative;
+        bottom: 4rem;
+    }
+
+    @media (width: 48rem) and (height: 47.75rem) {
+        position: relative;
+        bottom: 4rem;
+    }
+
+    @media (width: 25.688rem) and (height: 51.438rem) {
+        position: relative;
+        bottom: 1rem;
+    }
+
+    @media (width: 25.688rem) and (height: 45.688rem) {
+        position: relative;
+        bottom: 1rem;
     }
 
     .time {
         font-size: 1rem;
 
-        @media screen and (max-width: 53.125rem) {
-        font-size: 1.5rem    
+        @media (width: 90rem) and (height: 79.563rem) {
+            font-size: 1.5rem;
         }
+
+        @media screen and (max-width: 64rem) {
+            font-size: 1.5rem    
+        }
+
+        @media (width: 64rem) and (height: 85.375rem) {
+            font-size: 2.5rem;
+        }
+
+        @media (width: 64rem) and (height: 63.625rem) {
+            font-size: 2rem;
+        }
+
+        @media (width: 64rem) and (height: 63.5rem) {
+            font-size: 2rem;
+        }
+
+        @media (width: 48rem) and (height: 64rem) {
+            font-size: 2rem;
+        }   
         
     }
 
     h3 {
         font-size: 1rem;
         position: relative;
-        bottom: 0.75rem;
+        bottom: 1.2rem;
 
-        @media screen and (max-width: 53.125rem) {
-        font-size: 1.5rem;
-        font-weight: bolder;
-        color: pink;
-        text-shadow: -1.1px 0 black, 0 1.1px black, 1.1px 0 black, 0 -1.1px black;
+        @media (width: 90rem) and (height: 79.563rem) {
+            font-size: 1.5rem;
+        }
+
+        @media screen and (max-width: 64rem) {
+            font-size: 1.5rem;
+            font-weight: bolder;
+            color: pink;
+            text-shadow: -1.1px 0 black, 0 1.1px black, 1.1px 0 black, 0 -1.1px black;
+        }
+
+        @media (width: 64rem) and (height: 85.375rem) {
+            font-size: 2.5rem;
+        }
+
+        @media (width: 64rem) and (height: 63.625rem) {
+            font-size: 2rem;
+        }
+
+        @media (width: 64rem) and (height: 63.5rem) {
+            font-size: 2rem;
+        }
+
+        @media (width: 48rem) and (height: 64rem) {
+            font-size: 2rem;
+        }  
+
+        @media (width: 25.688rem) and (height: 51.438rem) {
+            position: relative;
+            bottom: 0.7rem;
+        }
+
+        @media (width: 25.688rem) and (height: 45.688rem) {
+            position: relative;
+            bottom: 0.7rem;
         }
     }
 `
@@ -348,7 +971,52 @@ const ButtonLine2 = styled.div`
     display: flex;
     position: relative;
     left: 1rem;
-    bottom: 2.5rem;        
+    bottom: 2.5rem;
+
+    @media (width: 64rem) and (height: 85.375rem) {
+        position: relative;
+        bottom: 2rem;
+    } 
+
+    @media (width: 64rem) and (height: 63.625rem) {
+        position: relative;
+        bottom: 4.5rem
+    }
+    
+    @media (width: 64rem) and (height: 63.5rem) {
+        position: relative;
+        bottom: 4.5rem
+    }
+
+    @media (width: 48rem) and (height: 64rem) {
+        position: relative;
+        bottom: 2rem;
+    } 
+    
+    @media (width: 48rem) and (height: 47.75rem) {
+        position: relative;
+        bottom: 4.5rem;
+    }
+    
+    @media (width: 25.875rem) and (height: 46rem) {
+        position: relative;
+        bottom: 1.5rem;
+    }
+    
+    @media (width: 25.688rem) and (height: 51.438rem) {
+        position: relative;
+        bottom: 0.5rem;
+    }
+
+    @media (width: 25.688rem) and (height: 45.688rem) {
+        position: relative;
+        bottom: 0.5rem;
+    }
+
+    @media (width: 23.438rem) and (height: 50.75rem) {
+        position: relative;
+        bottom: 2rem;
+    }
 `
 
 const QuitButton = styled.button`
@@ -363,6 +1031,90 @@ const QuitButton = styled.button`
     margin-right: 2.3rem;
     position: relative;
     bottom: 1.5rem;
+
+    @media (width: 90rem) and (height: 79.563rem) {
+        font-size: 2.5rem;
+        width: 18rem;
+        border-radius: 0.8rem;
+    }
+
+    @media (width: 64rem) and (height: 85.375rem) {
+        font-size: 2.5rem;
+        width: 18rem;
+        border-radius: 0.8rem;
+    } 
+
+    @media (width: 64rem) and (height: 63.625rem) {
+        font-size: 2rem;
+        width: 15rem;
+        border-radius: 0.5rem;
+    }
+    
+    @media (width: 64rem) and (height: 63.5rem) {
+        font-size: 2rem;
+        width: 15rem;
+        border-radius: 0.5rem;
+    }
+
+    @media (width: 48rem) and (height: 64rem) {
+        font-size: 2rem;
+        width: 15rem;
+        border-radius: 0.5rem;
+    }
+
+    @media (width: 48rem) and (height: 47.75rem) {
+        font-size: 2rem;
+        width: 15rem;
+        border-radius: 0.5rem;    
+    }
+
+    @media (width: 26.563rem) and (height: 47.75rem) {
+        font-size: 1.5rem;
+        width: 12rem;
+        border-radius: 0.5rem;
+    }
+
+    @media (width: 25.875rem) and (height: 46rem) {
+        font-size: 1.5rem;
+        width: 12rem;
+        border-radius: 0.5rem;
+    }
+
+    @media (width: 25.688rem) and (height: 51.438rem) {
+        font-size: 2rem;
+        width: 15rem;
+        border-radius: 0.5rem;
+    }
+
+    @media (width: 25.688rem) and (height: 45.688rem) {
+        font-size: 2rem;
+        width: 15rem;
+        border-radius: 0.5rem;
+    }
+
+    @media (width: 23.438rem) and (height: 50.75rem) {
+        font-size: 1.5rem;
+        width: 12rem;
+        border-radius: 0.5rem;
+    }
+
+    @media (width: 23.438rem) and (height: 47.75rem) {
+        font-size: 1.5rem;
+        width: 12rem;
+        border-radius: 0.5rem;
+    }
+
+    @media (width: 23.438rem) and (height: 41.688rem) {
+        font-size: 1.5rem;
+        width: 12rem;
+        border-radius: 0.5rem;
+    }
+
+    @media (width: 20rem) and (height: 47.75rem) {
+        font-size: 1.5rem;
+        width: 12rem;
+        border-radius: 0.5rem;
+    } 
 `
 
 class MultipleChoice extends React.Component {
@@ -376,7 +1128,7 @@ class MultipleChoice extends React.Component {
         actorName: "",
         movieName: "",
         secondMovieName: "",
-        count: 60,
+        count: 100000,
         resetTimer: false,
         currentScore: 0,
         wrongAnswer: false,
