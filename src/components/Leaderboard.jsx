@@ -10,7 +10,7 @@ const LeaderboardBackground = styled.div`
     height: 100vh;
     font-size: 16px; 
 
-    @media screen and (max-width: 53.123rem) {
+    @media screen and (max-width: 64rem) {
         background: url(${tv_static2}) no-repeat center center fixed;
         background-size: cover;
         height: 100vh;
@@ -19,7 +19,7 @@ const LeaderboardBackground = styled.div`
 `
 const CardWrapper = styled.div`
 
-    @media screen and (max-width: 53.125rem) {
+    @media screen and (max-width: 64rem) {
         display: flex;
         align-items: center;
         flex-flow: column;
@@ -34,12 +34,25 @@ const CardWrapper = styled.div`
         border: solid 0.2rem black;
     }
 
+    @media (width: 64rem) and (height: 85.375rem) {
+        position: relative;
+        top: 15rem;
+        width: 34rem;
+        height: 38rem;
+    }
+
     @media screen and (max-width: 48rem) {
         position: relative;
         top: 5rem;
         margin: 0 8rem;
         height: 32rem;   
     } 
+
+    @media (width: 48rem) and (height: 64rem) {
+        position: relative;
+        top: 14rem;
+        left: 0.5rem;
+    }
 
     @media screen and (max-width: 44rem) {
         margin: 0 7rem;   
@@ -54,11 +67,7 @@ const CardWrapper = styled.div`
     }
 
     @media screen and (max-width: 34rem) {
-        margin: 0 1.8rem;   
-    }
-
-    @media screen and (max-width: 34rem) {
-        margin: 0 1.4rem;   
+        margin: 0 0.6rem;   
     }
 
     @media screen and (max-width: 26.563rem) {
@@ -69,17 +78,57 @@ const CardWrapper = styled.div`
         height: 30rem;   
     }
 
+    @media (width: 25.875rem) and (height: 46rem) {
+        position: relative;
+        top: 7.5rem;
+        right: 0.35rem;
+    }
+
+    @media (width: 25.688rem) and (height: 51.438rem) {
+        position: relative;
+        top: 9.5rem;
+        right: 0.5rem;
+    }
+
+    @media (width: 25.688rem) and (height: 45.688rem) {
+        position: relative;
+        top: 7.5rem;
+        right: 0.5rem;
+    }
+
     @media screen and (max-width: 23.438rem) {
         width: 20.5rem;
         margin: 0 1.4rem;  
     }
 
-    @media screen and (max-width: 20rem) {
-        top: 6rem;
-        margin: 0 1.5rem;
+    @media (width: 23.438rem) and (height: 41.688rem) {
         position: relative;
+        top: 5rem;
+    }
+
+    @media (width: 23.438rem) and (height: 50.75rem) {
+        position: relative;
+        top: 10rem;
+    }
+
+    @media (width: 22.5rem) and (height: 40rem) {
+        position: relative;
+        top: 5rem;
+        right: 0.4rem;
+
+    }
+
+    @media screen and (max-width: 20rem) {
+        margin: 0 1.4rem;
+        position: relative;
+        top: 8rem;
         width: 17rem; 
-    }            
+    } 
+    
+    @media (width: 20rem) and (height: 35.5rem) {
+        position: relative;
+        top: 2.5rem;
+    }
 `
 
 const StyledLeaderboard = styled.div`
@@ -145,9 +194,12 @@ const StyledLeaderboard = styled.div`
     }
 
     @media screen and (max-width: 64rem) {
-        margin: 0 20.5rem;
-        width: 25rem;
-        height: 25rem;
+        position: relative;
+        top: 3.5rem;
+        right: 3.5rem;
+        margin: 0 17.5rem;
+        width: 30rem;
+        height: 30rem;
     }
 
     @media screen and (max-width: 61.875rem) {
@@ -167,15 +219,6 @@ const StyledLeaderboard = styled.div`
         height: 21.25rem;
     }
 
-    @media screen and (max-width: 53.125rem) {
-        position: relative;
-        top: 3.5rem;
-        right: 2.1rem;
-        margin: 0 17.5rem;
-        width: 30rem;
-        height: 30rem;
-    }
-
     @media screen and (max-width: 49.375rem) {
         margin: 0 16.25rem;
         width: 28.75rem;
@@ -185,6 +228,7 @@ const StyledLeaderboard = styled.div`
     @media screen and (max-width: 48rem) {
         position: relative;
         top: 2rem;
+        right: 2rem;
         margin: 0 18rem;
         width: 27.5rem;
         height: 27.5rem;
@@ -244,6 +288,10 @@ const LeaderboardTitle = styled.h1`
     @media screen and (max-width: 64rem) {
         position: relative;
         left: 3.4rem;
+    }
+
+    @media (width: 64rem) and (height: 85.375rem) {
+        font-size: 2.5rem;
     }
 
     @media screen and (max-width: 62.5rem) {
@@ -326,6 +374,10 @@ const LeaderboardTable = styled.table`
             column-gap: 12rem;
         }
 
+        @media (width: 64rem) and (height: 85.375rem) {
+            font-size: 1.25rem;
+        }
+
         @media screen and (max-width: 23.438rem) {
             -webkit-column-gap: 9rem;
             -moz-column-gap: 9rem;
@@ -346,6 +398,10 @@ const LeaderboardTable = styled.table`
         font-weight: bolder;
         color: pink;
         text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+        @media (width: 64rem) and (height: 85.375rem) {
+            font-size: 1.25rem;
+        }
 
         @media screen and (max-width: 20rem) {
         font-size: 0.875rem;
@@ -378,11 +434,21 @@ const ReturnHomeButton = styled.button`
         left: 2.5rem;
     }
      
-    @media screen and (max-width: 53.125rem) {
+    @media screen and (max-width: 64rem) {
         width: 7rem;
         position: relative;
-        left: 1.5rem;
+        left: 3rem;
         top: 2rem;
+    }
+
+    @media (width: 64rem) and (height: 85.375rem) {
+            font-size: 1.25rem;
+            width: 9rem;
+    }
+
+    @media screen and (max-width: 48rem) {
+        position: relative;
+        left: 1.75rem;
     }
 
     @media screen and (max-width: 20rem) {
