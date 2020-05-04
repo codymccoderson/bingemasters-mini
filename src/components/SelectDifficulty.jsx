@@ -68,6 +68,11 @@ const StyledSelectDifficulty = styled.div`
         margin: 0 35rem;
     }
 
+    @media (width: 56.813rem) and (height: 47.875rem) {
+        position: relative;
+        right: 6rem;   
+    }
+
     @media (width: 56.813rem) and (height: 47.75rem) {
         margin: 0 31rem;
     }
