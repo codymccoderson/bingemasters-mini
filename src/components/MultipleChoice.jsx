@@ -1128,7 +1128,7 @@ class MultipleChoice extends React.Component {
         actorName: "",
         movieName: "",
         secondMovieName: "",
-        count: 100000,
+        count: 60,
         resetTimer: false,
         currentScore: 0,
         wrongAnswer: false,

@@ -60,8 +60,20 @@ const StyledSelectDifficulty = styled.div`
         margin: 0 35rem;
     }
 
+    @media (width: 64rem) and (height: 63.625rem) {
+        margin: 0 35rem;
+    }
+
     @media (width: 64rem) and (height: 63.5rem) {
         margin: 0 35rem;
+    }
+
+    @media (width: 56.813rem) and (height: 47.75rem) {
+        margin: 0 31rem;
+    }
+
+    @media (width: 56rem) and (height: 47.75rem) {
+        margin: 0 31rem;
     }
 
     @media screen and (max-width: 51rem) {
@@ -111,6 +123,11 @@ const StyledSelectDifficulty = styled.div`
     @media screen and (max-width: 20rem) {
         margin: 0 12.3rem;
     }
+
+    @media (width: 20rem) and (height: 35.5rem) {
+        position: relative;
+        top: 5rem;
+    }
 `;
 
 const SelectDifficultyTitle = styled.h1`
@@ -139,6 +156,10 @@ const SelectDifficultyTitle = styled.h1`
     }
 
     @media (width: 64rem) and (height: 85.375rem) {
+        font-size: 8rem;
+    }
+
+    @media (width: 64rem) and (height: 63.625rem) {
         font-size: 6rem;
     }
 
@@ -158,6 +179,10 @@ const SelectDifficultyTitle = styled.h1`
         font-size: 2.5rem;
     }
 
+    @media (width: 23.438rem) and (height: 50.75rem) {
+        font-size: 3rem;
+    }
+
     @media (width: 22.5rem) and (height: 40rem) {
         position: relative;
         right: 0.3rem;
@@ -170,6 +195,7 @@ const SelectDifficultyTitle = styled.h1`
 
 const ButtonLine = styled.div`
     display: flex;
+    flex-flow: column;
     position: relative;
     bottom: 1.25rem;
     right: 0.5rem;
@@ -212,6 +238,16 @@ const ButtonLine = styled.div`
         left: -0.5rem;
     }
 
+    @media (width: 25.688rem) and (height: 51.438rem) {
+        position: relative;
+        left: -0.7rem;
+    }
+
+    @media (width: 25.688rem) and (height: 45.688rem) {
+        position: relative;
+        left: -0.7rem;
+    }
+
     @media screen and (max-width: 25rem) {
         position: relative;
         left: 0.5rem;
@@ -219,7 +255,12 @@ const ButtonLine = styled.div`
 
     @media (width: 23.438rem) and (height: 50.75rem) {
         position: relative;
-        left: 0.2rem;
+        left: -0.4rem;
+    }
+
+    @media (width: 23.438rem) and (height: 47.75rem) {
+        position: relative;
+        left: -0.4rem;        
     }
 
     @media (width: 23.438rem) and (height: 47.625rem) {
@@ -229,17 +270,27 @@ const ButtonLine = styled.div`
 
     @media (width: 23.438rem) and (height: 41.688rem) {
         position: relative;
-        left: 0.2rem;
+        left: -0.5rem;
     }
 
     @media (width: 22.5rem) and (height: 40rem) {
         position: relative;
-        left: -0.1rem;
+        left: -0.8rem;
     }
     
     @media screen and (max-width: 20rem) {
         position: relative;
         left: 0.2rem;
+    }
+
+    @media (width: 20rem) and (height: 47.75rem) {
+        position: relative;
+        left: -0.4rem;
+    }
+
+    @media (width: 20rem) and (height: 35.5rem) {
+        position: relative;
+        left: -0.5rem;
     }
 `
 
@@ -256,8 +307,15 @@ const EasyButton = styled.button`
     border: solid 0.188rem black;
 
     @media (width: 64rem) and (height: 85.375rem) {
-        font-size: 1.5rem;
-        width: 12rem;
+        font-size: 3rem;
+        width: 27rem;
+        border-radius: 0.8rem;
+    }
+
+    @media (width: 64rem) and (height: 63.625rem) {
+        font-size: 2rem;
+        width: 15rem;
+        border-radius: 0.8rem;
     }
 
     @media (width: 64rem) and (height: 63.5rem) {
@@ -265,39 +323,55 @@ const EasyButton = styled.button`
         width: 12rem;
     }
 
-    @media screen and (max-width: 48rem) {
-        font-size: 0.875rem;
+    @media (width: 48rem) and (height: 64rem) {
+        font-size: 2rem;
+        width: 18rem;
+    }
+
+    @media (width: 48rem) and (height: 47.75rem) {
+        font-size: 1.5rem;
+        width: 12rem;        
+    }
+
+    @media (width: 26.563rem) and (height: 47.75rem) {
+        font-size: 1.2rem;
+        width: 10rem;        
+    }
+
+    @media (width: 25.688rem) and (height: 51.438rem) {
+        font-size: 1.2rem;
+        width: 10rem;    
+    }
+
+    @media (width: 25.688rem) and (height: 45.688rem) {
+        font-size: 1.2rem;
+        width: 10rem;
+    }
+    
+    @media (width: 23.438rem) and (height: 47.75rem) {
+        font-size: 1.2rem;
+        width: 10rem;        
+    }
+
+    @media (width: 23.438rem) and (height: 41.688rem) {
+        font-size: 1.2rem;
+        width: 10rem;    
+    }
+
+    @media (width: 22.5rem) and (height: 40rem) {
+        font-size: 1.125rem;
+        width: 10rem;
+    }
+
+    @media (width: 20rem) and (height: 47.75rem) {
+        font-size: 1rem;
         width: 8rem;
     }
 
-    @media (width: 48rem) and (height: 64rem) {
-        font-size: 1.5rem;
-        width: 12rem;
+    @media (width: 20rem) and (height: 35.5rem) {
+        font-size: 1rem;
+        width: 8rem;
     }
-
-    @media screen and (max-width: 37.5rem) {
-        width: 6.875rem;
-    }
-
-    @media screen and (max-width: 35.938rem) {
-        width: 6.25rem;
-    }
-
-    @media (width: 25.688rem) and (length: 45.688rem) {
-        position: relative;
-        right: 1.5rem;
-    }
-
-    @media screen and (max-width: 25rem) {
-        padding: 0.3rem;
-        position: relative;
-        right: -0.5rem;
-    }  
-    
-    @media (width: 23.438rem) and (height: 47.625rem) {
-        margin-right: 3rem;
-    }
-
 `;
 
 const HardButton = styled.button`
@@ -315,8 +389,15 @@ const HardButton = styled.button`
     left: 0.2rem;
 
     @media (width: 64rem) and (height: 85.375rem) {
-        font-size: 1.5rem;
-        width: 12rem;
+        font-size: 3rem;
+        width: 27rem;
+        border-radius: 0.8rem;
+    }
+
+    @media (width: 64rem) and (height: 63.625rem) {
+        font-size: 2rem;
+        width: 15rem;
+        border-radius: 0.8rem;
     }
 
     @media (width: 64rem) and (height: 63.5rem) {
@@ -324,131 +405,82 @@ const HardButton = styled.button`
         width: 12rem;
     }
 
-    @media screen and (max-width: 48rem) {
-        font-size: 0.875rem;
-        width: 8rem;
-    }
-
     @media (width: 48rem) and (height: 64rem) {
+        font-size: 2rem;
+        width: 18rem;
+    }
+
+    @media (width: 48rem) and (height: 47.75rem) {
         font-size: 1.5rem;
-        width: 12rem;
+        width: 12rem;        
     }
 
-    @media screen and (max-width: 37.5rem) {
-        width: 6.875rem;
-    }
-
-    @media screen and (max-width: 35.938rem) {
-        width: 6.25rem;
-    }
-
-    @media screen and (max-width: 25rem) {
-        padding: 0.3rem;
-        left: -1.5rem;
-    } 
-`;
-
-const ButtonLine2 = styled.div`
-    display: flex;
-    position: relative;
-    bottom: 1.25rem;
-    right: 0.1rem;
-
-    @media (width: 64rem) and (height: 85.375rem) {
-        position: relative;
-        right: 1rem;
-    }
-
-    @media screen and (max-width: 46.875rem) {
-        margin: 0 22.5rem;
-    }
-
-    @media screen and (max-width: 43.75rem) {
-        margin: 0 21.25rem;
-    }
-
-    @media screen and (max-width: 42.188rem) {
-        margin: 0 20rem;
-    }
-
-    @media screen and (max-width: 40.625rem) {
-        margin: 0 18.75rem;
-    }
-
-    @media screen and (max-width: 39.063rem) {
-        margin: 0 18.125rem;
-    }
-
-    @media screen and (max-width: 37.5rem) {
-        margin: 0 16.875rem;
-    }
-
-    @media screen and (max-width: 35.938rem) {
-        margin: 0 14.688rem;
+    @media (width: 26.563rem) and (height: 47.75rem) {
+        font-size: 1.2rem;
+        width: 10rem;        
     }
 
     @media (width: 25.688rem) and (height: 51.438rem) {
-        left: -0.3rem;
+        font-size: 1.2rem;
+        width: 10rem;    
     }
 
     @media (width: 25.688rem) and (height: 45.688rem) {
-        left: -0.3rem;
+        font-size: 1.2rem;
+        width: 10rem;
     }
 
-    @media screen and (max-width: 25rem) {
-        padding: 0.3rem;
-        position: relative;
-        bottom: 3rem;
-        left: 0.25rem;
-    }
-
-    @media (width: 23.438rem) and (height: 50.75rem) {
-        position: relative;
-        left: -0.2rem;
+    @media (width: 23.438rem) and (height: 47.75rem) {
+        font-size: 1.2rem;
+        width: 10rem;        
     }
 
     @media (width: 23.438rem) and (height: 41.688rem) {
-        position: relative;
-        left: -0.1rem;
-    }
-    
-    @media (width: 22.5rem) and (height: 40rem) {
-        position: relative;
-        left: -0.5rem;
+        font-size: 1.2rem;
+        width: 10rem;    
     }
 
-    @media (width: 23.438rem) and (height: 47.625rem) {
-        position: relative;
-        left: -0.1rem;
+    @media (width: 22.5rem) and (height: 40rem) {
+        font-size: 1.125rem;
+        width: 10rem;
     }
-    
-    @media screen and (max-width: 20rem) {
-        position: relative;
-        left: -0.2rem;
+
+    @media (width: 20rem) and (height: 47.75rem) {
+        font-size: 1rem;
+        width: 8rem;
+    }
+
+    @media (width: 20rem) and (height: 35.5rem) {
+        font-size: 1rem;
+        width: 8rem;
     }
 `;
 
 const HomeButton = styled.button`
-    background-color: pink;
-    color: black;
+    background-color: black;
+    color: pink;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 1.5rem;
     padding: 0.625rem;
-    margin: 0.313rem;
-    width: 15rem;
+    margin: 1.25rem;
+    width: 12rem;
     border-radius: 0.5rem;
     box-sizing: border-box;
     border: solid 0.188rem black;
     position: relative;
-    top: 0.625rem;
-    right: 0.313rem;
+    left: 0.2rem;
 
 
     @media (width: 64rem) and (height: 85.375rem) {
-        font-size: 1.5rem;
+        font-size: 3rem;
+        width: 27rem;
+        border-radius: 0.8rem;
+    }
+
+    @media (width: 64rem) and (height: 63.625rem) {
+        font-size: 2rem;
         width: 15rem;
-        position: relative;
-        right: 0.8rem;
+        border-radius: 0.8rem;
     }
 
     @media (width: 64rem) and (height: 63.5rem) {
@@ -458,28 +490,23 @@ const HomeButton = styled.button`
         right: 0.8rem;
     }
 
-    @media screen and (max-width: 48rem) {
-        font-size: 0.875rem;
-        width: 8rem;
+    @media (width: 48rem) and (height: 64rem) {
+        font-size: 2rem;
+        width: 18rem;
     }
 
-    @media (width: 48rem) and (height: 64rem) {
+    @media (width: 48rem) and (height: 47.75rem) {
         font-size: 1.5rem;
-        width: 15rem;
-        position: relative;
-        right: 0.8rem;
+        width: 12rem;        
     }
 
     @media (width: 48rem) and (height: 47.625rem) {
         width: 10rem;
     }
 
-    @media screen and (max-width: 37.5rem) {
-        width: 6.875rem;
-    }
-
-    @media screen and (max-width: 35.938rem) {
-        width: 6.25rem;
+    @media (width: 26.563rem) and (height: 47.75rem) {
+        font-size: 1.2rem;
+        width: 10rem;        
     }
 
     @media (width: 26.563rem) and (height: 47.625rem) {
@@ -489,12 +516,46 @@ const HomeButton = styled.button`
     }
 
     @media (width: 25.875rem) and (height: 46rem) {
-        position: relative;
-        left: -0.5rem;
+        width: 12rem;
     }
 
-    @media screen and (max-width: 25rem) {
-        width: 7rem;
+    @media (width: 25.688rem) and (height: 51.438rem) {
+        font-size: 1.2rem;
+        width: 10rem;    
+    }
+
+    @media (width: 25.688rem) and (height: 45.688rem) {
+        font-size: 1.2rem;
+        width: 10rem;
+    }
+
+    @media (width: 23.438rem) and (height: 50.75rem) {
+        width: 12rem;
+    }
+
+    @media (width: 23.438rem) and (height: 47.75rem) {
+        font-size: 1.2rem;
+        width: 10rem;        
+    }
+
+    @media (width: 23.438rem) and (height: 41.688rem) {
+        font-size: 1.2rem;
+        width: 10rem;    
+    }
+
+    @media (width: 22.5rem) and (height: 40rem) {
+        font-size: 1.125rem;
+        width: 10rem;
+    }
+
+    @media (width: 20rem) and (height: 47.75rem) {
+        font-size: 1rem;
+        width: 8rem;
+    }
+
+    @media (width: 20rem) and (height: 35.5rem) {
+        font-size: 1rem;
+        width: 8rem;
     }
 
     
@@ -553,14 +614,12 @@ class SelectDifficulty extends React.Component {
                             onClick={this.handleClickHard.bind(this)}
                             >Hard   
                         </HardButton>
-                    </ButtonLine>
-                    <ButtonLine2>
                         <HomeButton
                             type="submit"
                             onClick={this.handleClickHome.bind(this)}
                             >Return Home
                         </HomeButton>
-                    </ButtonLine2>
+                    </ButtonLine>
                 </StyledSelectDifficulty>
             </SelectDifficultyBackground>
         )} else if (this.state.clickedEasy === true && this.state.clickedHard === false && this.state.clickedHome === false) {

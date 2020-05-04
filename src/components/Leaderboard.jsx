@@ -574,7 +574,7 @@ class Leaderboard extends React.Component {
                                         </td>
                                     </tr>
                                 </tbody>
-                        </LeaderboardTable>
+                            </LeaderboardTable>
                         </div>
                         <ButtonLine>
                             <ReturnHomeButton 
