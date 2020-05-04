@@ -42,6 +42,14 @@ const CardWrapper = styled.div`
         height: 46rem;
     }
 
+    @media (width: 64rem) and (height: 63.625rem) {
+        position: relative;
+        top: 1rem;
+        right: 0.2rem;
+        width: 62rem;
+        height: 61.625rem;
+    }
+
     @media (width: 64rem) and (height: 63.5rem) {
         position: relative;
         top: 8rem;
@@ -60,6 +68,14 @@ const CardWrapper = styled.div`
         position: relative;
         top: 11rem;
         right: 2rem;
+    }
+
+    @media (width: 48rem) and (height: 47.75rem) {
+        position: relative;
+        top: 0.5rem;
+        right: 9.5rem;
+        width: 47rem;
+        height: 46.75rem;
     }
 
     @media screen and (max-width: 44rem) {
@@ -88,6 +104,12 @@ const CardWrapper = styled.div`
         top: 3rem;
         width: 25rem;
         height: 42rem;   
+    }
+
+    @media (width: 26.563rem) and (height: 47.75rem) {
+        top: 0.4rem;
+        width: 25.563;
+        height: 46.75rem;
     }
 
     @media (width: 26.563rem) and (height: 47.625rem) {
@@ -139,6 +161,14 @@ const CardWrapper = styled.div`
         height: 49rem;
     }
 
+    @media (width: 23.438rem) and (height: 47.75rem) {
+        position: relative;
+        top: 0.5rem;
+        right: 0.8rem;
+        width: 22.438rem;
+        height: 46.75rem;
+    }
+
     @media (width: 23.438rem) and (height: 47.625rem) {
         position: relative;
         top: 1rem;
@@ -166,6 +196,12 @@ const CardWrapper = styled.div`
         top: 3rem;
         width: 19.2rem;
         height: 42rem;   
+    }
+
+    @media (width: 20rem) and (height: 47.75rem) {
+        top: 0.4rem;
+        width: 19.2rem;
+        height: 46.95rem;
     }
 
     @media (width: 20rem) and (height: 47.625rem) {
@@ -259,6 +295,11 @@ const StyledHowToPlay = styled.div`
         width: 30rem;
     }
 
+    @media (width: 64rem) and (height: 63.625rem) {
+        width: 50rem;
+        height: 49.625rem;
+    }
+
     @media (width: 64rem) and (height: 63.5rem) {
         position: relative;
         top: 2.5rem;
@@ -275,6 +316,11 @@ const StyledHowToPlay = styled.div`
     @media (width: 48rem) and (height: 64rem) {
         position: relative;
         top: -1rem;
+    }
+
+    @media (width: 48rem) and (height: 47.75rem) {
+        width: 38rem;
+        height: 38.75rem;
     }
 
     @media (width: 48rem) and (height: 47.625rem) {
@@ -306,6 +352,11 @@ const StyledHowToPlay = styled.div`
         width: 22rem;
     }
 
+    @media (width: 26.563rem) and (height: 47.75rem) {
+        position: relative;
+        top: 0.2rem;
+    }
+
     @media (width: 26.563rem) and (height: 47.625rem) {
         position: relative;
         top: 0.5rem;
@@ -333,6 +384,11 @@ const StyledHowToPlay = styled.div`
         top: 0.5rem;
     }
 
+    @media (width: 23.438rem) and (height: 47.75rem) {
+        position: relative;
+        top: -0.2rem;
+    }
+
     @media (width: 23.438rem) and (height: 47.625rem) {
         position: relative;
         top: -0.5rem
@@ -345,6 +401,11 @@ const StyledHowToPlay = styled.div`
 
     @media screen and (max-width: 20rem) {
         width: 17rem;
+    }
+
+    @media (width: 20rem) and (height: 47.75rem) {    
+        position: relative;
+        top: -0.2rem;
     }
 `;
 
@@ -360,6 +421,10 @@ const HowToPlayTitle = styled.h1`
     @media screen and (max-width: 64rem) {
         position: relative;
         right: 0.4rem;
+    }
+
+    @media (width: 64rem) and (height: 63.625rem) {
+        font-size: 3rem;
     }
 
     @media (width: 48rem) and (height: 64rem) {
@@ -400,6 +465,10 @@ const WhatTheGameIs = styled.h2`
         font-size: 1rem;
     }
 
+    @media (width: 64rem) and (height: 63.625rem) {
+        font-size: 2rem;
+    }
+
     @media screen and (max-width: 53.125rem) {
         font-size: 1rem;
     }
@@ -408,12 +477,22 @@ const WhatTheGameIs = styled.h2`
         font-size: 1.125rem;
     }
 
+    @media (width: 48rem) and (height: 47.75rem) {
+        font-size: 1.35rem;
+    }
+
     @media (width: 48rem) and (height: 47.625rem) {
         font-size: 1rem;
     }
 
     @media screen and (max-width: 26.563rem) {
         font-size: 0.8rem;
+    }
+
+    @media (width: 26.563rem) and (height: 47.75rem) {
+        font-size: 1.125rem;
+        position: relative;
+        right: 0.6rem;
     }
 
     @media (width: 26.563rem) and (height: 47.625rem) {
@@ -438,8 +517,16 @@ const WhatTheGameIs = styled.h2`
         font-size: 1rem;
     }
 
+    @media (width: 23.438rem) and (height: 47.75rem) {
+        font-size: 1.05rem;
+    }
+
     @media (width: 23.438rem) and (height: 47.625rem) {
         font-size: 1rem;
+    }
+
+    @media (width: 20rem) and (height: 47.75rem) {
+        font-size: 1.05rem;
     }
 
     @media (width: 20rem) and (height: 47.625rem) {
@@ -476,6 +563,10 @@ const Text = styled.p`
         font-size: 1.125rem;
     }
 
+    @media (width: 64rem) and (height: 63.625rem) {
+        font-size: 1.8rem;
+    }
+
     @media (width: 64rem) and (height: 63.5rem) {
         font-size: 1.125rem;
     }
@@ -484,8 +575,16 @@ const Text = styled.p`
         font-size: 1.125rem;
     }
 
+    @media (width: 48rem) and (height: 47.75rem) {
+        font-size: 1.35rem;
+    }
+
     @media (width: 48rem) and (height: 47.625rem) {
         font-size: 1rem;
+    }
+
+    @media (width: 26.563rem) and (height: 47.75rem) {
+        font-size: 1.125rem;
     }
 
     @media (width: 26.563rem) and (height: 47.625rem) {
@@ -508,7 +607,15 @@ const Text = styled.p`
         font-size: 1rem;
     }
 
+    @media (width: 23.438rem) and (height: 47.75rem) {
+        font-size: 1.05rem;
+    }
+
     @media (width: 23.438rem) and (height: 47.625rem) {
+        font-size: 1rem;
+    }
+
+    @media (width: 20rem) and (height: 47.75rem) {
         font-size: 1rem;
     }
 
@@ -581,6 +688,12 @@ const ReturnHomeButton = styled.button`
         font-size: 1.125rem;
     }
 
+    @media (width: 64rem) and (height: 63.625rem) {
+        font-size: 2rem;
+        width: 15rem;
+        border-radius: 0.5rem;
+    }
+
     @media (width: 64rem) and (height: 63.5rem) {
         font-size: 1.125rem;
     }
@@ -592,11 +705,22 @@ const ReturnHomeButton = styled.button`
         right: 1rem;
     }
 
+    @media (width: 48rem) and (height: 47.75rem) {
+        font-size: 1.5rem;
+        width: 10rem;
+        border-radius: 0.5rem;
+    }
+
     @media (width: 48rem) and (height: 47.625rem) {
         font-size: 1rem;
         position: relative;
         right: 0.8rem;
         top: 1rem;
+    }
+
+    @media (width: 26.563rem) and (height: 47.75rem) {
+        position: relative;
+        top: -1rem;
     }
 
     @media (width: 26.563rem) and (height: 47.625rem) {
@@ -637,6 +761,13 @@ const ReturnHomeButton = styled.button`
         right: 0.5rem;
     }
 
+    @media (width: 23.438rem) and (height: 47.75rem) {
+        position: relative;
+        top: -0.1rem;
+        right: 0.9rem;
+
+    }
+
     @media (width: 23.438rem) and (height: 47.625rem) {
         font-size: 1rem;
         width: 8rem;
@@ -648,6 +779,12 @@ const ReturnHomeButton = styled.button`
     @media (width: 23.438rem) and (height: 41.688rem) {
         position: relative;
         right: 0.5rem;
+    }
+
+    @media (width: 20rem) and (height: 47.75rem) {    
+        position: relative;
+        top: -0.1rem;
+        right: 0.6rem;
     }
 
     @media (width: 20rem) and (height: 47.625rem) {
